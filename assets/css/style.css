@@ -30,7 +30,7 @@ body {
   background-color: #007f9c;
 }
 
-.btn-save span:first-child {
+.btn-circle span:first-child {
   height: 50px;
   width: 50px;
   border: 1px solid #007f9c;

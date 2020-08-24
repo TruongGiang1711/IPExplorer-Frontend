@@ -232,6 +232,7 @@
 
     // ip
     .intellectual-property {
+        margin-top: 55px;
         display: flex;
         flex-wrap: wrap;
         color: white;
@@ -257,28 +258,48 @@
             }
             .question {
                 position: absolute;
-                right: 0;
+                right: -20px;
+                background-color: white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                svg {
+                    font-size: 18px;
+                    margin: 0;
+                }
             }
         }
         &_patent {
             background-color: $Honey_Flower;
             margin-right: 10px;
             margin-bottom: 10px;
+            .question {
+                color: $Honey_Flower;
+            }
         }
         &_trademark {
             background-color: $Deluge;
             margin-left: 10px;
             margin-bottom: 10px;
+            .question {
+                color: $Deluge;
+            }
         }
         &_design {
             background-color: $Viridian;
             margin-right: 10px;
             margin-top: 10px;
+            .question {
+                color: $Viridian;
+            }
         }
         &_copyright {
             background-color: $Salem;
             margin-left: 10px;
             margin-top: 10px;
+            .question {
+                color: $Salem;
+            }
         }
     }
 }

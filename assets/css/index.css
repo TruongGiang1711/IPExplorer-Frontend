@@ -216,6 +216,7 @@
     margin-bottom: 10px;
   }
   .intellectual-property {
+    margin-top: 55px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -253,27 +254,47 @@
   }
   .intellectual-property_patent .question, .intellectual-property_trademark .question, .intellectual-property_design .question, .intellectual-property_copyright .question {
     position: absolute;
-    right: 0;
+    right: -20px;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .intellectual-property_patent .question svg, .intellectual-property_trademark .question svg, .intellectual-property_design .question svg, .intellectual-property_copyright .question svg {
+    font-size: 18px;
+    margin: 0;
   }
   .intellectual-property_patent {
     background-color: #5b2080;
     margin-right: 10px;
     margin-bottom: 10px;
   }
+  .intellectual-property_patent .question {
+    color: #5b2080;
+  }
   .intellectual-property_trademark {
     background-color: #7a58a1;
     margin-left: 10px;
     margin-bottom: 10px;
+  }
+  .intellectual-property_trademark .question {
+    color: #7a58a1;
   }
   .intellectual-property_design {
     background-color: #3c8d74;
     margin-right: 10px;
     margin-top: 10px;
   }
+  .intellectual-property_design .question {
+    color: #3c8d74;
+  }
   .intellectual-property_copyright {
     background-color: #096e4a;
     margin-left: 10px;
     margin-top: 10px;
+  }
+  .intellectual-property_copyright .question {
+    color: #096e4a;
   }
 }
 
