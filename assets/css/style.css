@@ -1,0 +1,252 @@
+html,
+body {
+  height: 100%;
+}
+
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.color-Allports {
+  color: #007f9c;
+}
+
+.btn-custom {
+  border-radius: 10px;
+  padding: 17px 27px;
+  color: white;
+  font-family: "Raleway";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.btn-custom.btn-custom-outline {
+  border: 1px solid #007f9c;
+  color: #007f9c;
+}
+
+.btn-custom.btn-Allports {
+  background-color: #007f9c;
+}
+
+.btn-save span:first-child {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #007f9c;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10px;
+  font-family: "Raleway";
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.form-control {
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #2222221a;
+  -webkit-box-shadow: 0 0 25px #71b4c429;
+          box-shadow: 0 0 25px #71b4c429;
+}
+
+#formControlRange {
+  background: -webkit-gradient(linear, left top, right top, from(#007f9c), color-stop(50%, #007f9c), color-stop(50%, #fff), to(#fff));
+  background: linear-gradient(to right, #007f9c 0%, #007f9c 50%, #fff 50%, #fff 100%);
+  border: solid 1px #82cfd0;
+  border-radius: 8px;
+  height: 7px;
+  outline: none;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #007f9c;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/assets/fonts/Raleway/raleway-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Calibri-Bold";
+  src: url("/assets/fonts/calibri/Calibri-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Calibri-Light";
+  src: url("/assets/fonts/calibri/Calibri-Light.ttf");
+}
+
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .container-custom {
+    max-width: 375px;
+  }
+  .container-custom > div {
+    max-height: 667px;
+    height: 100%;
+  }
+  .container-custom header {
+    padding: 50px 30px 30px 30px;
+  }
+  .container-custom header.sticky-top-custom {
+    background-color: white;
+  }
+  .container-custom header > div .logo {
+    border-bottom: 1px solid;
+  }
+  .container-custom header > div .logo img {
+    margin-right: 20px;
+  }
+  .container-custom header > div .logo .nametag > div:first-child {
+    font-family: "Raleway";
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .container-custom header > div .logo .nametag > div:last-child {
+    font-family: "Calibri-Light";
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .container-custom header > div .logo .progress {
+    height: 4px;
+    bottom: -4px;
+    background-color: transparent;
+  }
+  .container-custom header > div .logo .progress .progress-bar-custom {
+    background-color: #007f9c;
+  }
+  .container-custom wrapper {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .container-custom .title {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+  .container-custom .description {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
+  .container-custom .form-group > div label {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .container-custom .form-group > div input {
+    font-family: "Calibri-Light";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+  .container-custom .item-carousel {
+    border-radius: 20px;
+    border: 1px solid #007f9c;
+    height: 95px;
+    width: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+  }
+  .container-custom .accordion .card {
+    border: 0;
+    margin-bottom: 10px;
+  }
+  .container-custom .accordion .card .card-header {
+    background: transparent;
+    border: 1px solid #007f9c;
+    border-radius: 5px;
+    margin-bottom: 0;
+    padding: 7px 0;
+  }
+  .container-custom .accordion .card .card-header .btn-block {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0;
+  }
+  .container-custom .accordion .card .card-header.active {
+    background-color: #007f9c;
+  }
+  .container-custom .accordion .card .card-header.active .btn-block {
+    color: white;
+  }
+  .container-custom .accordion .card .card-body {
+    padding: 10px 0 0 0;
+  }
+  .container-custom .btn-group-footer {
+    margin: 50px 0;
+  }
+}
+
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
+/*# sourceMappingURL=style.css.map */

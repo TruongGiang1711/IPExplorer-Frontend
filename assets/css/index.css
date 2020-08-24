@@ -1,0 +1,299 @@
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .language {
+    margin: 20px 20px 15px 0;
+    font-family: "Calibri-Bold";
+    height: 16px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .language i {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .logo {
+    padding-bottom: 30px;
+  }
+  .welcome {
+    margin-bottom: 50px;
+    font-family: "Raleway";
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .welcome b {
+    font-weight: bold;
+  }
+  .sologan {
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .sologan > div {
+    margin-bottom: 20px;
+  }
+  .sologan > div:last-child {
+    margin-bottom: 75px;
+  }
+  .action-index {
+    margin-bottom: 50px;
+  }
+  .action-index > :first-child {
+    margin-bottom: 20px;
+  }
+  .list-partner {
+    font-family: "Raleway";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .list-partner > div:first-child {
+    margin-bottom: 10px;
+  }
+  .list-partner .list-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .list-partner .list-group .list-group-item {
+    padding: 10px;
+    border: 0;
+  }
+  .form .form-group > div label {
+    margin-bottom: 10px;
+  }
+  .form .form-group > div:last-child {
+    margin-bottom: 80px;
+  }
+  .form .action a:first-child {
+    margin-bottom: 15px;
+  }
+  .content-terms {
+    margin: 20px 0;
+    font-family: "Calibri-Light";
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer-terms {
+    width: 100%;
+    padding: 0 30px 35px 30px;
+  }
+  .content-intangibles {
+    margin: 20px 0 55px 0;
+  }
+  .content-intangibles .figure .intangibles-model-lv1,
+  .content-intangibles .figure .intangibles-model-lv2,
+  .content-intangibles .figure .intangibles-model-lv3 {
+    width: 100%;
+  }
+  .content-intangibles .figure .intangibles-model-lv1 span,
+  .content-intangibles .figure .intangibles-model-lv2 span,
+  .content-intangibles .figure .intangibles-model-lv3 span {
+    font-family: "Calibri-Bold";
+    font-size: 12px;
+    line-height: 14px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+  }
+  .content-intangibles .figure .intangibles-model-lv1 {
+    border-radius: 60px;
+    background-color: #71b4c4;
+    height: 300px;
+    max-width: 300px;
+    position: relative;
+  }
+  .content-intangibles .figure .intangibles-model-lv2 {
+    border-radius: 48px;
+    background-color: #429bb0;
+    height: 240px;
+    max-width: 240px;
+    position: absolute;
+  }
+  .content-intangibles .figure .intangibles-model-lv3 {
+    border-radius: 36px;
+    background-color: #007f9c;
+    height: 180px;
+    max-width: 180px;
+    position: absolute;
+  }
+  .content-intangibles .figure .intangibles-model-lv3 span {
+    bottom: unset;
+  }
+  .content-intangibles .figure .figure-caption {
+    font-family: "Calibri-Light";
+    font-size: 12px;
+    line-height: 14px;
+    color: black;
+    margin: 10px 0 20px;
+  }
+  .content-intangibles .intangibles-details .intangibles-details_lv3,
+  .content-intangibles .intangibles-details .intangibles-details_lv2,
+  .content-intangibles .intangibles-details .intangibles-details_lv1 {
+    height: 50px;
+    max-width: 50px;
+    width: 100%;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .content-intangibles .intangibles-details .intangibles-details_lv3 {
+    background-color: #007f9c;
+  }
+  .content-intangibles .intangibles-details .intangibles-details_lv2 {
+    background-color: #429bb0;
+  }
+  .content-intangibles .intangibles-details .intangibles-details_lv1 {
+    background-color: #71b4c4;
+  }
+  .content-intangibles .intangibles-details .intangibles-details_title {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 15px 0 10px 0;
+  }
+  .content-intangibles .intangibles-details .intangibles-details_content {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-intangibles .intangibles-details .intangibles-details_content:last-child {
+    margin-bottom: 30px;
+  }
+  .content-myAccount {
+    margin: 20px 0 0 0;
+  }
+  .content-myAccount .evaluation_sucess {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  .content-myAccount .evaluation_select {
+    font-family: "Calibri-Light";
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 20px;
+  }
+  .content-myAccount .evaluation_list {
+    /* height */
+    min-height: 135px;
+    padding-bottom: 40px;
+  }
+  .content-myAccount .evaluation_list::-webkit-scrollbar {
+    height: 5px;
+  }
+  .content-myAccount .language-select {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  .content-myAccount .custom-select {
+    font-family: "Calibri-Light";
+    font-size: 16px;
+    line-height: 23px;
+    width: auto;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .content-myAccount .btn-save {
+    margin: 35px 0;
+  }
+  .content-business .form-group > div {
+    margin-bottom: 20px;
+  }
+  .content-business .form-group > div label {
+    margin-bottom: 20px;
+  }
+  .content-business .form-group > div input {
+    margin-bottom: 10px;
+  }
+  .content-business .form-group > div .creative_list .item-carousel:first-child {
+    margin-bottom: 10px;
+  }
+  .intellectual-property {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    color: white;
+  }
+  .intellectual-property_patent, .intellectual-property_trademark, .intellectual-property_design, .intellectual-property_copyright {
+    border-radius: 25px;
+    width: 141px;
+    height: 141px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  .intellectual-property_patent svg, .intellectual-property_trademark svg, .intellectual-property_design svg, .intellectual-property_copyright svg {
+    font-size: 24px;
+    margin-bottom: 13px;
+  }
+  .intellectual-property_patent .name, .intellectual-property_trademark .name, .intellectual-property_design .name, .intellectual-property_copyright .name {
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 16px;
+  }
+  .intellectual-property_patent .question, .intellectual-property_trademark .question, .intellectual-property_design .question, .intellectual-property_copyright .question {
+    position: absolute;
+    right: 0;
+  }
+  .intellectual-property_patent {
+    background-color: #5b2080;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .intellectual-property_trademark {
+    background-color: #7a58a1;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .intellectual-property_design {
+    background-color: #3c8d74;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  .intellectual-property_copyright {
+    background-color: #096e4a;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
+/*# sourceMappingURL=index.css.map */

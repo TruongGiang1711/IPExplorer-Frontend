@@ -1,0 +1,255 @@
+@import "./../variables/variables";
+
+html,
+body {
+    height: 100%;
+}
+
+.btn {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.color-Allports {
+    color: $Allports;
+}
+
+.btn-custom {
+    border-radius: 10px;
+    padding: 17px 27px;
+    color: white;
+    font-family: "Raleway";
+    @include font(14px, 16px);
+    &.btn-custom-outline {
+        border: 1px solid $Allports;
+        color: $Allports;
+    }
+    &.btn-Allports {
+        background-color: $Allports;
+    }
+}
+
+.btn-save {
+    span:first-child {
+        height: 50px;
+        width: 50px;
+        border: 1px solid $Allports;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        font-family: "Raleway";
+        @include font(18px, 16px);
+    }
+}
+
+.form-control {
+    border: 0;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #2222221a;
+    box-shadow: 0 0 25px #71b4c429;
+}
+
+#formControlRange {
+    background: linear-gradient(to right, $Allports 0%, $Allports 50%, #fff 50%, #fff 100%);
+    border: solid 1px #82cfd0;
+    border-radius: 8px;
+    height: 7px;
+    // width: 356px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $Allports;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("/assets/fonts/Raleway/raleway-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Calibri-Bold";
+    src: url("/assets/fonts/calibri/Calibri-Bold.ttf");
+}
+@font-face {
+    font-family: "Calibri-Light";
+    src: url("/assets/fonts/calibri/Calibri-Light.ttf");
+}
+
+@media (min-width: 320px) {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    .container-custom {
+        max-width: 375px;
+        > div {
+            max-height: 667px;
+            height: 100%;
+        }
+        header {
+            padding: 50px 30px 30px 30px;
+            &.sticky-top-custom {
+                background-color: white;
+            }
+            > div {
+                .logo {
+                    border-bottom: 1px solid;
+                    img {
+                        margin-right: 20px;
+                    }
+                    .nametag {
+                        > div {
+                            &:first-child {
+                                font-family: "Raleway";
+                                @include font(15px, 18px);
+                            }
+                            &:last-child {
+                                font-family: "Calibri-Light";
+                                @include font(15px, 21px);
+                            }
+                        }
+                    }
+                    .progress {
+                        height: 4px;
+                        bottom: -4px;
+                        background-color: transparent;
+                        .progress-bar-custom {
+                            background-color: $Allports;
+                        }
+                    }
+                }
+            }
+        }
+        wrapper {
+            width: 100%;
+            padding: 0 30px;
+        }
+        .title {
+            font-family: "Raleway";
+            font-weight: bold;
+            @include font(24px, 29px);
+            margin-bottom: 20px;
+        }
+        .description {
+            font-family: "Calibri-Light";
+            @include font(14px, 16px);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            > div {
+                label {
+                    font-family: "Raleway";
+                    font-weight: bold;
+                    @include font(15px, 18px);
+                }
+                input {
+                    font-family: "Calibri-Light";
+                    font-weight: bold;
+                    @include font(14px, 21px);
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .item-carousel {
+            border-radius: 20px;
+            border: 1px solid $Allports;
+            height: 95px;
+            width: 95px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            font-family: "Calibri-Light";
+            @include font(14px, 16px);
+            cursor: pointer;
+        }
+        .accordion {
+            .card {
+                border: 0;
+                margin-bottom: 10px;
+                .card-header {
+                    background: transparent;
+                    border: 1px solid $Allports;
+                    border-radius: 5px;
+                    margin-bottom: 0;
+                    padding: 7px 0;
+                    .btn-block {
+                        font-family: "Calibri-Light";
+                        @include font(14px, 21px);
+                        padding: 0;
+                    }
+                    &.active {
+                        background-color: $Allports;
+                        .btn-block {
+                            color: white;
+                        }
+                    }
+                }
+                .card-body {
+                    padding: 10px 0 0 0;
+                }
+            }
+        }
+        .btn-group-footer {
+            margin: 50px 0;
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    /* smartphones, Android phones, landscape iPhone */
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+@media (min-width: 600px) {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+@media (min-width: 801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+}
