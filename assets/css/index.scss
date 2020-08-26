@@ -50,8 +50,9 @@
         .list-group {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             .list-group-item {
-                padding: 10px;
+                padding: 0;
                 border: 0;
             }
         }
@@ -235,70 +236,134 @@
         margin-top: 55px;
         display: flex;
         flex-wrap: wrap;
-        color: white;
-        &_patent,
-        &_trademark,
-        &_design,
-        &_copyright {
-            border-radius: 25px;
-            width: 141px;
+        // transition: all ease-in-out 3s;
+        position: relative;
+        &-item {
+            width: 50%;
             height: 141px;
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            svg {
-                font-size: 24px;
-                margin-bottom: 13px;
-            }
-            .name {
-                font-family: "Raleway";
-                @include font(18px, 16px);
-            }
-            .question {
-                position: absolute;
-                right: -20px;
-                background-color: white;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                svg {
-                    font-size: 18px;
-                    margin: 0;
+            position: absolute;
+            // transition: all ease-in-out 3s;
+            // &.active {
+            //     width: 100%;
+            //     order: 1;
+            //     height: auto;
+            //     padding: 0 0 10px 0;
+            //     .intellectual-property-item {
+            //         &_patent,
+            //         &_trademark,
+            //         &_design,
+            //         &_copyright {
+            //             margin: 0;
+            //             min-height: 50px;
+            //             max-height: 50px;
+            //             border-radius: 10px;
+            //         }
+            //     }
+            // }
+            // &.notactive {
+            //     width: 88px;
+            //     height: 88px;
+            //     padding: 10px 20px 0 0;
+            //     .intellectual-property-item {
+            //         &_patent,
+            //         &_trademark,
+            //         &_design,
+            //         &_copyright {
+            //             margin: 0;
+            //             border-radius: 15px;
+            //         }
+            //     }
+            // }
+            &_patent,
+            &_trademark,
+            &_design,
+            &_copyright {
+                padding: 0;
+                border-radius: 25px;
+                width: 100%;
+                height: 100%;
+                &-header {
+                    height: 100%;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    svg {
+                        font-size: 24px;
+                        margin-bottom: 13px;
+                    }
+                    .name {
+                        font-family: "Raleway";
+                        @include font(18px, 16px);
+                    }
+                    .question {
+                        position: absolute;
+                        right: -20px;
+                        background-color: white;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        svg {
+                            font-size: 18px;
+                            margin: 0;
+                        }
+                    }
+                }
+                &-content {
+                    display: none;
                 }
             }
-        }
-        &_patent {
-            background-color: $Honey_Flower;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            .question {
-                color: $Honey_Flower;
+            &:nth-child(n) {
+                // &.active {
+                //     padding: 0;
+                // }
+                // &.notactive {
+                //     margin: 20px 0 0 0;
+                //     padding: 0;
+                // }
             }
-        }
-        &_trademark {
-            background-color: $Deluge;
-            margin-left: 10px;
-            margin-bottom: 10px;
-            .question {
-                color: $Deluge;
+            &:nth-child(odd) {
+                padding-right: 10px;
+                left: 0;
             }
-        }
-        &_design {
-            background-color: $Viridian;
-            margin-right: 10px;
-            margin-top: 10px;
-            .question {
-                color: $Viridian;
+            &:nth-child(even) {
+                padding-left: 10px;
+                right: 0;
             }
-        }
-        &_copyright {
-            background-color: $Salem;
-            margin-left: 10px;
-            margin-top: 10px;
-            .question {
-                color: $Salem;
+            &:nth-child(-1n + 2) {
+                padding-top: 10px;
+            }
+            &:nth-child(n + 3) {
+                padding-bottom: 10px;
+                top: 160px;
+            }
+            // &:nth-child(2n+2) {
+            //     margin-bottom: 10px;
+            // }
+            &_patent {
+                background-color: $Honey_Flower;
+                .question {
+                    color: $Honey_Flower;
+                }
+            }
+            &_trademark {
+                background-color: $Deluge;
+                .question {
+                    color: $Deluge;
+                }
+            }
+            &_design {
+                background-color: $Viridian;
+                .question {
+                    color: $Viridian;
+                }
+            }
+            &_copyright {
+                background-color: $Salem;
+                .question {
+                    color: $Salem;
+                }
             }
         }
     }

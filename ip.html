@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </header>
-            <wrapper class="overflow-auto">
+            <wrapper class="overflow-auto h-100">
                 <div class="content-myAccount">
                     <div class="title">Next, any registered IP you already have</div>
                     <div>
@@ -52,9 +52,69 @@
                         </div>
                     </div>
                     <div>
-                        <div class="intellectual-property">
-                            <div class="intellectual-property_patent">
-                                <div>
+                        <div class="intellectual-property justify-content-between">
+                            <div class="intellectual-property-item">
+                                <button class="btn intellectual-property-item_patent" type="button"
+                                    data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    Patent
+                                </button>
+                                <!-- <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson
+                                        cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="intellectual-property-item">
+                                <button class="btn intellectual-property-item_trademark" type="button"
+                                    data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    Trademark
+                                </button>
+                                <!-- <div class="collapse" id="collapseExample1">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson
+                                        cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="intellectual-property-item">
+                                <button class="btn intellectual-property-item_design" type="button"
+                                    data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    Design
+                                </button>
+                                <!-- <div class="collapse" id="collapseExample3">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson
+                                        cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="intellectual-property-item">
+                                <button class="btn intellectual-property-item_copyright" type="button"
+                                    data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    Copyright
+                                </button>
+                                <!-- <div class="collapse" id="collapseExample4">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                        richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                        anderson
+                                        cred nesciunt sapiente ea proident.
+                                    </div>
+                                </div> -->
+                            </div>
+                            <!-- <div class="intellectual-property_patent">
+                                <div class="intellectual-property_patent-header">
                                     <span><i class="fas fa-lightbulb"></i></span>
                                     <div class="name">Patent</div>
                                     <button type="button"
@@ -64,7 +124,7 @@
                                         <i class="fas fa-question"></i>
                                     </button>
                                 </div>
-                                <div>
+                                <div class="intellectual-property_patent-content">
                                     <form class="needs-validation" action="/intangibles.html" novalidate>
                                         <div class="form-group">
                                             <div class="">
@@ -118,7 +178,7 @@
                                     data-content="And here's some amazing content. It's very engaging. Right?">
                                     <i class="fas fa-question"></i>
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="d-flex justify-content-between btn-group-footer">
@@ -137,10 +197,149 @@
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
     <script>
         $(document).ready(function () {
             $('[data-toggle="popover"]').popover()
+        });
+        $(document).on('click', '.intellectual-property-item', function () {
+            n = $(this).index()
+            $(this).addClass('active')
+            gsap.to($(this), {
+                width: "100%"
+            });
+            if ($(this).children().is('.intellectual-property-item_design') || $(this).children().is('.intellectual-property-item_copyright')) {
+                gsap.to($(this), {
+                    top: "0"
+                });
+            }
+            if ($('.intellectual-property-item_patent').parent().is('.active')) {
+                gsap.to($('.intellectual-property-item_trademark').parent(), {
+                    left: 0,
+                    top: $('.intellectual-property-item').width(),
+                });
+            }
+            if ($(this).children().is('.intellectual-property-item_trademark')) {
+                gsap.to($(this), {
+                    left: "0"
+                });
+            }
+            $('.intellectual-property-item').each(function (index, item) {
+                if (n !== index) {
+                    $(this).removeClass('active')
+                    gsap.to($(this), {
+                        width: 88
+                    });
+                } else {
+                    // gsap.to($(this), {
+                    //     top: $('.intellectual-property-item').width(),
+                    // });
+                }
+            })
         })
+        $(document).on('click', '.intellectual-property-item.active', function () {
+            n = $(this).index()
+            $(this).removeClass('active')
+            gsap.to($(this), {
+                width: "50%"
+            });
+            if ($(this).children().is('.intellectual-property-item_design') || $(this).children().is('.intellectual-property-item_copyright')) {
+                gsap.to($(this), {
+                    top: $('.intellectual-property-item').width()
+                });
+            }
+            if ($('.intellectual-property-item_patent').parent()) {
+                gsap.to($('.intellectual-property-item_trademark').parent(), {
+                    left: "50%",
+                    top: 0,
+                });
+            }
+            $('.intellectual-property-item').each(function (index, item) {
+                if (n === index) {
+                    gsap.to($('.intellectual-property-item'), {
+                        width: "50%"
+                    });
+                }
+            })
+        })
+
+
+
+        // $(document).on('click', '.intellectual-property-item', function () {
+        //     $(this).toggleClass('active')
+        //     if ($(this).is('.active')) {
+        //         if ($(this).children().is('.intellectual-property-item_design') || $(this).children().is('.intellectual-property-item_copyright')) {
+        //             $(this).animate({
+        //                 top: '0',
+        //             });
+        //         }
+        //         if ($(this).children().is('.intellectual-property-item_trademark')) {
+        //             $(this).animate({
+        //                 left: 0,
+        //             });
+        //         }
+        //         $(this).animate({
+        //             width: '100%',
+        //         });
+        //         if ($('.intellectual-property-item_patent').parent().is('.active')) {
+        //             $('.intellectual-property-item_trademark').parent().animate({
+        //                 left: 0,
+        //                 top: $('.intellectual-property-item').width(),
+        //             });
+        //         }
+        //     } else {
+        //         // $(this).removeClass('active')
+        //         $(this).animate({
+        //             width: '50%',
+        //         });
+        //         if ($(this).children().is('.intellectual-property-item_design') || $(this).children().is('.intellectual-property-item_copyright')) {
+        //             $(this).animate({
+        //                 top: $('.intellectual-property-item').width(),
+        //             });
+        //         }
+        //         if ($(this).children().is('.intellectual-property-item_trademark')) {
+        //             $(this).animate({
+        //                 right:0,
+        //             });
+        //         }
+        //         if ($(this).children().is('.intellectual-property-item_trademark') || $(this).children().is('.intellectual-property-item_copyright')) {
+        //             $(this).animate({
+        //                 width: '50%',
+        //             });
+        //         }
+        //         if ($('.intellectual-property-item_patent').parent().is('.active')) {
+        //         } else {
+        //             $('.intellectual-property-item_trademark').parent().animate({
+        //                 left: "50%",
+        //                 top: 0,
+        //             });
+        //         }
+        //     }
+        // })
+        // $(document).on('click', '.intellectual-property-item', function () {
+        //     n = $(this).index()
+        //     // console.log(this);
+        //     $(this).addClass('active')
+        //     $('.intellectual-property-item').each(function (index, item) {
+        //         // console.log(item);
+        //         if (n !== index) {
+        //             $(this).removeClass('active')
+        //         } else {
+        //             $(this).removeClass('notactive')
+        //         }
+        //         if ($(item).is('.active')) {
+        //         } else {
+        //             $(this).addClass('notactive')
+        //             console.log(this);
+        //         }
+        //     })
+        // });
+        // $(document).on('click', '.intellectual-property-item.active', function () {
+        //     $(this).removeClass('active')
+        //     $('.intellectual-property-item').each(function (index, item) {
+        //         $(item).removeClass('active notactive')
+        //     })
+        // })
     </script>
 </body>
 
