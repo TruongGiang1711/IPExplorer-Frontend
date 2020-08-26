@@ -218,105 +218,29 @@
   .content-business .form-group > div .creative_list .item-carousel:first-child {
     margin-bottom: 10px;
   }
-  .intellectual-property {
-    margin-top: 55px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .animation-box {
+    max-width: 300px;
+    margin: 20px auto;
+    width: 100%;
     position: relative;
   }
-  .intellectual-property-item {
-    width: 50%;
-    height: 141px;
+  .animation-box--item {
     position: absolute;
-  }
-  .intellectual-property-item_patent, .intellectual-property-item_trademark, .intellectual-property-item_design, .intellectual-property-item_copyright {
-    padding: 0;
-    border-radius: 25px;
-    width: 100%;
-    height: 100%;
-  }
-  .intellectual-property-item_patent-header, .intellectual-property-item_trademark-header, .intellectual-property-item_design-header, .intellectual-property-item_copyright-header {
-    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
+    width: 141px;
+    height: 141px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    position: relative;
-  }
-  .intellectual-property-item_patent-header svg, .intellectual-property-item_trademark-header svg, .intellectual-property-item_design-header svg, .intellectual-property-item_copyright-header svg {
-    font-size: 24px;
-    margin-bottom: 13px;
-  }
-  .intellectual-property-item_patent-header .name, .intellectual-property-item_trademark-header .name, .intellectual-property-item_design-header .name, .intellectual-property-item_copyright-header .name {
-    font-family: "Raleway";
-    font-size: 18px;
-    line-height: 16px;
-  }
-  .intellectual-property-item_patent-header .question, .intellectual-property-item_trademark-header .question, .intellectual-property-item_design-header .question, .intellectual-property-item_copyright-header .question {
-    position: absolute;
-    right: -20px;
-    background-color: white;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-  }
-  .intellectual-property-item_patent-header .question svg, .intellectual-property-item_trademark-header .question svg, .intellectual-property-item_design-header .question svg, .intellectual-property-item_copyright-header .question svg {
-    font-size: 18px;
-    margin: 0;
-  }
-  .intellectual-property-item_patent-content, .intellectual-property-item_trademark-content, .intellectual-property-item_design-content, .intellectual-property-item_copyright-content {
-    display: none;
-  }
-  .intellectual-property-item:nth-child(odd) {
-    padding-right: 10px;
-    left: 0;
-  }
-  .intellectual-property-item:nth-child(even) {
-    padding-left: 10px;
-    right: 0;
-  }
-  .intellectual-property-item:nth-child(-1n + 2) {
-    padding-top: 10px;
-  }
-  .intellectual-property-item:nth-child(n + 3) {
-    padding-bottom: 10px;
-    top: 160px;
-  }
-  .intellectual-property-item_patent {
-    background-color: #5b2080;
-  }
-  .intellectual-property-item_patent .question {
-    color: #5b2080;
-  }
-  .intellectual-property-item_trademark {
-    background-color: #7a58a1;
-  }
-  .intellectual-property-item_trademark .question {
-    color: #7a58a1;
-  }
-  .intellectual-property-item_design {
-    background-color: #3c8d74;
-  }
-  .intellectual-property-item_design .question {
-    color: #3c8d74;
-  }
-  .intellectual-property-item_copyright {
-    background-color: #096e4a;
-  }
-  .intellectual-property-item_copyright .question {
-    color: #096e4a;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 25px;
+    cursor: pointer;
   }
 }
 
