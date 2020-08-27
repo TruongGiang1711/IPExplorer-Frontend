@@ -44,44 +44,93 @@
                 </div>
             </header>
             <wrapper class="overflow-auto h-100">
-                <div class="content-myAccount">
+                <div class="content-ip ip">
                     <div class="title">Next, any registered IP you already have</div>
                     <div>
                         <div class="description">Patents, trademarks and designs all have to be officially
                             registered at Dir Jen Haki.</br>Copyright can also be registered, but this is optional.
                         </div>
                     </div>
-                    <div>
-                        <div class="animation-box">
-                            <form action=""
-                                style="background-color: bisque; width: 100%; position: absolute; left: 0px; top: 50px; height: 0">
-                            </form>
-                            <div class="animation-box--item" style="background-color: #5B2080; top: 0px; left: 0px;">
-                                Patent</div>
-                            <div class="animation-box--item" style="background-color: #7A58A1; top: 0px; left: 160px;">
-                                Trademark</div>
-                            <div class="animation-box--item" style="background-color: #3C8D74; top: 161px; left: 0px;">
-                                Design</div>
-                            <div class="animation-box--item"
-                                style="background-color: #096E4A; top: 161px; left: 160px;">
-                                <span><i class="far fa-copyright"></i></span>
-                                <div class="name">Copyright</div>
+                    <div class="animation-box">
+                        <form class="needs-validation" action="" novalidate
+                            style="display: none; padding: 60px 0 30px 0">
+                            <div class="form-group text-left">
+                                <div class="">
+                                    <input type="text" class="form-control" id="validationCustom02" value=""
+                                        placeholder="Prefix / Number" required>
+                                </div>
+                                <div class="">
+                                    <input type="text" class="form-control" id="validationCustom03" value=""
+                                        placeholder="Prefix / Number" required>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-circle" href="">
+                                    <span><i class="fas fa-plus"></i></span>
+                                    <span>Add Row</span>
+                                </a>
+                                <a class="btn btn-circle" href="">
+                                    <span><i class="fas fa-save"></i></span>
+                                    <span>Save</span>
+                                </a>
+                            </div>
+                        </form>
+                        <div class="animation-box--item" style="background-color: #5B2080; top: 0px; left: 0px;">
+                            <div class="">
+                                <span><i class="fas fa-lightbulb"></i></span>
+                                <div class="name">Patent</div>
                                 <button type="button"
-                                    class="btn question d-flex align-items-center justify-content-center"
+                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
                                     data-toggle="popover" title="Popover title" data-placement="top"
                                     data-content="And here's some amazing content. It's very engaging. Right?">
                                     <i class="fas fa-question"></i>
                                 </button>
                             </div>
-                            <div class="animation-box--item" style="background-color: #3C8D74; top: 322px; left: 0px;">
+                        </div>
+                        <div class="animation-box--item" style="background-color: #7A58A1; top: 0px; left: 160px;">
+                            <div class="">
+                                <span><i class="fas fa-trademark"></i></i></span>
+                                <div class="name">Trademark</div>
+                                <button type="button"
+                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
+                                    data-toggle="popover" title="Popover title" data-placement="top"
+                                    data-content="And here's some amazing content. It's very engaging. Right?">
+                                    <i class="fas fa-question"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="animation-box--item" style="background-color: #3C8D74; top: 161px; left: 0px;">
+                            <div class="">
+                                <span><i class="fas fa-pencil-ruler"></i></span>
+                                <div class="name">Design</div>
+                                <button type="button"
+                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
+                                    data-toggle="popover" title="Popover title" data-placement="top"
+                                    data-content="And here's some amazing content. It's very engaging. Right?">
+                                    <i class="fas fa-question"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="animation-box--item" style="background-color: #096E4A; top: 161px; left: 160px;">
+                            <div class="">
+                                <span><i class="far fa-copyright"></i></span>
+                                <div class="name">Copyright</div>
+                                <button type="button"
+                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
+                                    data-toggle="popover" title="Popover title" data-placement="top"
+                                    data-content="And here's some amazing content. It's very engaging. Right?">
+                                    <i class="fas fa-question"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- <div class="animation-box--item" style="background-color: #3C8D74; top: 322px; left: 0px;">
                                 Patent 22</div>
                             <div class="animation-box--item"
-                                style="background-color: #096E4A; top: 322px; left: 160px;">Trademark 22</div>
-                        </div>
+                                style="background-color: #096E4A; top: 322px; left: 160px;">Trademark 22</div> -->
                     </div>
                     <div class="d-flex justify-content-between btn-group-footer">
-                        <a class="btn btn-custom btn-custom-outline" href="/intangibles.html">Previous</a>
-                        <a class="btn btn-custom btn-Allports" href="/ip.html">Continue</a>
+                        <a class="btn btn-custom btn-custom-outline" href="./business.html">Previous</a>
+                        <a class="btn btn-custom btn-Allports" href="./unregisteredCopyrights.html">Continue</a>
                     </div>
                 </div>
             </wrapper>
@@ -96,10 +145,23 @@
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/gsap.min.js"></script>
-    <script src="./assets/js/animation-box.js"></script>
+    <script src="./assets/js/animation-box-ip.js"></script>
     <script>
         $(document).ready(function () {
             $('[data-toggle="popover"]').popover()
+            animation_box()
+            $('[data-toggle="popover"]').on('show.bs.popover', function () {
+                $('.animation-box--item').off('click')
+            })
+            $('[data-toggle="popover"]').on('hidden.bs.popover', function () {
+                animation_box()
+            })
+            $('.animation-box--item').each(function (index, el) {
+                $(el).find('button.question').css('color', $(el).css('background-color'))
+            })
+            $('.animation-box--item').on('click', function () {
+                $('.btn-circle').css('color', $(this).css('background-color'))
+            })
         });
     </script>
 </body>

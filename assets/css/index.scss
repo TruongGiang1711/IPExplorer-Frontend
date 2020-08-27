@@ -3,15 +3,6 @@
 @media (min-width: 320px) {
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
     // index
-    .language {
-        margin: 20px 20px 15px 0;
-        font-family: "Calibri-Bold";
-        height: 16px;
-        @include font(16px, 23px);
-        i {
-            @include font(16px, 19px);
-        }
-    }
     .logo {
         padding-bottom: 30px;
     }
@@ -33,27 +24,38 @@
             }
         }
     }
-    .action-index {
-        margin-bottom: 50px;
-        & > :first-child {
-            margin-bottom: 20px;
-        }
-    }
-    .list-partner {
-        font-family: "Raleway";
-        @include font(14px, 16px);
-        > div {
-            &:first-child {
-                margin-bottom: 10px;
+    .content-index {
+        .language {
+            margin: 20px 20px 15px 0;
+            font-family: "Calibri-Bold";
+            height: 16px;
+            @include font(16px, 23px);
+            i {
+                @include font(16px, 19px);
             }
         }
-        .list-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .list-group-item {
-                padding: 0;
-                border: 0;
+        .action-index {
+            margin-bottom: 50px;
+            & > :first-child {
+                margin-bottom: 20px;
+            }
+        }
+        .list-partner {
+            font-family: "Raleway";
+            @include font(14px, 16px);
+            > div {
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+            }
+            .list-group {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .list-group-item {
+                    padding: 0;
+                    border: 0;
+                }
             }
         }
     }
@@ -65,14 +67,38 @@
                 label {
                     margin-bottom: 10px;
                 }
-                &:last-child {
-                    margin-bottom: 80px;
-                }
             }
         }
         .action {
             a:first-child {
                 margin-bottom: 15px;
+            }
+        }
+    }
+    .content-signin {
+        .form {
+            .form-group {
+                > div {
+                    .btn-forgot {
+                        font-family: "Raleway";
+                        @include font(15px, 18px);
+                        margin-bottom: 10px;
+                    }
+                    &:last-child {
+                        margin-bottom: 80px;
+                    }
+                }
+            }
+        }
+    }
+    .content-signup {
+        .form {
+            .form-group {
+                > div {
+                    &:last-child {
+                        margin-bottom: 70px;
+                    }
+                }
             }
         }
     }
@@ -207,6 +233,9 @@
         .btn-save {
             margin: 35px 0;
         }
+        .action-myAccount {
+            margin-top: 50px;
+        }
     }
 
     // business
@@ -231,23 +260,129 @@
         }
     }
 
-    // ip
-    .animation-box {
-        max-width: 300px;
-        margin: 20px auto;
-        width: 100%;
-        position: relative;
-        &--item {
-            position: absolute;
-            display: flex;
-            width: 141px;
-            height: 141px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #ffffff;
-            border-radius: 25px;
-            cursor: pointer;
+    // list unregistered Copyright
+    .list-group-item {
+        padding: 20px;
+        margin-bottom: 10px;
+        color: black;
+        transition: all ease-in-out 0.3s;
+        & + .list-group-item {
+            border-top-width: 1px;
+        }
+        &.active {
+            background-color: $Allports;
+            margin-top: 0;
+            border-left-width: 0;
+            color: white;
+        }
+        h5 {
+            font-family: "Calibri-Bold";
+            @include font(14px, 16px);
+        }
+        p {
+            margin-bottom: 0;
+            font-family: "Calibri-Light";
+            @include font(14px, 16px);
+        }
+    }
+    // ip, ip Intellectual Assets
+    .content-ip {
+        .animation-box {
+            max-width: 300px;
+            margin-top: 55px;
+            width: 100%;
+            position: relative;
+            &--item {
+                position: absolute;
+                display: flex;
+                width: 141px;
+                height: 141px;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: #ffffff;
+                border-radius: 25px;
+                padding: 9px;
+                cursor: pointer;
+                &.inactive {
+                    > div {
+                        height: 100%;
+                        justify-content: start;
+                        svg {
+                            margin-bottom: 10px;
+                            @include font(18px, 16px);
+                        }
+                        .name {
+                            @include font(14px, 16px);
+                        }
+                        .question {
+                            height: 30px;
+                            width: 30px;
+                            .fa-question {
+                                @include font(14px, 16px);
+                            }
+                        }
+                    }
+                }
+                > div {
+                    display: flex;
+                    flex-flow: column;
+                    &.active {
+                        display: flex;
+                        flex-flow: row;
+                        align-items: center;
+                        svg {
+                            margin-bottom: 0;
+                            margin-right: 23px;
+                        }
+                        .name {
+                            font-family: "Raleway";
+                        }
+                        .question {
+                            .fa-question {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    svg {
+                        @include font(24px, 16px);
+                        margin-bottom: 13px;
+                    }
+                    .name {
+                        font-family: "Raleway";
+                        @include font(18px, 16px);
+                        word-break: break-all;
+                    }
+                    .question {
+                        position: absolute;
+                        right: -20px;
+                        background-color: white;
+                        height: 40px;
+                        width: 40px;
+                        .fa-question {
+                            margin-bottom: 0;
+                            @include font(18px, 16px);
+                        }
+                    }
+                }
+            }
+        }
+        &.ip {
+            .form-group > div input {
+                margin-bottom: 10px;
+            }
+        }
+        &.IntellectualAssets {
+            .action-ipIntellectualAssets {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    //
+    .content-unregisteredCopyright {
+        .unregisteredCopyright-list {
+            margin-top: 55px;
         }
     }
 }

@@ -1,16 +1,5 @@
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-  .language {
-    margin: 20px 20px 15px 0;
-    font-family: "Calibri-Bold";
-    height: 16px;
-    font-size: 16px;
-    line-height: 23px;
-  }
-  .language i {
-    font-size: 16px;
-    line-height: 19px;
-  }
   .logo {
     padding-bottom: 30px;
   }
@@ -34,21 +23,32 @@
   .sologan > div:last-child {
     margin-bottom: 75px;
   }
-  .action-index {
+  .content-index .language {
+    margin: 20px 20px 15px 0;
+    font-family: "Calibri-Bold";
+    height: 16px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .content-index .language i {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .content-index .action-index {
     margin-bottom: 50px;
   }
-  .action-index > :first-child {
+  .content-index .action-index > :first-child {
     margin-bottom: 20px;
   }
-  .list-partner {
+  .content-index .list-partner {
     font-family: "Raleway";
     font-size: 14px;
     line-height: 16px;
   }
-  .list-partner > div:first-child {
+  .content-index .list-partner > div:first-child {
     margin-bottom: 10px;
   }
-  .list-partner .list-group {
+  .content-index .list-partner .list-group {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,18 +59,27 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .list-partner .list-group .list-group-item {
+  .content-index .list-partner .list-group .list-group-item {
     padding: 0;
     border: 0;
   }
   .form .form-group > div label {
     margin-bottom: 10px;
   }
-  .form .form-group > div:last-child {
-    margin-bottom: 80px;
-  }
   .form .action a:first-child {
     margin-bottom: 15px;
+  }
+  .content-signin .form .form-group > div .btn-forgot {
+    font-family: "Raleway";
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  .content-signin .form .form-group > div:last-child {
+    margin-bottom: 80px;
+  }
+  .content-signup .form .form-group > div:last-child {
+    margin-bottom: 70px;
   }
   .content-terms {
     margin: 20px 0;
@@ -206,6 +215,9 @@
   .content-myAccount .btn-save {
     margin: 35px 0;
   }
+  .content-myAccount .action-myAccount {
+    margin-top: 50px;
+  }
   .content-business .form-group > div {
     margin-bottom: 20px;
   }
@@ -218,13 +230,40 @@
   .content-business .form-group > div .creative_list .item-carousel:first-child {
     margin-bottom: 10px;
   }
-  .animation-box {
+  .list-group-item {
+    padding: 20px;
+    margin-bottom: 10px;
+    color: black;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+  }
+  .list-group-item + .list-group-item {
+    border-top-width: 1px;
+  }
+  .list-group-item.active {
+    background-color: #007f9c;
+    margin-top: 0;
+    border-left-width: 0;
+    color: white;
+  }
+  .list-group-item h5 {
+    font-family: "Calibri-Bold";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .list-group-item p {
+    margin-bottom: 0;
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-ip .animation-box {
     max-width: 300px;
-    margin: 20px auto;
+    margin-top: 55px;
     width: 100%;
     position: relative;
   }
-  .animation-box--item {
+  .content-ip .animation-box--item {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -240,7 +279,94 @@
     text-align: center;
     color: #ffffff;
     border-radius: 25px;
+    padding: 9px;
     cursor: pointer;
+  }
+  .content-ip .animation-box--item.inactive > div {
+    height: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .content-ip .animation-box--item.inactive > div svg {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 16px;
+  }
+  .content-ip .animation-box--item.inactive > div .name {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-ip .animation-box--item.inactive > div .question {
+    height: 30px;
+    width: 30px;
+  }
+  .content-ip .animation-box--item.inactive > div .question .fa-question {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-ip .animation-box--item > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .content-ip .animation-box--item > div.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content-ip .animation-box--item > div.active svg {
+    margin-bottom: 0;
+    margin-right: 23px;
+  }
+  .content-ip .animation-box--item > div.active .name {
+    font-family: "Raleway";
+  }
+  .content-ip .animation-box--item > div.active .question .fa-question {
+    margin-right: 0;
+  }
+  .content-ip .animation-box--item > div svg {
+    font-size: 24px;
+    line-height: 16px;
+    margin-bottom: 13px;
+  }
+  .content-ip .animation-box--item > div .name {
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 16px;
+    word-break: break-all;
+  }
+  .content-ip .animation-box--item > div .question {
+    position: absolute;
+    right: -20px;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+  }
+  .content-ip .animation-box--item > div .question .fa-question {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 16px;
+  }
+  .content-ip.ip .form-group > div input {
+    margin-bottom: 10px;
+  }
+  .content-ip.IntellectualAssets .action-ipIntellectualAssets {
+    margin-top: 20px;
+  }
+  .content-unregisteredCopyright .unregisteredCopyright-list {
+    margin-top: 55px;
   }
 }
 

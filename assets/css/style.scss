@@ -6,6 +6,10 @@ body {
 }
 
 .btn {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:focus {
         box-shadow: none;
     }
@@ -14,9 +18,21 @@ body {
 .color-Allports {
     color: $Allports;
 }
+.color-Honey_Flower {
+    color: $Honey_Flower;
+}
+.color-Deluge {
+    color: $Deluge;
+}
+.color-Viridian {
+    color: $Viridian;
+}
+.color-Salem {
+    color: $Salem;
+}
 
 .btn-custom {
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 17px 27px;
     color: white;
     font-family: "Raleway";
@@ -34,7 +50,7 @@ body {
     span:first-child {
         height: 50px;
         width: 50px;
-        border: 1px solid $Allports;
+        border: 1px solid;
         border-radius: 50%;
         display: inline-flex;
         align-items: center;
