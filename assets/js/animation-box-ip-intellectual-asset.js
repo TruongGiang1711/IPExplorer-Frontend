@@ -57,13 +57,19 @@ function animation_box() {
             });
         } else {
             // height 200px test, actually height auto
-            console.log($list);
+            $($list).each(function (index, el) {
+                if ($this.parent($parent).find($list).hasClass($this.find('.name').text()) && $this.index() === index + 1) {
+                    $(el).addClass('active')
+                } else {
+                    $(el).removeClass('active')
+                }
+            })
             $form.fadeIn(duration * 1000);
             $this.addClass('active').removeClass('inactive');
             $item.not($this).addClass('inactive').removeClass('active');
             $this.children().addClass('active')
             $item.not($this).children().removeClass('active')
-            $('.nametag .tag').append(" - " + $(this).find('.name').text())
+            $('.nametag .tag').replaceWith($('<span class="tag"> - ' + $this.find('.name').text() + '</span>'))
             if (firstAnimation) {
                 $parentX = $parent.offset().top;
                 $parentY = $parent.offset().left;

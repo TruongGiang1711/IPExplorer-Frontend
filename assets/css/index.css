@@ -362,6 +362,12 @@
   .content-ip.ip .form-group > div input {
     margin-bottom: 10px;
   }
+  .content-ip.IntellectualAssets .ipIntellectualAssets-list {
+    display: none;
+  }
+  .content-ip.IntellectualAssets .ipIntellectualAssets-list.active {
+    display: block;
+  }
   .content-ip.IntellectualAssets .action-ipIntellectualAssets {
     margin-top: 20px;
   }

@@ -373,13 +373,19 @@
             }
         }
         &.IntellectualAssets {
+            .ipIntellectualAssets-list{
+                display: none;
+                &.active{
+                    display: block;
+                }
+            }
             .action-ipIntellectualAssets {
                 margin-top: 20px;
             }
         }
     }
 
-    //
+    // unregistered Copyright
     .content-unregisteredCopyright {
         .unregisteredCopyright-list {
             margin-top: 55px;
