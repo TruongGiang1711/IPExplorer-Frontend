@@ -1,6 +1,6 @@
 // global variables
 var firstAnimation = true;
-var duration = 0.5;
+var duration = 0;
 
 // default box variables
 var defaultWidth = 141;
@@ -27,6 +27,7 @@ function animation_box() {
     var $parent = $('.animation-box');
     var $form = $('.animation-box form');
     var $item = $('.animation-box--item');
+    var $list = $('.ipIntellectualAssets-list');
     $parent.height($item.innerHeight() * 2 + 20)
     $('.animation-box--item').on('click', function (e) {
         var $this = $(this);
@@ -34,12 +35,13 @@ function animation_box() {
             $form.fadeOut(duration * 1000);
             $item.removeClass('active').removeClass('inactive');
             $this.children().removeClass('active')
-            $('.nametag .tag').remove() // đang làm tại đây
+            $('.nametag .tag').contents().filter(function () {
+                return this.nodeType === 3;
+            }).remove();
             $item.each(function (index, el) {
                 $itemThis = $(this);
                 gsap.to($parent, {
-                    height:
-                        $form.innerHeight() + activeHeight + Math.floor(inactiveItemsPerRow),
+                    height: $item.innerHeight() * 2 + 30,
                 });
                 gsap.to($itemThis, {
                     x: (defaultWidth + defaultGapLeft) * (index % defaultItemsPerRow),
@@ -55,12 +57,13 @@ function animation_box() {
             });
         } else {
             // height 200px test, actually height auto
+            console.log($list);
             $form.fadeIn(duration * 1000);
             $this.addClass('active').removeClass('inactive');
             $item.not($this).addClass('inactive').removeClass('active');
             $this.children().addClass('active')
             $item.not($this).children().removeClass('active')
-            $('.nametag .tag').append($(this).find('.name').text())
+            $('.nametag .tag').append(" - " + $(this).find('.name').text())
             if (firstAnimation) {
                 $parentX = $parent.offset().top;
                 $parentY = $parent.offset().left;
@@ -90,7 +93,7 @@ function animation_box() {
                 });
                 gsap.to($itemThis, {
                     x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
-                    y: $form.innerHeight(),
+                    y: $form.innerHeight() + 10,
                     width: inactiveWidth,
                     height: inactiveHeight,
                     top: 0,
