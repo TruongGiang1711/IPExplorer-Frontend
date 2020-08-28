@@ -44,7 +44,7 @@
                 </div>
             </header>
             <wrapper class="overflow-auto">
-                <div class="content-business">
+                <div class="content content-business">
                     <div class="title">Before we begin, tell us a bit about your business!</div>
                     <form>
                         <div class="form-group">
@@ -722,8 +722,12 @@
             console.log(n)
             $('.owl-wrapper').trigger('owl.goTo', n);
         });
-        $(document).on('click', '.card-header', function () {
-            $(this).toggleClass('active');
+        $(document).on('click', '.card-header button', function () {
+            $(this).parents('.card-header').toggleClass('active');
+            $(this).parents('.card-header').children('.collapse').on('shown.bs.collapse', function () {
+                console.log(1);
+                $(this).parents('card').find('.card-header').removeClass('active');
+            })
         });
     </script>
 </body>

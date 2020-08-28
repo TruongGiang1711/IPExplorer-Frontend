@@ -173,9 +173,6 @@
   .content-intangibles .intangibles-details .intangibles-details_content:last-child {
     margin-bottom: 30px;
   }
-  .content-myAccount {
-    margin: 20px 0 0 0;
-  }
   .content-myAccount .evaluation_sucess {
     font-family: "Raleway";
     font-weight: bold;
@@ -373,6 +370,35 @@
   }
   .content-unregisteredCopyright .unregisteredCopyright-list {
     margin-top: 55px;
+  }
+  .content-report .report-info h5 {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .content-report .report-info h5.score {
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .content-report .report-info p {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-report .report-info .title-try {
+    margin: 50px auto 20px;
+  }
+  .content-report .report-info .info-try p {
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+  .content-report .report-info .info-company {
+    font-family: "Raleway";
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 

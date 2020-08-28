@@ -198,7 +198,6 @@
 
     // my Account
     .content-myAccount {
-        margin: 20px 0 0 0;
         .evaluation_sucess {
             font-family: "Raleway";
             font-weight: bold;
@@ -373,9 +372,9 @@
             }
         }
         &.IntellectualAssets {
-            .ipIntellectualAssets-list{
+            .ipIntellectualAssets-list {
                 display: none;
-                &.active{
+                &.active {
                     display: block;
                 }
             }
@@ -389,6 +388,38 @@
     .content-unregisteredCopyright {
         .unregisteredCopyright-list {
             margin-top: 55px;
+        }
+    }
+
+    // report
+    .content-report {
+        .report-info {
+            h5 {
+                font-family: "Raleway";
+                font-weight: bold;
+                @include font(15px, 18px);
+                &.score {
+                    @include font(21px, 25px);
+                }
+            }
+            p {
+                font-family: "Calibri-Light";
+                @include font(14px, 16px);
+            }
+            .title-try {
+                margin: 50px auto 20px;
+            }
+            .info-try {
+                p {
+                    font-family: "Raleway";
+                    @include font(18px, 21px);
+                    margin-bottom: 20px;
+                }
+            }
+            .info-company {
+                font-family: "Raleway";
+                @include font(12px, 14px);
+            }
         }
     }
 }

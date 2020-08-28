@@ -160,6 +160,9 @@ body {
         wrapper {
             width: 100%;
             padding: 0 30px;
+            .content {
+                margin-top: 20px;
+            }
         }
         .title {
             font-family: "Raleway";
