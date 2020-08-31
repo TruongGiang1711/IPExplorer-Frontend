@@ -547,7 +547,7 @@
                 </div>
             </wrapper>
         </div>
-    </div>
+    </div>`
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, Font Awesome -->
@@ -724,7 +724,7 @@
         });
         $(document).on('click', '.card-header button', function () {
             $(this).parents('.card-header').toggleClass('active');
-            $(this).parents('.card-header').children('.collapse').on('shown.bs.collapse', function () {
+            $(this).parents('.card-header').children('.collapse').on('shown.bs.collapse', function () { // active chưa hoàn thiện
                 console.log(1);
                 $(this).parents('card').find('.card-header').removeClass('active');
             })

@@ -259,6 +259,7 @@
     margin-top: 55px;
     width: 100%;
     position: relative;
+    min-height: 300px;
   }
   .content-ip .animation-box--item {
     position: absolute;
@@ -297,6 +298,7 @@
   .content-ip .animation-box--item.inactive > div .question {
     height: 30px;
     width: 30px;
+    top: 30px;
   }
   .content-ip .animation-box--item.inactive > div .question .fa-question {
     font-size: 14px;
@@ -330,6 +332,9 @@
   .content-ip .animation-box--item > div.active .name {
     font-family: "Raleway";
   }
+  .content-ip .animation-box--item > div.active .question {
+    top: unset;
+  }
   .content-ip .animation-box--item > div.active .question .fa-question {
     margin-right: 0;
   }
@@ -350,6 +355,7 @@
     background-color: white;
     height: 40px;
     width: 40px;
+    top: 50px;
   }
   .content-ip .animation-box--item > div .question .fa-question {
     margin-bottom: 0;
@@ -359,13 +365,16 @@
   .content-ip.ip .form-group > div input {
     margin-bottom: 10px;
   }
-  .content-ip.IntellectualAssets .ipIntellectualAssets-list {
+  .content-ip.IntellectualAssets .animation-box {
+    margin-top: 20px;
+  }
+  .content-ip.IntellectualAssets .animation-box .ipIntellectualAssets-list {
     display: none;
   }
-  .content-ip.IntellectualAssets .ipIntellectualAssets-list.active {
+  .content-ip.IntellectualAssets .animation-box .ipIntellectualAssets-list.active {
     display: block;
   }
-  .content-ip.IntellectualAssets .action-ipIntellectualAssets {
+  .content-ip.IntellectualAssets .animation-box .action-ipIntellectualAssets {
     margin-top: 20px;
   }
   .content-unregisteredCopyright .unregisteredCopyright-list {
