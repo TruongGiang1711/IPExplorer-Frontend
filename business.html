@@ -501,7 +501,7 @@
                         <div class="form-group">
                             <div class="">
                                 <label for="">How Many Years Trading?</label>
-                                <input type="range" class="form-control-range" id="formControlRange">
+                                <input type="range" class="form-control-range" />
                                 <span class="d-flex justify-content-between">
                                     <div style="padding-left: 5px;">0</div>
                                     <div style="padding-left: 15px;">5</div>
@@ -558,9 +558,9 @@
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function () {
-            document.getElementById("formControlRange").oninput = function () {
-                this.style.background = 'linear-gradient(to right, #007F9C 0%, #007F9C ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
-            };
+            // document.getElementById("formControlRange").oninput = function () {
+            //     this.style.background = 'linear-gradient(to right, #007F9C 0%, #007F9C ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
+            // };
             // if ($('.container-custom') < 480) { // only for mobile devices
             //     $('.creative_list .owl-carousel .item').each(function (index) {
             //         if (index % 2 == 0) { // wrap by 2 items
@@ -724,8 +724,7 @@
         });
         $(document).on('click', '.card-header button', function () {
             $(this).parents('.card-header').toggleClass('active');
-            $(this).parents('.card-header').children('.collapse').on('shown.bs.collapse', function () { // active chưa hoàn thiện
-                console.log(1);
+            $(this).parents('.card-header').children('.collapse').on('shown.bs.collapse', function () {
                 $(this).parents('card').find('.card-header').removeClass('active');
             })
         });

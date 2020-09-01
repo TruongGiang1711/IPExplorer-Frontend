@@ -23,10 +23,10 @@ var inactiveGapTop = 20;
 var inactiveRadius = 15;
 var inactiveItemsPerRow = 3;
 
+var $parent = $('.animation-box');
+var $form = $('.animation-box form');
+var $item = $('.animation-box--item');
 function animation_box() {
-    var $parent = $('.animation-box');
-    var $form = $('.animation-box form');
-    var $item = $('.animation-box--item');
     $parent.height($form.innerHeight() + activeHeight + Math.floor(inactiveItemsPerRow))
     $('.animation-box--item').on('click', function (e) {
         var $this = $(this);
@@ -53,7 +53,6 @@ function animation_box() {
                 });
             });
         } else {
-            // height 200px test, actually height auto
             $form.fadeIn(duration * 1000);
             $this.addClass('active').removeClass('inactive');
             $item.not($this).addClass('inactive').removeClass('active');
@@ -99,5 +98,26 @@ function animation_box() {
             });
             firstAnimation = false;
         }
+    });
+}
+
+function addRowInput(heightInput) {
+    console.log(heightInput);
+    gsap.to($parent, {
+        height:
+            $form.innerHeight() + 100 + (heightInput ? heightInput : 0),
+    });
+    $('.animation-box--item.inactive').each(function (index, el) {
+        var $itemThis = $(this);
+        gsap.to($itemThis, {
+            x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
+            y: $form.innerHeight() + (heightInput ? heightInput : 0),
+            width: inactiveWidth,
+            height: inactiveHeight,
+            top: 0,
+            left: 0,
+            borderRadius: inactiveRadius,
+            duration: duration
+        });
     });
 }
