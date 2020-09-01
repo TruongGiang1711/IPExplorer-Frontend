@@ -102,16 +102,15 @@ function animation_box() {
 }
 
 function addRowInput(heightInput) {
-    console.log(heightInput);
+    var formHeight = $form.innerHeight() + 100 + heightInput
     gsap.to($parent, {
-        height:
-            $form.innerHeight() + 100 + (heightInput ? heightInput : 0),
+        height: formHeight,
     });
     $('.animation-box--item.inactive').each(function (index, el) {
         var $itemThis = $(this);
         gsap.to($itemThis, {
             x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
-            y: $form.innerHeight() + (heightInput ? heightInput : 0),
+            y: $form.innerHeight() + heightInput,
             width: inactiveWidth,
             height: inactiveHeight,
             top: 0,

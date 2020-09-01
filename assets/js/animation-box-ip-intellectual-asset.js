@@ -62,6 +62,7 @@ function animation_box() {
                     $(el).addClass('active')
                 } else {
                     $(el).removeClass('active')
+                    $(el).find('.list-group-item').removeClass('active')
                 }
             })
             $form.fadeIn(duration * 1000);

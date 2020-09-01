@@ -31,9 +31,14 @@
             margin: 20px 20px 15px 0;
             font-family: "Calibri-Bold";
             height: 16px;
+            display: flex;
             @include font(16px, 23px);
-            i {
+            svg {
                 @include font(16px, 19px);
+                margin-right: 10px;
+            }
+            span {
+                margin-top: -4px;
             }
         }
         .action-index {
@@ -84,7 +89,7 @@
                     .btn-forgot {
                         font-family: "Raleway";
                         @include font(15px, 18px);
-                        margin-bottom: 10px;
+                        margin: 0 20px 10px 0;
                     }
                     &:last-child {
                         margin-bottom: 80px;
@@ -200,6 +205,9 @@
 
     // my Account
     .content-myAccount {
+        > div {
+            padding-right: 30px;
+        }
         .evaluation_sucess {
             font-family: "Raleway";
             font-weight: bold;

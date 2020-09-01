@@ -27,12 +27,19 @@
     margin: 20px 20px 15px 0;
     font-family: "Calibri-Bold";
     height: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 16px;
     line-height: 23px;
   }
-  .content-index .language i {
+  .content-index .language svg {
     font-size: 16px;
     line-height: 19px;
+    margin-right: 10px;
+  }
+  .content-index .language span {
+    margin-top: -4px;
   }
   .content-index .action-index {
     margin-bottom: 50px;
@@ -73,7 +80,7 @@
     font-family: "Raleway";
     font-size: 15px;
     line-height: 18px;
-    margin-bottom: 10px;
+    margin: 0 20px 10px 0;
   }
   .content-signin .form .form-group > div:last-child {
     margin-bottom: 80px;
@@ -172,6 +179,9 @@
   }
   .content-intangibles .intangibles-details .intangibles-details_content:last-child {
     margin-bottom: 30px;
+  }
+  .content-myAccount > div {
+    padding-right: 30px;
   }
   .content-myAccount .evaluation_sucess {
     font-family: "Raleway";

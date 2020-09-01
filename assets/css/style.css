@@ -142,7 +142,7 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
+  background: #007f9c;
 }
 
 @font-face {
@@ -231,6 +231,14 @@ body {
     font-size: 14px;
     line-height: 21px;
     margin-bottom: 20px;
+  }
+  .container-custom .form-group > div .password {
+    position: relative;
+  }
+  .container-custom .form-group > div .password .pass-eye {
+    position: absolute;
+    right: 10px;
+    top: 25%;
   }
   .container-custom .item-carousel {
     border-radius: 20px;

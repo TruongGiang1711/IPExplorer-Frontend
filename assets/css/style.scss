@@ -126,7 +126,7 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+    background: $Allports;
 }
 
 @font-face {
@@ -214,6 +214,17 @@ body {
                     font-weight: bold;
                     @include font(14px, 21px);
                     margin-bottom: 20px;
+                }
+                .password {
+                    position: relative;
+                    .pass-eye {
+                        position: absolute;
+                        right: 10px;
+                        top: 25%;
+                        // .fa-eye-slash {
+                        //     display: none;
+                        // }
+                    }
                 }
             }
         }
