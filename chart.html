@@ -31,7 +31,7 @@
                             <img width="50" src="./assets/images/logo.svg">
                         </div>
                         <div class="nametag">
-                            <div>Intellectual Property</div>
+                            <div>Analysis</div>
                             <div></div>
                         </div>
                         <div class="progress position-absolute w-100">
@@ -66,65 +66,43 @@
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/chart.min.js"></script>
     <script>
-        var data = {
-            // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 0.1, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        };
-        var options = {
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        var value = data.datasets[0].data[tooltipItem.index];
-                        var label = data.labels[tooltipItem.index];
-
-                        if (value === 0.1) {
-                            value = 0;
-                        }
-
-                        return label + ': ' + value + ' %';
-                    }
-                }
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
+        var canvasP = document.getElementById("myChart");
+        var ctxP = canvasP.getContext('2d');
+        var myPieChart = new Chart(ctxP, {
+            type: 'pie',
+            data: {
+                labels: ["Värde 1", "Värde 2", "Värde 3", "Värde 4", "Värde 5", "Värde 6", "Värde 7"],
+                datasets: [{
+                    data: [1, 5, 10, 20, 50, 70, 50],
+                    backgroundColor: ["#64B5F6", "#FFD54F", "#2196F3", "#FFC107", "#1976D2", "#FFA000", "#0D47A1"],
+                    hoverBackgroundColor: ["#B2EBF2", "#FFCCBC", "#4DD0E1", "#FF8A65", "#00BCD4", "#FF5722", "#0097A7"]
                 }]
             },
-        }
-        var ctx = document.getElementById('myChart');
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var ctx = $('#myChart');
-        var ctx = 'myChart';
-        $(document).ready(function () {
-            $('[data-toggle="popover"]').popover();
-            var myPieChart = new Chart(ctx, {
-                type: 'pie',
-                data: data,
-                options: options,
-            });
+            options: {
+                legend: {
+                    display: false,
+                }
+            }
         });
+
+        canvasP.onclick = function (e) {
+            var slice = myPieChart.getElementAtEvent(e);
+            if (!slice.length) return; // return if not clicked on slice
+            var label = slice[0]._model.label;
+            switch (label) {
+                // add case for each label/slice
+                case 'Värde 5':
+                    alert('clicked on slice 5');
+                    window.open('www.example.com/foo');
+                    break;
+                case 'Värde 6':
+                    alert('clicked on slice 6');
+                    window.open('www.example.com/bar');
+                    break;
+                // add rests ...
+            }
+        }
+
     </script>
 </body>
 
