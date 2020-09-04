@@ -56,10 +56,10 @@
                                     <label for="validationCustom02">Password</label>
                                     <div class="password">
                                         <input type="password" class="form-control" id="validationCustom03" value=""
-                                            placeholder="Password" required data-toggle="password">
-                                        <span class="pass-eye">
+                                            placeholder="Password" required>
+                                        <!-- <span class="pass-eye">
                                             <i class="far fa-eye"></i>
-                                        </span>
+                                        </span> -->
                                     </div>
                                     <!-- <div class="valid-feedback">
                                     Looks good!
@@ -110,18 +110,14 @@
             }, false);
         })();
         $(document).ready(function () {
-            $(".fa-eye").on("click", function () {
-                $(this).toggleClass("fa-eye-slash");
-                var type = $(".password input").attr("type");
-                if (type == "text") {
-                    $(this).toggleClass("fa-eye-slash");
-                    $(".password input").attr("type", "password");
-                }
-                else {
-                    $(this).toggleClass("fa-eye");
-                    $(".password input").attr("type", "text");
-                }
-            });
+            // $(".fa-eye").on("click", function () {
+            //     var type = $(".password input").attr("type");
+            //     if (x.type === "password") {
+            //         x.type = "text";
+            //     } else {
+            //         x.type = "password";
+            //     }
+            // });
         })
     </script>
 </body>

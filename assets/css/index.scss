@@ -112,9 +112,18 @@
 
     // terms
     .content-terms {
-        margin: 20px 0;
+        // margin: 20px 0;
         font-family: "Calibri-Light";
         @include font(12px, 14px);
+        position: relative;
+        .gradient {
+            position: absolute;
+            bottom: 0;
+            height: 50px;
+            width: 100%;
+            background-color: #ffffff50; /* For browsers that do not support gradients */
+            background-image: linear-gradient(#ffffff50, white); /* Standard syntax (must be last) */
+        }
     }
     .footer-terms {
         width: 100%;
@@ -249,7 +258,11 @@
 
     // business
     .content-business {
+        .title {
+            padding: 0 30px;
+        }
         .form-group {
+            padding: 0 30px;
             > div {
                 margin-bottom: 20px;
                 label {
@@ -257,6 +270,11 @@
                 }
                 input {
                     margin-bottom: 10px;
+                }
+                .card-body {
+                    > div {
+                        padding: 0 0 0 30px;
+                    }
                 }
                 .creative_list {
                     .item-carousel {

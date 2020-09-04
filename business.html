@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </header>
-            <wrapper class="overflow-auto">
+            <wrapper class="overflow-auto p-0">
                 <div class="content content-business">
                     <div class="title">Before we begin, tell us a bit about your business!</div>
                     <form>
@@ -54,11 +54,12 @@
                                     placeholder="Business Name" required>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group p-0">
                             <div class="">
-                                <label for="" style="margin-bottom: 10px;">Your Business Sector & Subsector</label>
+                                <label for="" style="margin-bottom: 10px; padding: 0 30px;">Your Business Sector &
+                                    Subsector</label>
                                 <div
-                                    style="margin-bottom: 20px; font-family: 'Calibri-Light'; font-size: 12px; line-height: 14px;">
+                                    style="margin-bottom: 20px; font-family: 'Calibri-Light'; font-size: 12px; line-height: 14px; padding: 0 30px;">
                                     Please select one sector & subsector.</div>
                                 <div class="accordion" id="accordionExample">
                                     <div class="card">
@@ -717,16 +718,16 @@
             })
         })
         // Custom Navigation Events
-        $(document).on('click', '.owl-item', function () {
-            n = $(this).index();
-            console.log(n)
-            $('.owl-wrapper').trigger('owl.goTo', n);
-        });
+        // $(document).on('click', '.owl-item', function () {
+        //     n = $(this).index();
+        //     $('.owl-wrapper').trigger('owl.goTo', n);
+        // });
         $(document).on('click', '.card-header button', function () {
             $(this).parents('.card-header').toggleClass('active');
-            $(this).parents('.card-header').children('.collapse').on('shown.bs.collapse', function () {
-                $(this).parents('card').find('.card-header').removeClass('active');
-            })
+            // $('.card-header').each(function (index, item) {
+            //     console.log(item);
+            //     $('.card .card-header').not('.active').removeClass('active')
+            // })
         });
     </script>
 </body>

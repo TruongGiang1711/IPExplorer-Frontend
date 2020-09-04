@@ -89,10 +89,21 @@
     margin-bottom: 70px;
   }
   .content-terms {
-    margin: 20px 0;
     font-family: "Calibri-Light";
     font-size: 12px;
     line-height: 14px;
+    position: relative;
+  }
+  .content-terms .gradient {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff50;
+    /* For browsers that do not support gradients */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff50), to(white));
+    background-image: linear-gradient(#ffffff50, white);
+    /* Standard syntax (must be last) */
   }
   .footer-terms {
     width: 100%;
@@ -225,6 +236,12 @@
   .content-myAccount .action-myAccount {
     margin-top: 50px;
   }
+  .content-business .title {
+    padding: 0 30px;
+  }
+  .content-business .form-group {
+    padding: 0 30px;
+  }
   .content-business .form-group > div {
     margin-bottom: 20px;
   }
@@ -233,6 +250,9 @@
   }
   .content-business .form-group > div input {
     margin-bottom: 10px;
+  }
+  .content-business .form-group > div .card-body > div {
+    padding: 0 0 0 30px;
   }
   .content-business .form-group > div .creative_list .item-carousel:first-child {
     margin-bottom: 10px;
