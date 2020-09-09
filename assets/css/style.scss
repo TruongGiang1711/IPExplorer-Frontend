@@ -3,6 +3,7 @@
 html,
 body {
     height: 100%;
+    overflow: hidden;
 }
 
 .btn {
@@ -67,6 +68,11 @@ body {
     height: 40px;
     background-color: #2222221a;
     box-shadow: 0 0 25px #71b4c429;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+    display: none;
 }
 
 .form-control-range {
@@ -149,11 +155,14 @@ body {
         > div {
             max-height: 667px;
             height: 100%;
+            position: relative;
         }
         header {
             padding: 50px 30px 30px 30px;
             &.sticky-top-custom {
-                background-color: white;
+                position: absolute;
+                background-color: #fffffff4;
+                z-index: 4;
             }
             > div {
                 .logo {
@@ -188,7 +197,7 @@ body {
             width: 100%;
             padding: 0 30px;
             .content {
-                margin-top: 20px;
+                margin-top: 180px;
             }
         }
         .title {
@@ -221,9 +230,6 @@ body {
                         position: absolute;
                         right: 10px;
                         top: 25%;
-                        // .fa-eye-slash {
-                        //     display: none;
-                        // }
                     }
                 }
             }
@@ -251,13 +257,13 @@ body {
                     border: 1px solid $Allports;
                     border-radius: 5px;
                     margin-bottom: 0;
-                    padding: 7px 0;
+                    padding: 0;
                     margin: 0 30px;
                     transition: 0.3s;
                     .btn-block {
                         font-family: "Calibri-Light";
                         @include font(14px, 21px);
-                        padding: 0;
+                        padding: 7px 0;
                     }
                     &.active {
                         background-color: $Allports;
@@ -272,7 +278,7 @@ body {
             }
         }
         .btn-group-footer {
-            padding: 0 30px;
+            // padding: 0 30px;
             margin: 50px 0;
         }
     }

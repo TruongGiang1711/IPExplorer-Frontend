@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 .btn {
@@ -88,6 +89,11 @@ body {
           box-shadow: 0 0 25px #71b4c429;
 }
 
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
 .form-control-range {
   -webkit-appearance: none;
   width: 100%;
@@ -168,12 +174,15 @@ body {
   .container-custom > div {
     max-height: 667px;
     height: 100%;
+    position: relative;
   }
   .container-custom header {
     padding: 50px 30px 30px 30px;
   }
   .container-custom header.sticky-top-custom {
-    background-color: white;
+    position: absolute;
+    background-color: #fffffff4;
+    z-index: 4;
   }
   .container-custom header > div .logo {
     border-bottom: 1px solid;
@@ -204,7 +213,7 @@ body {
     padding: 0 30px;
   }
   .container-custom wrapper .content {
-    margin-top: 20px;
+    margin-top: 180px;
   }
   .container-custom .title {
     font-family: "Raleway";
@@ -270,7 +279,7 @@ body {
     border: 1px solid #007f9c;
     border-radius: 5px;
     margin-bottom: 0;
-    padding: 7px 0;
+    padding: 0;
     margin: 0 30px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -279,7 +288,7 @@ body {
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 21px;
-    padding: 0;
+    padding: 7px 0;
   }
   .container-custom .accordion .card .card-header.active {
     background-color: #007f9c;
@@ -291,7 +300,6 @@ body {
     padding: 10px 0 0 0;
   }
   .container-custom .btn-group-footer {
-    padding: 0 30px;
     margin: 50px 0;
   }
 }

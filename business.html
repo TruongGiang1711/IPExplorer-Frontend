@@ -540,7 +540,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between btn-group-footer">
+                        <div class="d-flex justify-content-between btn-group-footer" style="padding: 0 30px;">
                             <a class="btn btn-custom btn-custom-outline" href="./intangibles.html">Previous</a>
                             <a class="btn btn-custom btn-Allports" href="./ip.html">Continue</a>
                         </div>
@@ -722,12 +722,15 @@
         //     n = $(this).index();
         //     $('.owl-wrapper').trigger('owl.goTo', n);
         // });
-        $(document).on('click', '.card-header button', function () {
-            $(this).parents('.card-header').toggleClass('active');
-            // $('.card-header').each(function (index, item) {
-            //     console.log(item);
-            //     $('.card .card-header').not('.active').removeClass('active')
-            // })
+        $(document).on('click', '.card', function () {
+            var $this = $(this).index()
+            $(this).children('.card-header').toggleClass('active');
+            $('.card').each(function (index, item) {
+                if (index === $this) {
+                } else {
+                    $(item).children('.card-header').removeClass('active')
+                }
+            })
         });
     </script>
 </body>

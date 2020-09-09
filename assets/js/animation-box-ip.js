@@ -100,17 +100,23 @@ function animation_box() {
         }
     });
 }
-
-function addRowInput(heightInput) {
-    var formHeight = $form.innerHeight() + 100 + heightInput
+var addHeight = 0;
+var addHeightInactive = 0;
+function addRowInput() {
+    if (addHeight == 0) {
+        addHeight = $form.innerHeight();
+        addHeightInactive = $form.innerHeight();
+    }
+    addHeight += 200;
+    addHeightInactive += 100
     gsap.to($parent, {
-        height: formHeight,
+        height: addHeight,
     });
     $('.animation-box--item.inactive').each(function (index, el) {
         var $itemThis = $(this);
         gsap.to($itemThis, {
             x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
-            y: $form.innerHeight() + heightInput,
+            y: addHeightInactive,
             width: inactiveWidth,
             height: inactiveHeight,
             top: 0,
