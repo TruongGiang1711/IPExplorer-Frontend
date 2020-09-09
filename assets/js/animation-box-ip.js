@@ -27,8 +27,6 @@ var $parent = $('.animation-box');
 var $form = $('.animation-box form');
 var $item = $('.animation-box--item');
 var $itemThis = $('.animation-box--item.inactive');
-var addHeight = 0;
-var addHeightInactive = 0;
 function addRowInput() {
     $form.children('.form-group').append('<div class=""><input type="text" class="form-control" id="validationCustom03" value="" placeholder="Prefix / Number" required></div>')
     gsap.to($parent, {

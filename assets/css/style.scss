@@ -218,11 +218,18 @@ input::-ms-reveal {
                     font-weight: bold;
                     @include font(15px, 18px);
                 }
-                input {
-                    font-family: "Calibri-Light";
-                    font-weight: bold;
-                    @include font(14px, 21px);
-                    margin-bottom: 20px;
+                .input-validate {
+                    position: relative;
+                    input {
+                        font-family: "Calibri-Light";
+                        font-weight: bold;
+                        @include font(14px, 21px);
+                        margin-bottom: 20px;
+                    }
+                    small {
+                        position: absolute;
+                        margin-top: -17px;
+                    }
                 }
                 .password {
                     position: relative;

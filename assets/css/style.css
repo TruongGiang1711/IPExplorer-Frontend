@@ -234,12 +234,19 @@ input::-ms-reveal {
     font-size: 15px;
     line-height: 18px;
   }
-  .container-custom .form-group > div input {
+  .container-custom .form-group > div .input-validate {
+    position: relative;
+  }
+  .container-custom .form-group > div .input-validate input {
     font-family: "Calibri-Light";
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
     margin-bottom: 20px;
+  }
+  .container-custom .form-group > div .input-validate small {
+    position: absolute;
+    margin-top: -17px;
   }
   .container-custom .form-group > div .password {
     position: relative;
