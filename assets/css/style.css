@@ -128,6 +128,12 @@ input::-ms-reveal {
   cursor: pointer;
 }
 
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+  display: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 0;
@@ -213,7 +219,7 @@ input::-ms-reveal {
     padding: 0 30px;
   }
   .container-custom wrapper .content {
-    margin-top: 180px;
+    padding-top: 180px;
   }
   .container-custom .title {
     font-family: "Raleway";

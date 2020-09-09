@@ -113,6 +113,12 @@ input::-ms-reveal {
     }
 }
 
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 0;
@@ -197,7 +203,7 @@ input::-ms-reveal {
             width: 100%;
             padding: 0 30px;
             .content {
-                margin-top: 180px;
+                padding-top: 180px;
             }
         }
         .title {

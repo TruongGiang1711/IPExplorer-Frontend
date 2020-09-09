@@ -58,7 +58,7 @@ function animation_box() {
                 $itemThis = $(this);
                 gsap.to($parent, {
                     height:
-                        $form.innerHeight() + activeHeight + Math.floor(inactiveItemsPerRow),
+                        $item.innerHeight() * 2,
                 });
                 gsap.to($itemThis, {
                     x: (defaultWidth + defaultGapLeft) * (index % defaultItemsPerRow),
