@@ -26,6 +26,28 @@ var inactiveItemsPerRow = 3;
 var $parent = $('.animation-box');
 var $form = $('.animation-box form');
 var $item = $('.animation-box--item');
+var $itemThis = $('.animation-box--item.inactive');
+var addHeight = 0;
+var addHeightInactive = 0;
+function addRowInput() {
+    $form.children('.form-group').append('<div class=""><input type="text" class="form-control" id="validationCustom03" value="" placeholder="Prefix / Number" required></div>')
+    gsap.to($parent, {
+        height: $form.innerHeight() + $itemThis.innerHeight(),
+    });
+    $('.animation-box--item.inactive').each(function (index, el) {
+        $itemThis = $(this);
+        gsap.to($itemThis, {
+            x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
+            y: $form.innerHeight(),
+            width: inactiveWidth,
+            height: inactiveHeight,
+            top: 0,
+            left: 0,
+            borderRadius: inactiveRadius,
+            duration: duration
+        });
+    });
+}
 function animation_box() {
     $parent.height($form.innerHeight() + activeHeight + Math.floor(inactiveItemsPerRow))
     $('.animation-box--item').on('click', function (e) {
@@ -80,7 +102,7 @@ function animation_box() {
 
             // loop inactive box
             $('.animation-box--item.inactive').each(function (index, el) {
-                var $itemThis = $(this);
+                $itemThis = $(this);
                 gsap.to($parent, {
                     height:
                         $form.innerHeight() + 100,
@@ -98,31 +120,5 @@ function animation_box() {
             });
             firstAnimation = false;
         }
-    });
-}
-var addHeight = 0;
-var addHeightInactive = 0;
-function addRowInput() {
-    if (addHeight == 0) {
-        addHeight = $form.innerHeight();
-        addHeightInactive = $form.innerHeight();
-    }
-    addHeight += 200;
-    addHeightInactive += 100
-    gsap.to($parent, {
-        height: addHeight,
-    });
-    $('.animation-box--item.inactive').each(function (index, el) {
-        var $itemThis = $(this);
-        gsap.to($itemThis, {
-            x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
-            y: addHeightInactive,
-            width: inactiveWidth,
-            height: inactiveHeight,
-            top: 0,
-            left: 0,
-            borderRadius: inactiveRadius,
-            duration: duration
-        });
     });
 }
