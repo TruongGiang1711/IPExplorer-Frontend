@@ -28,7 +28,7 @@
         <div class="d-flex flex-column align-items-center w-100 border">
             <header class="sticky-top w-100 sticky-top-custom">
                 <div class="m-auto">
-                    <div class="d-flex align-items-center position-relative logo">
+                    <div class="d-flex align-items-end position-relative logo">
                         <div>
                             <img width="50" src="./assets/images/logo.svg">
                         </div>
@@ -301,7 +301,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="ipIntellectualAssets-list Recommendations">
+                            <div class="ipIntellectualAssets-list Recommendations Recom-mendations">
                                 <div class="list-group">
                                     <a href="#" class="list-group-item list-group-item-action active">
                                         <div class="d-flex w-100 justify-content-between">
@@ -432,14 +432,7 @@
     <script src="./assets/js/animation-box-ip-intellectual-asset.js"></script>
     <script>
         $(document).ready(function () {
-            $('[data-toggle="popover"]').popover()
             animation_box()
-            $('[data-toggle="popover"]').on('show.bs.popover', function () {
-                $('.animation-box--item').off('click')
-            })
-            $('[data-toggle="popover"]').on('hidden.bs.popover', function () {
-                animation_box()
-            })
             $('.animation-box--item').each(function (index, el) {
                 $(el).find('button.question').css('color', $(el).css('background-color'))
             })

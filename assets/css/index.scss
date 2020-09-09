@@ -5,6 +5,9 @@
     // index
     .logo {
         padding-bottom: 30px;
+        .nametag {
+            margin-bottom: 10px;
+        }
     }
     .welcome {
         margin-bottom: 50px;
@@ -206,7 +209,7 @@
                 font-family: "Calibri-Light";
                 @include font(14px, 16px);
                 &:last-child {
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                 }
             }
         }
@@ -330,15 +333,19 @@
                 text-align: center;
                 color: #ffffff;
                 border-radius: 25px;
-                padding: 9px;
+                padding: 9px 0;
                 cursor: pointer;
                 &.inactive {
                     > div {
                         height: 100%;
                         justify-content: start;
                         svg {
-                            margin-bottom: 10px;
                             @include font(18px, 16px);
+                        }
+                        span {
+                            svg {
+                                margin: 10px 0;
+                            }
                         }
                         .name {
                             @include font(14px, 16px);
@@ -362,7 +369,7 @@
                         align-items: center;
                         svg {
                             margin-bottom: 0;
-                            margin-right: 23px;
+                            margin-right: 15px;
                         }
                         .name {
                             font-family: "Raleway";
@@ -393,6 +400,16 @@
                         .fa-question {
                             margin-bottom: 0;
                             @include font(18px, 16px);
+                        }
+                    }
+                    button {
+                        position: relative;
+                        .popover-custom {
+                            // display: none;
+                            position: absolute;
+                            background-color: white;
+                            min-width: 320px;
+                            z-index: 1;
                         }
                     }
                 }

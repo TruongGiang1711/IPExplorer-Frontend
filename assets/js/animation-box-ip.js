@@ -120,3 +120,47 @@ function animation_box() {
         }
     });
 }
+
+var defaultBottom = 20;
+
+var $btnQues = $('.popover-custom');
+function animation_question() {
+    $btnQues.on('click', function (e) {
+        $('.animation-box--item').off('click')
+        var $this = $(this);
+        if ($this.hasClass('active')) {
+            $item.removeClass('active').removeClass('inactive');
+            gsap.to($itemThis, {
+                x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
+                y: $form.innerHeight(),
+                width: inactiveWidth,
+                height: inactiveHeight,
+                top: 0,
+                left: 0,
+                borderRadius: inactiveRadius,
+                duration: duration
+            });
+        } else {
+            $this.addClass('active').removeClass('inactive');
+            $item.not($this).addClass('inactive').removeClass('active');
+
+            if (firstAnimation) {
+                $parentX = $btnQues.offset().top;
+                $parentY = $btnQues.offset().left;
+                $x = $this.offset().top;
+                $y = $this.offset().left;
+                $transaleX = $parentX - $x;
+                $transaleY = $parentY - $y;
+            } else {
+                $transaleX = 0;
+                $transaleY = 0;
+            }
+            gsap.to($this, {
+                x: $transaleY,
+                y: $transaleX,
+                width: activeWidth,
+                height: activeHeight,
+            });
+        }
+    })
+}

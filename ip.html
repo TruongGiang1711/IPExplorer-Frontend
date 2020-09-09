@@ -28,7 +28,7 @@
         <div class="d-flex flex-column align-items-center w-100 border">
             <header class="sticky-top w-100 sticky-top-custom">
                 <div class="m-auto">
-                    <div class="d-flex align-items-center position-relative logo">
+                    <div class="d-flex align-items-end position-relative logo">
                         <div>
                             <img width="50" src="./assets/images/logo.svg">
                         </div>
@@ -80,10 +80,9 @@
                                 <span><i class="fas fa-lightbulb"></i></span>
                                 <div class="name">Patent</div>
                                 <button type="button"
-                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
-                                    data-toggle="popover" data-placement="top"
-                                    data-content="Patent - a patent is an invention ofr which protection as been applied for or granted by DGIP. It will have an application number or a registration number.">
+                                    class="btn rounded-circle question d-flex align-items-center justify-content-center">
                                     <i class="fas fa-question"></i>
+                                    <div class="popover-custom">Patent - a patent is an invention ofr which protection as been applied for or granted by DGIP. It will have an application number or a registration number.</div>
                                 </button>
                             </div>
                         </div>
@@ -148,14 +147,15 @@
     <script src="./assets/js/animation-box-ip.js"></script>
     <script>
         $(document).ready(function () {
-            $('[data-toggle="popover"]').popover()
+            // $('[data-toggle="popover"]').popover()
             animation_box()
-            $('[data-toggle="popover"]').on('show.bs.popover', function () {
-                $('.animation-box--item').off('click')
-            })
-            $('[data-toggle="popover"]').on('hidden.bs.popover', function () {
-                animation_box()
-            })
+            animation_question()
+            // $('[data-toggle="popover"]').on('show.bs.popover', function () {
+            //     $('.animation-box--item').off('click')
+            // })
+            // $('[data-toggle="popover"]').on('hidden.bs.popover', function () {
+            //     animation_box()
+            // })
             $('.animation-box--item').each(function (index, el) {
                 $(el).find('button.question').css('color', $(el).css('background-color'))
             })

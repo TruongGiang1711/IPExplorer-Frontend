@@ -40,6 +40,9 @@ function animation_box() {
             }).remove();
             $item.each(function (index, el) {
                 $itemThis = $(this);
+                if ($(el).find('.name').text() === 'Recommendations' || $(el).find('.name').text() === 'Recom-mendations') {
+                    $(el).find('.name').replaceWith('<div class="name" style="font-size: 14px;">Recommendations</div>')
+                }
                 gsap.to($parent, {
                     height: $item.innerHeight() * 2 + 30,
                 });
@@ -65,12 +68,18 @@ function animation_box() {
                     $(el).find('.list-group-item').removeClass('active')
                 }
             })
+            if ($this.find('.name').text() === 'Recommendations' || $this.find('.name').text() === 'Recom-mendations') {
+                $this.find('.name').replaceWith('<div class="name">Recommendations</div>')
+            }
             $form.fadeIn(duration * 1000);
             $this.addClass('active').removeClass('inactive');
             $item.not($this).addClass('inactive').removeClass('active');
             $this.children().addClass('active')
             $item.not($this).children().removeClass('active')
             $('.nametag .tag').replaceWith($('<span class="tag"> - ' + $this.find('.name').text() + '</span>'))
+            if ($this.find('.name').text() === 'Recommendations' || $this.find('.name').text() === 'Recom-mendations') {
+                $('.nametag .tag').replaceWith($('<span class="tag"> - Recs</span>'))
+            }
             if (firstAnimation) {
                 $parentX = $parent.offset().top;
                 $parentY = $parent.offset().left;
@@ -94,6 +103,9 @@ function animation_box() {
             // loop inactive box
             $('.animation-box--item.inactive').each(function (index, el) {
                 var $itemThis = $(this);
+                if ($(el).find('.name').text() === 'Recommendations') {
+                    $(el).find('.name').replaceWith('<div class="name" style="font-size:14px; line-height:16px; word-break:break-word;">Recom-mendations</div>')
+                }
                 gsap.to($parent, {
                     height:
                         $form.innerHeight() + 100,

@@ -3,6 +3,9 @@
   .logo {
     padding-bottom: 30px;
   }
+  .logo .nametag {
+    margin-bottom: 10px;
+  }
   .welcome {
     margin-bottom: 50px;
     font-family: "Raleway";
@@ -189,7 +192,7 @@
     line-height: 16px;
   }
   .content-intangibles .intangibles-details .intangibles-details_content:last-child {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .content-myAccount > div {
     padding-right: 30px;
@@ -307,7 +310,7 @@
     text-align: center;
     color: #ffffff;
     border-radius: 25px;
-    padding: 9px;
+    padding: 9px 0;
     cursor: pointer;
   }
   .content-ip .animation-box--item.inactive > div {
@@ -317,9 +320,11 @@
             justify-content: start;
   }
   .content-ip .animation-box--item.inactive > div svg {
-    margin-bottom: 10px;
     font-size: 18px;
     line-height: 16px;
+  }
+  .content-ip .animation-box--item.inactive > div span svg {
+    margin: 10px 0;
   }
   .content-ip .animation-box--item.inactive > div .name {
     font-size: 14px;
@@ -357,7 +362,7 @@
   }
   .content-ip .animation-box--item > div.active svg {
     margin-bottom: 0;
-    margin-right: 23px;
+    margin-right: 15px;
   }
   .content-ip .animation-box--item > div.active .name {
     font-family: "Raleway";
@@ -391,6 +396,15 @@
     margin-bottom: 0;
     font-size: 18px;
     line-height: 16px;
+  }
+  .content-ip .animation-box--item > div button {
+    position: relative;
+  }
+  .content-ip .animation-box--item > div button .popover-custom {
+    position: absolute;
+    background-color: white;
+    min-width: 320px;
+    z-index: 1;
   }
   .content-ip.ip .form-group > div input {
     margin-bottom: 10px;
