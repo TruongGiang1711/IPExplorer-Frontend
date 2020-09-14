@@ -350,12 +350,15 @@
                         .name {
                             @include font(14px, 16px);
                         }
-                        .question {
+                        .animation-box--tooltip-icon {
                             height: 30px;
                             width: 30px;
                             top: 30px;
                             .fa-question {
                                 @include font(14px, 16px);
+                            }
+                            svg {
+                                margin: 0;
                             }
                         }
                     }
@@ -374,7 +377,7 @@
                         .name {
                             font-family: "Raleway";
                         }
-                        .question {
+                        .animation-box--tooltip-icon {
                             top: unset;
                             .fa-question {
                                 margin-right: 0;
@@ -390,7 +393,7 @@
                         @include font(18px, 16px);
                         word-break: break-all;
                     }
-                    .question {
+                    .animation-box--tooltip-icon {
                         position: absolute;
                         right: -20px;
                         background-color: white;
@@ -400,16 +403,6 @@
                         .fa-question {
                             margin-bottom: 0;
                             @include font(18px, 16px);
-                        }
-                    }
-                    button {
-                        position: relative;
-                        .popover-custom {
-                            // display: none;
-                            position: absolute;
-                            background-color: white;
-                            min-width: 320px;
-                            z-index: 1;
                         }
                     }
                 }

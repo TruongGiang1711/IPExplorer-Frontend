@@ -14,6 +14,7 @@
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="./assets/css/normalize.css">
@@ -557,7 +558,15 @@
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
-    <script>
+    <script type="text/javascript">
+        $(window).on('load', function () { // Prevent the stage height from collapsing: GitHub #251
+        })
+            $('.owl-carousel').owlCarousel({
+                autoWidth: true,
+                margin: 10,
+                dots: false,
+                autoHeight: false,
+            });
         $(document).ready(function () {
             // document.getElementById("formControlRange").oninput = function () {
             //     this.style.background = 'linear-gradient(to right, #007F9C 0%, #007F9C ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
@@ -569,162 +578,29 @@
             //         }
             //     });
             // }
-            $('.creative_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-            $('.consumerGoods_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-            $('.consumerServices_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-            $('.it_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-            $('.commercial_ProfessionalServices_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                mouseDrag: false,
-            })
-            $('.health_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-            $('.industrials_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-            $('.materials_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                dots: false,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-            $('.energy_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                mouseDrag: false,
-            })
-            $('.transport_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                mouseDrag: false,
-            })
-            $('.role_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                mouseDrag: false,
-            })
-            $('.funded_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                mouseDrag: false,
-            })
-            $('.gender_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                mouseDrag: false,
-            })
-            $('.tradingRegion_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                mouseDrag: false,
-            })
+            // var carousel = $('.owl-carousel');
+            // carousel.on({
+
+            //     'initialized.owl.carousel': function () {
+            //         carousel.find('.item').fadeIn(300);
+            //         carousel.find('.loading-placeholder').hide();
+            //     }
+
+            // }).owlCarousel({
+            //     autoWidth: true,
+            //     margin: 10,
+            //     dots: false,
+            //     autoHeight: true,
+            // });
         })
         // Custom Navigation Events
         // $(document).on('click', '.owl-item', function () {
         //     n = $(this).index();
         //     $('.owl-wrapper').trigger('owl.goTo', n);
         // });
-        $(document).on('click', '.card', function () {
-            var $this = $(this).index()
-            $(this).children('.card-header').toggleClass('active');
+        $(document).on('click', '.card-header', function () {
+            var $this = $(this).parent('.card').index()
+            $(this).toggleClass('active');
             $('.card').each(function (index, item) {
                 if (index === $this) {
                 } else {

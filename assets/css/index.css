@@ -330,14 +330,17 @@
     font-size: 14px;
     line-height: 16px;
   }
-  .content-ip .animation-box--item.inactive > div .question {
+  .content-ip .animation-box--item.inactive > div .animation-box--tooltip-icon {
     height: 30px;
     width: 30px;
     top: 30px;
   }
-  .content-ip .animation-box--item.inactive > div .question .fa-question {
+  .content-ip .animation-box--item.inactive > div .animation-box--tooltip-icon .fa-question {
     font-size: 14px;
     line-height: 16px;
+  }
+  .content-ip .animation-box--item.inactive > div .animation-box--tooltip-icon svg {
+    margin: 0;
   }
   .content-ip .animation-box--item > div {
     display: -webkit-box;
@@ -367,10 +370,10 @@
   .content-ip .animation-box--item > div.active .name {
     font-family: "Raleway";
   }
-  .content-ip .animation-box--item > div.active .question {
+  .content-ip .animation-box--item > div.active .animation-box--tooltip-icon {
     top: unset;
   }
-  .content-ip .animation-box--item > div.active .question .fa-question {
+  .content-ip .animation-box--item > div.active .animation-box--tooltip-icon .fa-question {
     margin-right: 0;
   }
   .content-ip .animation-box--item > div svg {
@@ -384,7 +387,7 @@
     line-height: 16px;
     word-break: break-all;
   }
-  .content-ip .animation-box--item > div .question {
+  .content-ip .animation-box--item > div .animation-box--tooltip-icon {
     position: absolute;
     right: -20px;
     background-color: white;
@@ -392,19 +395,10 @@
     width: 40px;
     top: 50px;
   }
-  .content-ip .animation-box--item > div .question .fa-question {
+  .content-ip .animation-box--item > div .animation-box--tooltip-icon .fa-question {
     margin-bottom: 0;
     font-size: 18px;
     line-height: 16px;
-  }
-  .content-ip .animation-box--item > div button {
-    position: relative;
-  }
-  .content-ip .animation-box--item > div button .popover-custom {
-    position: absolute;
-    background-color: white;
-    min-width: 320px;
-    z-index: 1;
   }
   .content-ip.ip .form-group > div input {
     margin-bottom: 10px;

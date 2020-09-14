@@ -1,11 +1,5 @@
 @import "./../variables/variables";
 
-html,
-body {
-    height: 100%;
-    overflow: hidden;
-}
-
 .btn {
     padding: 0;
     display: flex;
@@ -119,9 +113,49 @@ input::-ms-reveal {
     display: none;
 }
 
+.owl-carousel,
+.owl-stage-outer {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tooltip-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    z-index: 0;
+    &--content {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        font-size: 12px;
+        background: #ccc;
+        padding: 20px;
+        text-align: left;
+        z-index: 1;
+    }
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 0;
+    height: 0;
 }
 
 /* Track */
@@ -143,7 +177,7 @@ input::-ms-reveal {
 
 @font-face {
     font-family: "Raleway";
-    src: url("/assets/fonts/Raleway/raleway-VariableFont_wght.ttf");
+    src: url("/assets/fonts/raleway/Raleway-Medium.ttf");
 }
 @font-face {
     font-family: "Calibri-Bold";
@@ -156,10 +190,13 @@ input::-ms-reveal {
 
 @media (min-width: 320px) {
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-    .container-custom {
+    body {
         max-width: 375px;
+        margin: auto;
+    }
+    .container-custom {
         > div {
-            max-height: 667px;
+            // max-height: 667px;
             height: 100%;
             position: relative;
         }
@@ -272,7 +309,7 @@ input::-ms-reveal {
                     margin-bottom: 0;
                     padding: 0;
                     margin: 0 30px;
-                    transition: 0.3s;
+                    transition: 0.5s;
                     .btn-block {
                         font-family: "Calibri-Light";
                         @include font(14px, 21px);

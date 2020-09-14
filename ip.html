@@ -75,25 +75,23 @@
                                 </a>
                             </div>
                         </form>
+
                         <div class="animation-box--item" style="background-color: #5B2080; top: 0px; left: 0px;">
                             <div class="">
                                 <span><i class="fas fa-lightbulb"></i></span>
                                 <div class="name">Patent</div>
-                                <button type="button"
-                                    class="btn rounded-circle question d-flex align-items-center justify-content-center">
+                                <span data-tooltip="1"
+                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
                                     <i class="fas fa-question"></i>
-                                    <div class="popover-custom">Patent - a patent is an invention ofr which protection as been applied for or granted by DGIP. It will have an application number or a registration number.</div>
-                                </button>
+                                </span>
                             </div>
                         </div>
                         <div class="animation-box--item" style="background-color: #7A58A1; top: 0px; left: 160px;">
                             <div class="">
                                 <span><i class="fas fa-trademark"></i></i></span>
                                 <div class="name">Trademark</div>
-                                <button type="button"
-                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
-                                    data-toggle="popover" data-placement="top"
-                                    data-content="Trademark - a trademark is a brand or logo for which protection has been applied for or granted by DGIP. It will have an application number or application registration number.">
+                                <button type="button" data-tooltip="2"
+                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
                                     <i class="fas fa-question"></i>
                                 </button>
                             </div>
@@ -102,10 +100,8 @@
                             <div class="">
                                 <span><i class="fas fa-pencil-ruler"></i></span>
                                 <div class="name">Design</div>
-                                <button type="button"
-                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
-                                    data-toggle="popover" data-placement="top"
-                                    data-content="Design - an aesthetic product design for which protection as been applied for or granted by DGIP. It will have an application number or a registration number.">
+                                <button type="button" data-tooltip="3"
+                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
                                     <i class="fas fa-question"></i>
                                 </button>
                             </div>
@@ -114,10 +110,8 @@
                             <div class="">
                                 <span><i class="far fa-copyright"></i></span>
                                 <div class="name">Copyright</div>
-                                <button type="button"
-                                    class="btn rounded-circle question d-flex align-items-center justify-content-center"
-                                    data-toggle="popover" data-placement="top"
-                                    data-content="Copyright - a creative work of art, graphics, music, film, software and games, writing or design drawings. It is voluntary to register at DGIP, indeed most copyrights are not in fact registered. If you haave registered one you will have a registration number. If you have not registered a copyright, you can add it in the next screen.">
+                                <button type="button" data-tooltip="4"
+                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
                                     <i class="fas fa-question"></i>
                                 </button>
                             </div>
@@ -135,6 +129,38 @@
             </wrapper>
         </div>
     </div>
+    <div class="tooltip-box" data-tooltip="1">
+        <div class="tooltip-box--content">
+            Patent --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been
+            the
+            industry's standard dummy text ever since the 1500s, when an unknown print
+        </div>
+    </div>
+    <div class="tooltip-box" data-tooltip="2">
+        <div class="tooltip-box--content">
+            Trademark --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has
+            been the
+            industry's standard dummy text ever since the 1500s, when an unknown print
+        </div>
+    </div>
+    <div class="tooltip-box" data-tooltip="3">
+        <div class="tooltip-box--content">
+            Design --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been
+            the
+            industry's standard dummy text ever since the 1500s, when an unknown print
+        </div>
+    </div>
+    <div class="tooltip-box" data-tooltip="4">
+        <div class="tooltip-box--content">
+            Copyright --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has
+            been the
+            industry's standard dummy text ever since the 1500s, when an unknown print
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, Font Awesome -->
@@ -146,10 +172,15 @@
     <script src="./assets/js/gsap.min.js"></script>
     <script src="./assets/js/animation-box-ip.js"></script>
     <script>
+        // $(window).on("resize", function () {
+        //     // Set .right's width to the window width minus 480 pixels
+        //     $("body").width($(this).width() - 480);
+        //     // Invoke the resize event immediately
+        // }).resize();
+
         $(document).ready(function () {
-            // $('[data-toggle="popover"]').popover()
-            animation_box()
-            animation_question()
+            // $('[data-toggle="popover"]').popover();
+            // animation_box()
             // $('[data-toggle="popover"]').on('show.bs.popover', function () {
             //     $('.animation-box--item').off('click')
             // })
@@ -157,13 +188,13 @@
             //     animation_box()
             // })
             $('.animation-box--item').each(function (index, el) {
-                $(el).find('button.question').css('color', $(el).css('background-color'))
+                $(el).find('button.animation-box--tooltip-icon').css('color', $(el).css('background-color'))
             })
             $('.animation-box--item').on('click', function () {
                 $('.btn-circle').css('color', $(this).css('background-color'))
             })
             $('.btn-addRow').on('click', function () {
-                addRowInput()
+                // addRowInput()
             })
         });
     </script>
