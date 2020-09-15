@@ -80,6 +80,8 @@
             }
         }
         .action {
+            font-family: "Raleway";
+            @include font(14px, 16px);
             a:first-child {
                 margin-bottom: 15px;
             }

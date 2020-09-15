@@ -76,6 +76,11 @@
   .form .form-group > div label {
     margin-bottom: 10px;
   }
+  .form .action {
+    font-family: "Raleway";
+    font-size: 14px;
+    line-height: 16px;
+  }
   .form .action a:first-child {
     margin-bottom: 15px;
   }

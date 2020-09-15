@@ -65,7 +65,6 @@ $('.animation-box--item').on('click', function (e) {
 
         if (firstAnimation) {
             $parentX = $parent.offset().top;
-            console.log($parentX);
             $parentY = $parent.offset().left;
             $x = $this.offset().top;
             $y = $this.offset().left;
@@ -221,14 +220,10 @@ function addRowInput() {
         height: $form.innerHeight() + $itemThis.innerHeight(),
     });
     $('.animation-box--item.inactive').each(function (index, el) {
-        $itemThis = $(this);
+        var $itemThis = $(this);
         gsap.to($itemThis, {
-            x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
-            y: $form.innerHeight(),
             width: inactiveWidth,
             height: inactiveHeight,
-            top: 0,
-            left: 0,
             borderRadius: inactiveRadius,
             duration: duration
         });
