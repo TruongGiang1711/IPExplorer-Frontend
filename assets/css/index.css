@@ -215,13 +215,9 @@
     line-height: 14px;
     margin-bottom: 20px;
   }
-  .content-myAccount .evaluation_list {
-    /* height */
-    min-height: 135px;
+  .content-myAccount .list-accordion {
+    margin-left: 0;
     padding-bottom: 40px;
-  }
-  .content-myAccount .evaluation_list::-webkit-scrollbar {
-    height: 5px;
   }
   .content-myAccount .language-select {
     font-family: "Raleway";
@@ -259,10 +255,7 @@
   .content-business .form-group > div input {
     margin-bottom: 10px;
   }
-  .content-business .form-group > div .card-body > div {
-    padding: 0 0 0 30px;
-  }
-  .content-business .form-group > div .creative_list .item-carousel:first-child {
+  .content-business .form-group > div .card:first-child .list-accordion > div:first-child {
     margin-bottom: 10px;
   }
   .list-group-item {

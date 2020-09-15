@@ -128,37 +128,6 @@ input::-ms-reveal {
   display: none;
 }
 
-.owl-carousel,
-.owl-stage-outer {
-  opacity: 1;
-  -webkit-animation-name: fadeInOpacity;
-          animation-name: fadeInOpacity;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-
-@-webkit-keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .tooltip-box {
   position: absolute;
   left: 0;
@@ -232,11 +201,7 @@ input::-ms-reveal {
   }
   .container-custom header {
     padding: 50px 30px 30px 30px;
-  }
-  .container-custom header.sticky-top-custom {
-    position: absolute;
-    background-color: #fffffff4;
-    z-index: 4;
+    background-color: #fffffff0;
   }
   .container-custom header > div .logo {
     border-bottom: 1px solid;
@@ -265,9 +230,6 @@ input::-ms-reveal {
   .container-custom wrapper {
     width: 100%;
     padding: 0 30px;
-  }
-  .container-custom wrapper .content {
-    padding-top: 180px;
   }
   .container-custom .title {
     font-family: "Raleway";
@@ -310,11 +272,12 @@ input::-ms-reveal {
     right: 10px;
     top: 25%;
   }
-  .container-custom .item-carousel {
+  .container-custom .item {
     border-radius: 20px;
     border: 1px solid #007f9c;
     height: 95px;
     width: 95px;
+    margin-right: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -342,8 +305,8 @@ input::-ms-reveal {
     margin-bottom: 0;
     padding: 0;
     margin: 0 30px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
   .container-custom .accordion .card .card-header .btn-block {
     font-family: "Calibri-Light";
@@ -359,6 +322,11 @@ input::-ms-reveal {
   }
   .container-custom .accordion .card .card-body {
     padding: 10px 0 0 0;
+  }
+  .container-custom .list-accordion {
+    overflow: auto;
+    margin: 0 0 0 30px;
+    padding-right: 30px;
   }
   .container-custom .btn-group-footer {
     margin: 50px 0;

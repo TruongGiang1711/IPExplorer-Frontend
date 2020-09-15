@@ -233,12 +233,8 @@
             @include font(12px, 14px);
             margin-bottom: 20px;
         }
-        .evaluation_list {
-            /* height */
-            &::-webkit-scrollbar {
-                height: 5px;
-            }
-            min-height: 135px;
+        .list-accordion {
+            margin-left: 0;
             padding-bottom: 40px;
         }
         .language-select {
@@ -276,15 +272,14 @@
                 input {
                     margin-bottom: 10px;
                 }
-                .card-body {
-                    > div {
-                        padding: 0 0 0 30px;
-                    }
-                }
-                .creative_list {
-                    .item-carousel {
-                        &:first-child {
-                            margin-bottom: 10px;
+                .card {
+                    &:first-child {
+                        .list-accordion {
+                            > div {
+                                &:first-child {
+                                    margin-bottom: 10px;
+                                }
+                            }
                         }
                     }
                 }

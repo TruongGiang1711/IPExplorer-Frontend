@@ -113,24 +113,6 @@ input::-ms-reveal {
     display: none;
 }
 
-.owl-carousel,
-.owl-stage-outer {
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
-}
-
-@keyframes fadeInOpacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .tooltip-box {
     position: absolute;
     left: 0;
@@ -202,11 +184,7 @@ input::-ms-reveal {
         }
         header {
             padding: 50px 30px 30px 30px;
-            &.sticky-top-custom {
-                position: absolute;
-                background-color: #fffffff4;
-                z-index: 4;
-            }
+            background-color: #fffffff0;
             > div {
                 .logo {
                     border-bottom: 1px solid;
@@ -239,9 +217,6 @@ input::-ms-reveal {
         wrapper {
             width: 100%;
             padding: 0 30px;
-            .content {
-                padding-top: 180px;
-            }
         }
         .title {
             font-family: "Raleway";
@@ -284,11 +259,12 @@ input::-ms-reveal {
                 }
             }
         }
-        .item-carousel {
+        .item {
             border-radius: 20px;
             border: 1px solid $Allports;
             height: 95px;
             width: 95px;
+            margin-right: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -309,7 +285,7 @@ input::-ms-reveal {
                     margin-bottom: 0;
                     padding: 0;
                     margin: 0 30px;
-                    transition: 0.5s;
+                    transition: 0.4s;
                     .btn-block {
                         font-family: "Calibri-Light";
                         @include font(14px, 21px);
@@ -326,6 +302,11 @@ input::-ms-reveal {
                     padding: 10px 0 0 0;
                 }
             }
+        }
+        .list-accordion {
+            overflow: auto;
+            margin: 0 0 0 30px;
+            padding-right: 30px;
         }
         .btn-group-footer {
             // padding: 0 30px;

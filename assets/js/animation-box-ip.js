@@ -28,7 +28,9 @@ var oLeft = $('.animation-box').offset().left;
 
 var $form = $('.animation-box form');
 var $parent = $('.animation-box');
+var $itemThis = $('.animation-box--item.inactive');
 $parent.height($form.innerHeight() + activeHeight + Math.floor(inactiveItemsPerRow))
+
 $('.animation-box--item').on('click', function (e) {
     var $this = $(this);
     $item = $('.animation-box--item');
@@ -84,29 +86,12 @@ $('.animation-box--item').on('click', function (e) {
             duration: duration
         });
 
-        // loop inactive box
-        $('.animation-box--item.inactive').each(function (index, el) {
-            var $itemThis = $(this);
-            $itemThis.children().removeClass('active');
-
-            gsap.to($parent, {
-                duration: duration,
-                height:
-                    $form.innerHeight() + 100,
-            });
-            gsap.to($itemThis, {
-                width: inactiveWidth,
-                height: inactiveHeight,
-                left: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
-                top: $form.innerHeight(),
-                borderRadius: inactiveRadius,
-                duration: duration
-            });
-        });
+        ResetHeightForm();
         firstAnimation = false;
     }
     setTimeout(function () {
         calcPositionTooltips();
+        ResetHeightForm();
     }, duration * 1000);
 
 });
@@ -213,14 +198,38 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
 
 });
 
-var $itemThis = $('.animation-box--item.inactive');
-function addRowInput() {
-    $form.children('.form-group').append('<div class=""><input type="text" class="form-control" id="validationCustom03" value="" placeholder="Prefix / Number" required></div>')
+function addRowInput(value) {
+    console.log("aa");
+    $form.children('.form-group').append('<div class="prefix-number-add"><input type="text" class="form-control txt-prefix-number" id="validationCustom03" value="' + value + '" placeholder="Prefix / Number" required></div>')
     gsap.to($parent, {
         height: $form.innerHeight() + $('.animation-box--item.inactive').innerHeight(),
     });
     $('.animation-box--item.inactive').each(function (index, el) {
         $itemThis = $(this);
+        gsap.to($itemThis, {
+            width: inactiveWidth,
+            height: inactiveHeight,
+            left: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
+            top: $form.innerHeight(),
+            borderRadius: inactiveRadius,
+            duration: duration
+        });
+    });
+}
+
+
+function ResetHeightForm() {
+    // loop inactive box
+    console.log($form.innerHeight());
+    $('.animation-box--item.inactive').each(function (index, el) {
+        var $itemThis = $(this);
+        $itemThis.children().removeClass('active');
+
+        gsap.to($parent, {
+            duration: duration,
+            height:
+                $form.innerHeight() + $itemThis.innerHeight(),
+        });
         gsap.to($itemThis, {
             width: inactiveWidth,
             height: inactiveHeight,

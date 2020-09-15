@@ -26,7 +26,7 @@
 <body>
     <div class="container-custom h-100 d-flex align-items-center m-auto">
         <div class="d-flex flex-column align-items-center w-100">
-            <header class="sticky-top w-100 sticky-top-custom">
+            <header class="sticky-top w-100">
                 <div class="m-auto">
                     <div class="d-flex align-items-end position-relative logo">
                         <div>
@@ -51,21 +51,21 @@
                         <div class="evaluation_select">Click on any section below to review, or continue, your
                             evaluation of your IP.</div>
                     </div>
-                    <div class="evaluation_list pr-0">
-                        <div class="owl-carousel owl-theme">
-                            <div class="item-carousel">
+                    <div class="list-accordion">
+                        <div class="d-inline-flex">
+                            <div class="item">
                                 Intangibles
                             </div>
-                            <div class="item-carousel">
+                            <div class="item">
                                 Business
                             </div>
-                            <div class="item-carousel">
+                            <div class="item">
                                 Intellectual Property
                             </div>
-                            <div class="item-carousel">
+                            <div class="item">
                                 Intellectual Assets
                             </div>
-                            <div class="item-carousel">
+                            <div class="item">
                                 Your Analysis
                             </div>
                         </div>
@@ -100,28 +100,10 @@
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.evaluation_list .owl-carousel').owlCarousel({
-                autoWidth: true,
-                margin: 10,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
-                    }
-                }
-            })
-        })
         // Custom Navigation Events
-        $(document).on('click', '.owl-item', function () {
+        $(document).on('click', '.item', function () {
             n = $(this).index();
             console.log(n)
-            $('.owl-wrapper').trigger('owl.goTo', n);
         });
     </script>
 </body>
