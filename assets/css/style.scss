@@ -303,10 +303,12 @@ input::-ms-reveal {
                 }
             }
         }
-        .list-accordion {
-            overflow: auto;
-            margin: 0 0 0 30px;
-            padding-right: 30px;
+        .card-body {
+            .list-accordion {
+                overflow: auto;
+                margin: 0 0 0 30px;
+                padding-right: 30px;
+            }
         }
         .btn-group-footer {
             // padding: 0 30px;
