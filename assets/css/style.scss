@@ -217,6 +217,9 @@ input::-ms-reveal {
         wrapper {
             width: 100%;
             padding: 0 30px;
+            .content {
+                margin: 20px 0;
+            }
         }
         .title {
             font-family: "Raleway";
@@ -285,7 +288,7 @@ input::-ms-reveal {
                     margin-bottom: 0;
                     padding: 0;
                     margin: 0 30px;
-                    transition: 0.4s;
+                    transition: 0.2s;
                     .btn-block {
                         font-family: "Calibri-Light";
                         @include font(14px, 21px);

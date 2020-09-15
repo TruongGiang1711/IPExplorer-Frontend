@@ -199,7 +199,6 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
 });
 
 function addRowInput(value) {
-    console.log("aa");
     $form.children('.form-group').append('<div class="prefix-number-add"><input type="text" class="form-control txt-prefix-number" id="validationCustom03" value="' + value + '" placeholder="Prefix / Number" required></div>')
     gsap.to($parent, {
         height: $form.innerHeight() + $('.animation-box--item.inactive').innerHeight(),
@@ -215,6 +214,9 @@ function addRowInput(value) {
             duration: duration
         });
     });
+    setTimeout(function () {
+        calcPositionTooltips();
+    }, duration * 1000);
 }
 
 

@@ -490,10 +490,10 @@
             $(this).toggleClass('active');
             $('.card').each(function (index, item) {
                 if (index === $this) {
-                    $(item).children('.collapse').fadeIn(300);
+                    $(item).children('.collapse').fadeToggle(300);
                 } else {
                     $(item).children('.card-header').removeClass('active')
-                    $(item).children('.collapse').fadeOut(200);
+                    $(item).children('.collapse').fadeOut(100);
                 }
             })
         });

@@ -231,6 +231,9 @@ input::-ms-reveal {
     width: 100%;
     padding: 0 30px;
   }
+  .container-custom wrapper .content {
+    margin: 20px 0;
+  }
   .container-custom .title {
     font-family: "Raleway";
     font-weight: bold;
@@ -305,8 +308,8 @@ input::-ms-reveal {
     margin-bottom: 0;
     padding: 0;
     margin: 0 30px;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
   }
   .container-custom .accordion .card .card-header .btn-block {
     font-family: "Calibri-Light";
