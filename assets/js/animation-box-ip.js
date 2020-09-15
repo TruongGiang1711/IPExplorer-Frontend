@@ -98,8 +98,7 @@ $('.animation-box--item').on('click', function (e) {
                 width: inactiveWidth,
                 height: inactiveHeight,
                 left: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
-                top: 200 + activeHeight + Math.floor(index / inactiveItemsPerRow) * (
-                    inactiveGapTop + inactiveHeight),
+                top: $form.innerHeight(),
                 borderRadius: inactiveRadius,
                 duration: duration
             });
@@ -214,16 +213,19 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
 
 });
 
+var $itemThis = $('.animation-box--item.inactive');
 function addRowInput() {
     $form.children('.form-group').append('<div class=""><input type="text" class="form-control" id="validationCustom03" value="" placeholder="Prefix / Number" required></div>')
     gsap.to($parent, {
-        height: $form.innerHeight() + $itemThis.innerHeight(),
+        height: $form.innerHeight() + $('.animation-box--item.inactive').innerHeight(),
     });
     $('.animation-box--item.inactive').each(function (index, el) {
-        var $itemThis = $(this);
+        $itemThis = $(this);
         gsap.to($itemThis, {
             width: inactiveWidth,
             height: inactiveHeight,
+            left: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
+            top: $form.innerHeight(),
             borderRadius: inactiveRadius,
             duration: duration
         });
