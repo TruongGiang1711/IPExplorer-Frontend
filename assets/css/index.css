@@ -265,6 +265,8 @@
     color: black;
     -webkit-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
+    border: 1px solid #007f9c;
+    border-radius: 5px;
   }
   .list-group-item + .list-group-item {
     border-top-width: 1px;

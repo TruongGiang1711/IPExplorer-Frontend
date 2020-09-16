@@ -294,6 +294,8 @@
         margin-bottom: 10px;
         color: black;
         transition: all ease-in-out 0.3s;
+        border: 1px solid $Allports;
+        border-radius: 5px;
         & + .list-group-item {
             border-top-width: 1px;
         }
