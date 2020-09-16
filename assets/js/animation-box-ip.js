@@ -29,19 +29,19 @@ var oLeft = $('.animation-box').offset().left;
 var $form = $('.animation-box form');
 var $parent = $('.animation-box');
 var $itemThis = $('.animation-box--item.inactive');
-$parent.height($form.innerHeight() + activeHeight + Math.floor(inactiveItemsPerRow))
+var $item = $('.animation-box--item');
+var heightForm = $form.innerHeight()
 
+$parent.height(defaultHeight * 2 + inactiveGapTop)
 $('.animation-box--item').on('click', function (e) {
     var $this = $(this);
-    $item = $('.animation-box--item');
     if ($this.hasClass('active')) {
         // $form.fadeOut(duration * 1000, function () {
         //     $(this).css('height', 0);
         // });
-        gsap.to($parent, {
-            height:
-                $item.innerHeight() * 2,
-        });
+        // $parent.height($item.innerHeight() * 2)
+        // $parent.css({ height: $item.innerHeight() * 2 })
+        $parent.height(defaultHeight * 2 + inactiveGapTop)
         $form.fadeOut(duration * 1000);
         $item.removeClass('active').removeClass('inactive');
         $item.children().removeClass('active').removeClass('inactive');
@@ -91,9 +91,8 @@ $('.animation-box--item').on('click', function (e) {
     }
     setTimeout(function () {
         calcPositionTooltips();
-        ResetHeightForm();
+        // ResetHeightForm();
     }, duration * 1000);
-
 });
 
 // tooltip animation
@@ -200,9 +199,7 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
 
 function addRowInput(value) {
     $form.children('.form-group').append('<div class="prefix-number-add"><input type="text" class="form-control txt-prefix-number" id="validationCustom03" value="' + value + '" placeholder="Prefix / Number" required></div>')
-    gsap.to($parent, {
-        height: $form.innerHeight() + $('.animation-box--item.inactive').innerHeight(),
-    });
+    ResetHeightForm()
     $('.animation-box--item.inactive').each(function (index, el) {
         $itemThis = $(this);
         gsap.to($itemThis, {
@@ -222,16 +219,11 @@ function addRowInput(value) {
 
 function ResetHeightForm() {
     // loop inactive box
-    console.log($form.innerHeight());
+    // console.log($form.innerHeight());
     $('.animation-box--item.inactive').each(function (index, el) {
-        var $itemThis = $(this);
+        $itemThis = $(this);
         $itemThis.children().removeClass('active');
-
-        gsap.to($parent, {
-            duration: duration,
-            height:
-                $form.innerHeight() + $itemThis.innerHeight(),
-        });
+        // $parent.height($form.innerHeight()+$itemThis.innerHeight())
         gsap.to($itemThis, {
             width: inactiveWidth,
             height: inactiveHeight,
@@ -241,4 +233,5 @@ function ResetHeightForm() {
             duration: duration
         });
     });
+    $parent.height($form.innerHeight() + inactiveHeight)
 }

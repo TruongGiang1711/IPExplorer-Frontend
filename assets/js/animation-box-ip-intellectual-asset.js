@@ -106,10 +106,6 @@ function animation_box() {
                 if ($(el).find('.name').text() === 'Recommendations') {
                     $(el).find('.name').replaceWith('<div class="name" style="font-size:14px; line-height:16px; word-break:break-word;">Recom-mendations</div>')
                 }
-                gsap.to($parent, {
-                    height:
-                        $form.innerHeight() + 100,
-                });
                 gsap.to($itemThis, {
                     x: (inactiveWidth + inactiveGapLeft) * (index % inactiveItemsPerRow),
                     y: $form.innerHeight() + 10,
@@ -121,6 +117,7 @@ function animation_box() {
                     duration: duration
                 });
             });
+            $parent.height($form.innerHeight() + inactiveHeight)
             firstAnimation = false;
         }
     });
