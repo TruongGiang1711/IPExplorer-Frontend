@@ -318,7 +318,6 @@
     // ip, ip Intellectual Assets
     .content-ip {
         .animation-box {
-            max-width: 300px;
             margin: 55px auto 0;
             width: 100%;
             position: relative;
@@ -415,7 +414,7 @@
         }
         &.IntellectualAssets {
             .animation-box {
-                margin-top: 20px;
+                margin: 20px 0 0;
                 .ipIntellectualAssets-list {
                     display: none;
                     &.active {

@@ -94,7 +94,7 @@ function animation_box() {
             gsap.to($this, {
                 x: $transaleY,
                 y: $transaleX,
-                width: activeWidth,
+                width: "100%",
                 height: activeHeight,
                 borderRadius: activeRadius,
                 duration: duration
