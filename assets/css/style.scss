@@ -86,6 +86,7 @@ input::-ms-reveal {
     opacity: 0.7;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+    margin: 10px 0;
     &:hover {
         opacity: 1;
     }
@@ -233,6 +234,7 @@ input::-ms-reveal {
             margin-bottom: 20px;
         }
         .form-group {
+            margin-bottom: 80px;
             > div {
                 label {
                     font-family: "Raleway";

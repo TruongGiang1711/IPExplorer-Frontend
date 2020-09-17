@@ -6,6 +6,9 @@
   .logo .nametag {
     margin-bottom: 10px;
   }
+  .logo .nametag.welcome {
+    margin: auto 0;
+  }
   .welcome {
     margin-bottom: 50px;
     font-family: "Raleway";
@@ -27,14 +30,14 @@
     margin-bottom: 75px;
   }
   .content-index .language {
-    margin: 20px 20px 15px 0;
+    margin: 20px 20px 17px 0;
     font-family: "Calibri-Bold";
     height: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 1.5;
   }
   .content-index .language svg {
     font-size: 16px;
@@ -45,7 +48,7 @@
     margin-top: -4px;
   }
   .content-index .action-index {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
   .content-index .action-index > :first-child {
     margin-bottom: 20px;
@@ -78,11 +81,13 @@
   }
   .form .action {
     font-family: "Raleway";
+    margin-bottom: 25px;
     font-size: 14px;
     line-height: 16px;
   }
-  .form .action a:first-child {
-    margin-bottom: 15px;
+  .form .action a.btn {
+    height: 50px;
+    margin-bottom: 20px;
   }
   .content-signin .form .form-group > div .btn-forgot {
     font-family: "Raleway";
@@ -90,21 +95,23 @@
     line-height: 18px;
     margin: 0 20px 10px 0;
   }
-  .content-signin .form .form-group > div:last-child {
-    margin-bottom: 80px;
-  }
-  .content-signup .form .form-group > div:last-child {
-    margin-bottom: 70px;
-  }
   .content-terms {
     font-family: "Calibri-Light";
     font-size: 12px;
     line-height: 14px;
     position: relative;
   }
-  .content-terms .gradient {
-    position: absolute;
+  .footer-terms {
+    left: 0;
     bottom: 0;
+    background: white;
+    width: 100%;
+    padding: 0 30px 35px 30px;
+  }
+  .footer-terms .gradient {
+    position: absolute;
+    left: 0;
+    top: -50px;
     height: 50px;
     width: 100%;
     background-color: #ffffff50;
@@ -112,10 +119,6 @@
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff50), to(white));
     background-image: linear-gradient(#ffffff50, white);
     /* Standard syntax (must be last) */
-  }
-  .footer-terms {
-    width: 100%;
-    padding: 0 30px 35px 30px;
   }
   .content-intangibles {
     margin: 20px 0 55px 0;
@@ -199,6 +202,9 @@
   .content-intangibles .intangibles-details .intangibles-details_content:last-child {
     margin-bottom: 20px;
   }
+  .content-myAccount {
+    margin: 24px 0 0 0;
+  }
   .content-myAccount > div {
     padding-right: 30px;
   }
@@ -218,7 +224,7 @@
   .content-myAccount .list-accordion {
     overflow: auto;
     margin-left: 0;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
   .content-myAccount .language-select {
     font-family: "Raleway";
@@ -227,7 +233,7 @@
     line-height: 18px;
     margin-bottom: 10px;
   }
-  .content-myAccount .custom-select {
+  .content-myAccount .select {
     font-family: "Calibri-Light";
     font-size: 16px;
     line-height: 23px;
@@ -239,21 +245,19 @@
     margin: 35px 0;
   }
   .content-myAccount .action-myAccount {
-    margin-top: 50px;
+    margin: 73px 0 40px;
   }
   .content-business .title {
     padding: 0 30px;
   }
   .content-business .form-group {
     padding: 0 30px;
+    margin-bottom: 20px;
   }
   .content-business .form-group > div {
     margin-bottom: 20px;
   }
   .content-business .form-group > div label {
-    margin-bottom: 20px;
-  }
-  .content-business .form-group > div input {
     margin-bottom: 10px;
   }
   .content-business .form-group > div .card:first-child .list-accordion > div:first-child {
@@ -399,6 +403,9 @@
     font-size: 18px;
     line-height: 16px;
   }
+  .content-ip.ip .form-group {
+    margin-bottom: 20px;
+  }
   .content-ip.ip .form-group > div input {
     margin-bottom: 10px;
   }
@@ -416,6 +423,9 @@
   }
   .content-unregisteredCopyright .unregisteredCopyright-list {
     margin-top: 55px;
+  }
+  .content-unregisteredCopyright .unregisteredCopyright-list .list-group-item:last-child {
+    margin-bottom: 0;
   }
   .content-report .report-info h5 {
     font-family: "Raleway";

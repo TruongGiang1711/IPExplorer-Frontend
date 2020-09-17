@@ -7,6 +7,9 @@
         padding-bottom: 30px;
         .nametag {
             margin-bottom: 10px;
+            &.welcome {
+                margin: auto 0;
+            }
         }
     }
     .welcome {
@@ -31,11 +34,11 @@
     // index
     .content-index {
         .language {
-            margin: 20px 20px 15px 0;
+            margin: 20px 20px 17px 0;
             font-family: "Calibri-Bold";
             height: 16px;
             display: flex;
-            @include font(16px, 23px);
+            @include font(16px, 1.5);
             svg {
                 @include font(16px, 19px);
                 margin-right: 10px;
@@ -45,7 +48,7 @@
             }
         }
         .action-index {
-            margin-bottom: 50px;
+            margin-bottom: 53px;
             & > :first-child {
                 margin-bottom: 20px;
             }
@@ -81,9 +84,11 @@
         }
         .action {
             font-family: "Raleway";
+            margin-bottom: 25px;
             @include font(14px, 16px);
-            a:first-child {
-                margin-bottom: 15px;
+            a.btn {
+                height: 50px;
+                margin-bottom: 20px;
             }
         }
     }
@@ -96,20 +101,6 @@
                         @include font(15px, 18px);
                         margin: 0 20px 10px 0;
                     }
-                    &:last-child {
-                        margin-bottom: 80px;
-                    }
-                }
-            }
-        }
-    }
-    .content-signup {
-        .form {
-            .form-group {
-                > div {
-                    &:last-child {
-                        margin-bottom: 70px;
-                    }
                 }
             }
         }
@@ -121,16 +112,20 @@
         font-family: "Calibri-Light";
         @include font(12px, 14px);
         position: relative;
+    }
+    .footer-terms {
         .gradient {
             position: absolute;
-            bottom: 0;
+            left: 0;
+            top: -50px;
             height: 50px;
             width: 100%;
             background-color: #ffffff50; /* For browsers that do not support gradients */
             background-image: linear-gradient(#ffffff50, white); /* Standard syntax (must be last) */
         }
-    }
-    .footer-terms {
+        left: 0;
+        bottom: 0;
+        background: white;
         width: 100%;
         padding: 0 30px 35px 30px;
     }
@@ -219,6 +214,7 @@
 
     // my Account
     .content-myAccount {
+        margin: 24px 0 0 0;
         > div {
             padding-right: 30px;
         }
@@ -236,7 +232,7 @@
         .list-accordion {
             overflow: auto;
             margin-left: 0;
-            padding-bottom: 40px;
+            margin-bottom: 40px;
         }
         .language-select {
             font-family: "Raleway";
@@ -244,7 +240,7 @@
             @include font(15px, 18px);
             margin-bottom: 10px;
         }
-        .custom-select {
+        .select {
             font-family: "Calibri-Light";
             @include font(16px, 23px);
             width: auto;
@@ -254,7 +250,7 @@
             margin: 35px 0;
         }
         .action-myAccount {
-            margin-top: 50px;
+            margin: 73px 0 40px;
         }
     }
 
@@ -265,12 +261,10 @@
         }
         .form-group {
             padding: 0 30px;
+            margin-bottom: 20px;
             > div {
                 margin-bottom: 20px;
                 label {
-                    margin-bottom: 20px;
-                }
-                input {
                     margin-bottom: 10px;
                 }
                 .card {
@@ -408,8 +402,11 @@
             }
         }
         &.ip {
-            .form-group > div input {
-                margin-bottom: 10px;
+            .form-group {
+                margin-bottom: 20px;
+                > div input {
+                    margin-bottom: 10px;
+                }
             }
         }
         &.IntellectualAssets {
@@ -432,6 +429,11 @@
     .content-unregisteredCopyright {
         .unregisteredCopyright-list {
             margin-top: 55px;
+            .list-group-item {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 

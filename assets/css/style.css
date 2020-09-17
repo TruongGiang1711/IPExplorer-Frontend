@@ -98,6 +98,7 @@ input::-ms-reveal {
   -webkit-transition: 0.2s;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  margin: 10px 0;
 }
 
 .form-control-range:hover {
@@ -246,6 +247,9 @@ input::-ms-reveal {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 20px;
+  }
+  .container-custom .form-group {
+    margin-bottom: 80px;
   }
   .container-custom .form-group > div label {
     font-family: "Raleway";

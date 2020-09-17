@@ -232,6 +232,6 @@ function ResetHeightForm() {
             borderRadius: inactiveRadius,
             duration: duration
         });
+        $parent.height($form.innerHeight() + inactiveHeight)
     });
-    $parent.height($form.innerHeight() + inactiveHeight)
 }
