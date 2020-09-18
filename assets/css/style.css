@@ -84,8 +84,7 @@
 }
 
 input::-ms-clear,
-input::-ms-reveal,
-input::-webkit-search-cancel-button {
+input::-ms-reveal {
   display: none;
 }
 
@@ -202,7 +201,7 @@ input::-webkit-search-cancel-button {
     position: relative;
   }
   .container-custom header {
-    padding: 50px 30px 30px 30px;
+    padding: 50px 37px 30px 37px;
     background-color: #fffffff0;
   }
   .container-custom header > div .logo {
@@ -231,7 +230,7 @@ input::-webkit-search-cancel-button {
   }
   .container-custom wrapper {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 37px;
   }
   .container-custom wrapper .content {
     margin: 20px 0;

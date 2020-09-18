@@ -80,10 +80,10 @@
                             <div class="">
                                 <span><i class="fas fa-lightbulb"></i></span>
                                 <div class="name">Patent</div>
-                                <span data-tooltip="1"
+                                <button data-tooltip="1"
                                     class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
                                     <i class="fas fa-question"></i>
-                                </span>
+                                </button>
                             </div>
                         </div>
                         <div class="animation-box--item" style="background-color: #7A58A1; top: 0px; left: 160px;">
@@ -172,21 +172,7 @@
     <script src="./assets/js/gsap.min.js"></script>
     <script src="./assets/js/animation-box-ip.js"></script>
     <script>
-        // $(window).on("resize", function () {
-        //     // Set .right's width to the window width minus 480 pixels
-        //     $("body").width($(this).width() - 480);
-        //     // Invoke the resize event immediately
-        // }).resize();
-
         $(document).ready(function () {
-            // $('[data-toggle="popover"]').popover();
-            // animation_box()
-            // $('[data-toggle="popover"]').on('show.bs.popover', function () {
-            //     $('.animation-box--item').off('click')
-            // })
-            // $('[data-toggle="popover"]').on('hidden.bs.popover', function () {
-            //     animation_box()
-            // })
             $('.animation-box--item').each(function (index, el) {
                 $(el).find('button.animation-box--tooltip-icon').css('color', $(el).css('background-color'))
             })
