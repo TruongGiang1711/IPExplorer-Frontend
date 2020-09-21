@@ -4,12 +4,26 @@
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
     // index
     .logo {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
         .nametag {
             margin-bottom: 10px;
             &.welcome {
                 margin: auto 0;
             }
+        }
+    }
+    .language {
+        margin: 20px 20px 17px 0;
+        font-family: "Calibri-Bold";
+        height: 16px;
+        display: flex;
+        @include font(16px, 1.5);
+        svg {
+            @include font(16px, 19px);
+            margin-right: 10px;
+        }
+        span {
+            margin-top: -4px;
         }
     }
     .welcome {
@@ -23,38 +37,22 @@
     .sologan {
         font-family: "Raleway";
         @include font(18px, 21px);
+        margin-bottom: 75px;
         > div {
             margin-bottom: 20px;
-            &:last-child {
-                margin-bottom: 75px;
-            }
         }
     }
-
-    // index
     .content-index {
-        .language {
-            margin: 20px 20px 17px 0;
-            font-family: "Calibri-Bold";
-            height: 16px;
-            display: flex;
-            @include font(16px, 1.5);
-            svg {
-                @include font(16px, 19px);
-                margin-right: 10px;
-            }
-            span {
-                margin-top: -4px;
-            }
-        }
         .action-index {
             margin-bottom: 53px;
+            font-family: "Raleway";
+            @include font(14px, 16px);
             & > :first-child {
+                height: 50px;
                 margin-bottom: 20px;
             }
         }
         .list-partner {
-            font-family: "Raleway";
             @include font(14px, 16px);
             > div {
                 &:first-child {
@@ -72,42 +70,15 @@
             }
         }
     }
-
-    // sign Up, sign In
-    .form {
-        .form-group {
-            > div {
-                label {
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        .action {
-            font-family: "Raleway";
-            @include font(14px, 16px);
-            a.btn {
-                height: 50px;
-                margin-bottom: 20px;
-            }
-            &.action-signIn {
-                margin-bottom: 108px;
-            }
-            &.action-signUp {
-                margin-bottom: 25px;
-            }
-        }
+    .footer-index {
+        display: none;
     }
-    .content-signin {
-        .form {
-            .form-group {
-                > div {
-                    .btn-forgot {
-                        font-family: "Raleway";
-                        @include font(15px, 18px);
-                        margin: 0 20px 10px 0;
-                    }
-                }
-            }
+
+    .content-terms,
+    .content-myAccount {
+        .logo {
+            margin-bottom: 0;
+            padding-bottom: 30px;
         }
     }
 
@@ -134,6 +105,49 @@
         background: white;
         width: 100%;
         padding: 0 30px 35px 30px;
+    }
+
+    // sign Up, sign In
+    .content-signup,
+    .content-signin {
+        .form {
+            .form-group {
+                > div {
+                    label {
+                        margin: 20px 0 10px;
+                    }
+                }
+            }
+            .action {
+                font-family: "Raleway";
+                @include font(14px, 16px);
+                a.btn {
+                    height: 50px;
+                    margin-bottom: 20px;
+                }
+                &.action-signIn {
+                    margin-bottom: 108px;
+                }
+                &.action-signUp {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    // forgot sigin
+    .content-signin {
+        .form {
+            .form-group {
+                margin-bottom: 84px;
+                > div {
+                    .btn-forgot {
+                        font-family: "Raleway";
+                        @include font(15px, 18px);
+                        margin: 0 23px 10px 0;
+                    }
+                }
+            }
+        }
     }
 
     // intangibles
@@ -221,42 +235,52 @@
     // my Account
     .content-myAccount {
         margin: 24px 0 0 0;
-        > div {
-            padding-right: 30px;
-        }
-        .evaluation_sucess {
-            font-family: "Raleway";
-            font-weight: bold;
-            @include font(15px, 18px);
-            margin-bottom: 10px;
-        }
-        .evaluation_select {
-            font-family: "Calibri-Light";
-            @include font(12px, 14px);
-            margin-bottom: 20px;
-        }
-        .list-accordion {
-            overflow: auto;
-            margin-left: 0;
-            margin-bottom: 40px;
-        }
-        .language-select {
-            font-family: "Raleway";
-            font-weight: bold;
-            @include font(15px, 18px);
-            margin-bottom: 10px;
-        }
-        .select {
-            font-family: "Calibri-Light";
-            @include font(16px, 23px);
-            width: auto;
-            box-shadow: none;
-        }
-        .btn-save {
-            margin: 35px 0;
-        }
-        .action-myAccount {
-            margin: 73px 0 40px;
+        wrapper {
+            > div {
+                > div {
+                    padding-right: 30px;
+                }
+            }
+            .title {
+                margin-bottom: 20px;
+            }
+            .evaluation_sucess {
+                font-family: "Raleway";
+                font-weight: bold;
+                @include font(15px, 18px);
+                margin-bottom: 10px;
+            }
+            .evaluation_select {
+                font-family: "Calibri-Light";
+                @include font(12px, 14px);
+                margin-bottom: 20px;
+            }
+            .list-accordion {
+                overflow: auto;
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
+            .language-select {
+                font-family: "Raleway";
+                font-weight: bold;
+                @include font(15px, 18px);
+                margin-bottom: 10px;
+            }
+            .select {
+                font-family: "Calibri-Light";
+                @include font(16px, 23px);
+                width: auto;
+                box-shadow: none;
+            }
+            .btn-save {
+                margin: 35px 0;
+            }
+            .action-myAccount {
+                margin: 73px 0 40px;
+                > .btn-circle {
+                    justify-content: flex-end;
+                }
+            }
         }
     }
 
@@ -325,8 +349,6 @@
             &--item {
                 position: absolute;
                 display: flex;
-                width: 141px;
-                height: 141px;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
@@ -510,4 +532,92 @@
 
 @media (min-width: 1281px) {
     /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
+    .container-desktop {
+        // index
+        .logo {
+            margin-bottom: 30px;
+        }
+        .language {
+            margin: 50px 50px -13px;
+        }
+        .content-index {
+            max-width: 100%;
+            .logo,
+            .language,
+            .list-partner {
+                margin: 0;
+                display: none;
+            }
+            wrapper {
+                padding: 185px 0 240px;
+                margin: 0 auto;
+                max-width: 302px;
+            }
+            .action-index {
+                margin-bottom: 0;
+            }
+        }
+        .footer-index {
+            padding: 95px;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            .contact-name {
+                font-family: "Raleway";
+                @include font(18px, 24px);
+                font-weight: bold;
+                margin-right: 50px;
+                height: 21px;
+            }
+            .contact-mail {
+                font-family: "Calibri-Light";
+                @include font(14px, 14px);
+            }
+        }
+
+        // temrs
+        .content-terms {
+            max-width: 536px;
+            margin: auto;
+            wrapper {
+                padding: 0;
+            }
+        }
+        .footer-terms {
+            .footer {
+                max-width: 536px;
+                margin: auto;
+            }
+        }
+
+        // sign Up, sign In
+        .content-signin,
+        .content-signup {
+            max-width: 100%;
+            wrapper {
+                padding: 0;
+                margin: 0 auto;
+                max-width: 302px;
+            }
+        }
+
+        // my Account
+        .content-myAccount {
+            max-width: 100%;
+            wrapper {
+                padding: 0;
+                margin: 0 auto;
+                max-width: 536px;
+                .action-myAccount {
+                    margin: 73px 0 141px;
+                    > .btn-circle {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
 }

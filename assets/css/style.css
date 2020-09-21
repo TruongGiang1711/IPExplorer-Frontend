@@ -192,94 +192,98 @@ input::-ms-reveal {
 
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-  body {
+  .container-desktop .sidebar-right {
+    display: none;
+  }
+  .container-desktop .container-custom {
     max-width: 375px;
     margin: auto;
+    width: 100%;
   }
-  .container-custom > div {
-    height: 100%;
-    position: relative;
-  }
-  .container-custom header {
-    padding: 50px 37px 30px 37px;
+  .container-desktop .container-custom header {
+    padding: 50px 37px 40px;
     background-color: #fffffff0;
   }
-  .container-custom header > div .logo {
+  .container-desktop .container-custom header > div .logo {
     border-bottom: 1px solid;
   }
-  .container-custom header > div .logo img {
+  .container-desktop .container-custom header > div .logo img {
     margin-right: 20px;
   }
-  .container-custom header > div .logo .nametag > div:first-child {
+  .container-desktop .container-custom header > div .logo .nametag > div:first-child {
     font-family: "Raleway";
     font-size: 15px;
     line-height: 18px;
   }
-  .container-custom header > div .logo .nametag > div:last-child {
+  .container-desktop .container-custom header > div .logo .nametag > div:last-child {
     font-family: "Calibri-Light";
     font-size: 15px;
     line-height: 21px;
   }
-  .container-custom header > div .logo .progress {
+  .container-desktop .container-custom header > div .logo .progress {
     height: 4px;
     bottom: -4px;
     background-color: transparent;
   }
-  .container-custom header > div .logo .progress .progress-bar-custom {
+  .container-desktop .container-custom header > div .logo .progress .progress-bar-custom {
     background-color: #007f9c;
   }
-  .container-custom wrapper {
+  .container-desktop .container-custom wrapper {
     width: 100%;
     padding: 0 37px;
   }
-  .container-custom wrapper .content {
+  .container-desktop .container-custom wrapper .content {
     margin: 20px 0;
   }
-  .container-custom .title {
+  .container-desktop .container-custom .title {
     font-family: "Raleway";
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 20px;
   }
-  .container-custom .description {
+  .container-desktop .container-custom .description {
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 20px;
   }
-  .container-custom .form-group {
+  .container-desktop .container-custom .form-group {
     margin-bottom: 80px;
   }
-  .container-custom .form-group > div label {
+  .container-desktop .container-custom .form-group > div label {
     font-family: "Raleway";
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
   }
-  .container-custom .form-group > div .input-validate {
+  .container-desktop .container-custom .form-group > div .input-validate {
     position: relative;
   }
-  .container-custom .form-group > div .input-validate input {
+  .container-desktop .container-custom .form-group > div .input-validate input {
     font-family: "Calibri-Light";
-    font-weight: bold;
     font-size: 14px;
     line-height: 21px;
-    margin-bottom: 20px;
   }
-  .container-custom .form-group > div .input-validate small {
+  .container-desktop .container-custom .form-group > div .input-validate small {
     position: absolute;
     margin-top: -17px;
   }
-  .container-custom .form-group > div .password {
+  .container-desktop .container-custom .form-group > div .password {
     position: relative;
   }
-  .container-custom .form-group > div .password .pass-eye {
+  .container-desktop .container-custom .form-group > div .password .pass-eye {
     position: absolute;
-    right: 10px;
-    top: 25%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
   }
-  .container-custom .item {
+  .container-desktop .container-custom .form-group > div .password .pass-eye svg {
+    width: 16px;
+    margin: auto 10px 0 auto;
+    height: 100%;
+  }
+  .container-desktop .container-custom .item {
     border-radius: 20px;
     border: 1px solid #007f9c;
     height: 95px;
@@ -301,11 +305,11 @@ input::-ms-reveal {
     line-height: 16px;
     cursor: pointer;
   }
-  .container-custom .accordion .card {
+  .container-desktop .container-custom .accordion .card {
     border: 0;
     margin-bottom: 10px;
   }
-  .container-custom .accordion .card .card-header {
+  .container-desktop .container-custom .accordion .card .card-header {
     background: transparent;
     border: 1px solid #007f9c;
     border-radius: 5px;
@@ -315,27 +319,27 @@ input::-ms-reveal {
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
-  .container-custom .accordion .card .card-header .btn-block {
+  .container-desktop .container-custom .accordion .card .card-header .btn-block {
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 21px;
     padding: 7px 0;
   }
-  .container-custom .accordion .card .card-header.active {
+  .container-desktop .container-custom .accordion .card .card-header.active {
     background-color: #007f9c;
   }
-  .container-custom .accordion .card .card-header.active .btn-block {
+  .container-desktop .container-custom .accordion .card .card-header.active .btn-block {
     color: white;
   }
-  .container-custom .accordion .card .card-body {
+  .container-desktop .container-custom .accordion .card .card-body {
     padding: 10px 0 0 0;
   }
-  .container-custom .card-body .list-accordion {
+  .container-desktop .container-custom .card-body .list-accordion {
     overflow: auto;
     margin: 0 0 0 30px;
     padding-right: 30px;
   }
-  .container-custom .btn-group-footer {
+  .container-desktop .container-custom .btn-group-footer {
     margin: 50px 0;
   }
 }
@@ -358,5 +362,40 @@ input::-ms-reveal {
 
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
+  .container-desktop .sidebar-right {
+    display: block;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    background-color: #2222220d;
+    padding: 155px 95px 175px;
+  }
+  .container-desktop .sidebar-right .list-partner {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .container-desktop .sidebar-right .list-partner .list-group {
+    margin-top: 30px;
+  }
+  .container-desktop .sidebar-right .list-partner .list-group .list-group-item {
+    border: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    background-color: transparent;
+  }
+  .container-desktop .sidebar-right .list-partner .list-group .list-group-item:last-child {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  .container-desktop .container-custom {
+    margin: unset;
+  }
+  .container-desktop .container-custom header {
+    max-width: 536px;
+    padding: 50px 0 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -173,151 +173,154 @@ input::-ms-reveal {
 
 @media (min-width: 320px) {
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-    body {
-        max-width: 375px;
-        margin: auto;
-    }
-    .container-custom {
-        > div {
-            // max-height: 667px;
-            height: 100%;
-            position: relative;
+    .container-desktop {
+        .sidebar-right {
+            display: none;
         }
-        header {
-            padding: 50px 37px 30px 37px;
-            background-color: #fffffff0;
-            > div {
-                .logo {
-                    border-bottom: 1px solid;
-                    img {
-                        margin-right: 20px;
-                    }
-                    .nametag {
-                        > div {
-                            &:first-child {
-                                font-family: "Raleway";
-                                @include font(15px, 18px);
-                            }
-                            &:last-child {
-                                font-family: "Calibri-Light";
-                                @include font(15px, 21px);
-                            }
-                        }
-                    }
-                    .progress {
-                        height: 4px;
-                        bottom: -4px;
-                        background-color: transparent;
-                        .progress-bar-custom {
-                            background-color: $Allports;
-                        }
-                    }
-                }
-            }
-        }
-        wrapper {
+        .container-custom {
+            max-width: 375px;
+            margin: auto;
             width: 100%;
-            padding: 0 37px;
-            .content {
-                margin: 20px 0;
-            }
-        }
-        .title {
-            font-family: "Raleway";
-            font-weight: bold;
-            @include font(24px, 29px);
-            margin-bottom: 20px;
-        }
-        .description {
-            font-family: "Calibri-Light";
-            @include font(14px, 16px);
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 80px;
-            > div {
-                label {
-                    font-family: "Raleway";
-                    font-weight: bold;
-                    @include font(15px, 18px);
-                }
-                .input-validate {
-                    position: relative;
-                    input {
-                        font-family: "Calibri-Light";
-                        font-weight: bold;
-                        @include font(14px, 21px);
-                        margin-bottom: 20px;
-                    }
-                    small {
-                        position: absolute;
-                        margin-top: -17px;
-                    }
-                }
-                .password {
-                    position: relative;
-                    .pass-eye {
-                        position: absolute;
-                        right: 10px;
-                        top: 25%;
-                    }
-                }
-            }
-        }
-        .item {
-            border-radius: 20px;
-            border: 1px solid $Allports;
-            height: 95px;
-            width: 95px;
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-            font-family: "Calibri-Light";
-            @include font(14px, 16px);
-            cursor: pointer;
-        }
-        .accordion {
-            .card {
-                border: 0;
-                margin-bottom: 10px;
-                .card-header {
-                    background: transparent;
-                    border: 1px solid $Allports;
-                    border-radius: 5px;
-                    margin-bottom: 0;
-                    padding: 0;
-                    margin: 0 30px;
-                    transition: 0.2s;
-                    .btn-block {
-                        font-family: "Calibri-Light";
-                        @include font(14px, 21px);
-                        padding: 7px 0;
-                    }
-                    &.active {
-                        background-color: $Allports;
-                        .btn-block {
-                            color: white;
+            header {
+                padding: 50px 37px 40px;
+                background-color: #fffffff0;
+                > div {
+                    .logo {
+                        border-bottom: 1px solid;
+                        img {
+                            margin-right: 20px;
+                        }
+                        .nametag {
+                            > div {
+                                &:first-child {
+                                    font-family: "Raleway";
+                                    @include font(15px, 18px);
+                                }
+                                &:last-child {
+                                    font-family: "Calibri-Light";
+                                    @include font(15px, 21px);
+                                }
+                            }
+                        }
+                        .progress {
+                            height: 4px;
+                            bottom: -4px;
+                            background-color: transparent;
+                            .progress-bar-custom {
+                                background-color: $Allports;
+                            }
                         }
                     }
                 }
-                .card-body {
-                    padding: 10px 0 0 0;
+            }
+            wrapper {
+                width: 100%;
+                padding: 0 37px;
+                .content {
+                    margin: 20px 0;
                 }
             }
-        }
-        .card-body {
-            .list-accordion {
-                overflow: auto;
-                margin: 0 0 0 30px;
-                padding-right: 30px;
+            .title {
+                font-family: "Raleway";
+                font-weight: bold;
+                @include font(24px, 29px);
             }
-        }
-        .btn-group-footer {
-            // padding: 0 30px;
-            margin: 50px 0;
+            .description {
+                font-family: "Calibri-Light";
+                @include font(14px, 16px);
+                margin-bottom: 20px;
+            }
+            .form-group {
+                margin-bottom: 80px;
+                > div {
+                    label {
+                        font-family: "Raleway";
+                        font-weight: bold;
+                        @include font(15px, 18px);
+                    }
+                    .input-validate {
+                        position: relative;
+                        input {
+                            font-family: "Calibri-Light";
+                            @include font(14px, 21px);
+                        }
+                        small {
+                            position: absolute;
+                            margin-top: -17px;
+                        }
+                    }
+                    .password {
+                        position: relative;
+                        .pass-eye {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 100%;
+                            width: 50px;
+                            svg {
+                                width: 16px;
+                                margin: auto 10px 0 auto;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .item {
+                border-radius: 20px;
+                border: 1px solid $Allports;
+                height: 95px;
+                width: 95px;
+                margin-right: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 10px;
+                font-family: "Calibri-Light";
+                @include font(14px, 16px);
+                cursor: pointer;
+            }
+            .accordion {
+                .card {
+                    border: 0;
+                    margin-bottom: 10px;
+                    .card-header {
+                        background: transparent;
+                        border: 1px solid $Allports;
+                        border-radius: 5px;
+                        margin-bottom: 0;
+                        padding: 0;
+                        margin: 0 30px;
+                        transition: 0.2s;
+                        .btn-block {
+                            font-family: "Calibri-Light";
+                            @include font(14px, 21px);
+                            padding: 7px 0;
+                        }
+                        &.active {
+                            background-color: $Allports;
+                            .btn-block {
+                                color: white;
+                            }
+                        }
+                    }
+                    .card-body {
+                        padding: 10px 0 0 0;
+                    }
+                }
+            }
+            .card-body {
+                .list-accordion {
+                    overflow: auto;
+                    margin: 0 0 0 30px;
+                    padding-right: 30px;
+                }
+            }
+            .btn-group-footer {
+                // padding: 0 30px;
+                margin: 50px 0;
+            }
         }
     }
 }
@@ -356,4 +359,41 @@ input::-ms-reveal {
 
 @media (min-width: 1281px) {
     /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
+    .container-desktop {
+        .sidebar-right {
+            display: block;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            background-color: #2222220d;
+            padding: 155px 95px 175px;
+            .list-partner {
+                @include font(18px, 21px);
+                .list-group {
+                    margin-top: 30px;
+                    .list-group-item {
+                        border: 0;
+                        margin-bottom: 25px;
+                        padding: 0;
+                        background-color: transparent;
+                        &:last-child {
+                            margin-bottom: 0;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-custom {
+            margin: unset;
+            header {
+                max-width: 536px;
+                padding: 50px 0 30px;
+            }
+        }
+    }
 }

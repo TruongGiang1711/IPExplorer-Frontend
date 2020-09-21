@@ -1,13 +1,31 @@
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
   .logo {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
   .logo .nametag {
     margin-bottom: 10px;
   }
   .logo .nametag.welcome {
     margin: auto 0;
+  }
+  .language {
+    margin: 20px 20px 17px 0;
+    font-family: "Calibri-Bold";
+    height: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .language svg {
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 10px;
+  }
+  .language span {
+    margin-top: -4px;
   }
   .welcome {
     margin-bottom: 50px;
@@ -22,39 +40,22 @@
     font-family: "Raleway";
     font-size: 18px;
     line-height: 21px;
+    margin-bottom: 75px;
   }
   .sologan > div {
     margin-bottom: 20px;
   }
-  .sologan > div:last-child {
-    margin-bottom: 75px;
-  }
-  .content-index .language {
-    margin: 20px 20px 17px 0;
-    font-family: "Calibri-Bold";
-    height: 16px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  .content-index .language svg {
-    font-size: 16px;
-    line-height: 19px;
-    margin-right: 10px;
-  }
-  .content-index .language span {
-    margin-top: -4px;
-  }
   .content-index .action-index {
     margin-bottom: 53px;
+    font-family: "Raleway";
+    font-size: 14px;
+    line-height: 16px;
   }
   .content-index .action-index > :first-child {
+    height: 50px;
     margin-bottom: 20px;
   }
   .content-index .list-partner {
-    font-family: "Raleway";
     font-size: 14px;
     line-height: 16px;
   }
@@ -76,29 +77,13 @@
     padding: 0;
     border: 0;
   }
-  .form .form-group > div label {
-    margin-bottom: 10px;
+  .footer-index {
+    display: none;
   }
-  .form .action {
-    font-family: "Raleway";
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .form .action a.btn {
-    height: 50px;
-    margin-bottom: 20px;
-  }
-  .form .action.action-signIn {
-    margin-bottom: 108px;
-  }
-  .form .action.action-signUp {
-    margin-bottom: 25px;
-  }
-  .content-signin .form .form-group > div .btn-forgot {
-    font-family: "Raleway";
-    font-size: 15px;
-    line-height: 18px;
-    margin: 0 20px 10px 0;
+  .content-terms .logo,
+  .content-myAccount .logo {
+    margin-bottom: 0;
+    padding-bottom: 30px;
   }
   .content-terms {
     font-family: "Calibri-Light";
@@ -125,6 +110,38 @@
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff50), to(white));
     background-image: linear-gradient(#ffffff50, white);
     /* Standard syntax (must be last) */
+  }
+  .content-signup .form .form-group > div label,
+  .content-signin .form .form-group > div label {
+    margin: 20px 0 10px;
+  }
+  .content-signup .form .action,
+  .content-signin .form .action {
+    font-family: "Raleway";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-signup .form .action a.btn,
+  .content-signin .form .action a.btn {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .content-signup .form .action.action-signIn,
+  .content-signin .form .action.action-signIn {
+    margin-bottom: 108px;
+  }
+  .content-signup .form .action.action-signUp,
+  .content-signin .form .action.action-signUp {
+    margin-bottom: 25px;
+  }
+  .content-signin .form .form-group {
+    margin-bottom: 84px;
+  }
+  .content-signin .form .form-group > div .btn-forgot {
+    font-family: "Raleway";
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 23px 10px 0;
   }
   .content-intangibles {
     margin: 20px 0 55px 0;
@@ -211,35 +228,38 @@
   .content-myAccount {
     margin: 24px 0 0 0;
   }
-  .content-myAccount > div {
+  .content-myAccount wrapper > div > div {
     padding-right: 30px;
   }
-  .content-myAccount .evaluation_sucess {
+  .content-myAccount wrapper .title {
+    margin-bottom: 20px;
+  }
+  .content-myAccount wrapper .evaluation_sucess {
     font-family: "Raleway";
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     margin-bottom: 10px;
   }
-  .content-myAccount .evaluation_select {
+  .content-myAccount wrapper .evaluation_select {
     font-family: "Calibri-Light";
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 20px;
   }
-  .content-myAccount .list-accordion {
+  .content-myAccount wrapper .list-accordion {
     overflow: auto;
     margin-left: 0;
     margin-bottom: 40px;
   }
-  .content-myAccount .language-select {
+  .content-myAccount wrapper .language-select {
     font-family: "Raleway";
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     margin-bottom: 10px;
   }
-  .content-myAccount .select {
+  .content-myAccount wrapper .select {
     font-family: "Calibri-Light";
     font-size: 16px;
     line-height: 23px;
@@ -247,11 +267,16 @@
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .content-myAccount .btn-save {
+  .content-myAccount wrapper .btn-save {
     margin: 35px 0;
   }
-  .content-myAccount .action-myAccount {
+  .content-myAccount wrapper .action-myAccount {
     margin: 73px 0 40px;
+  }
+  .content-myAccount wrapper .action-myAccount > .btn-circle {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .content-business .title {
     padding: 0 30px;
@@ -308,8 +333,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 141px;
-    height: 141px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -482,5 +505,92 @@
 
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
+  .container-desktop .logo {
+    margin-bottom: 30px;
+  }
+  .container-desktop .language {
+    margin: 50px 50px -13px;
+  }
+  .container-desktop .content-index {
+    max-width: 100%;
+  }
+  .container-desktop .content-index .logo,
+  .container-desktop .content-index .language,
+  .container-desktop .content-index .list-partner {
+    margin: 0;
+    display: none;
+  }
+  .container-desktop .content-index wrapper {
+    padding: 185px 0 240px;
+    margin: 0 auto;
+    max-width: 302px;
+  }
+  .container-desktop .content-index .action-index {
+    margin-bottom: 0;
+  }
+  .container-desktop .footer-index {
+    padding: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-desktop .footer-index .contact-name {
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-right: 50px;
+    height: 21px;
+  }
+  .container-desktop .footer-index .contact-mail {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .container-desktop .content-terms {
+    max-width: 536px;
+    margin: auto;
+  }
+  .container-desktop .content-terms wrapper {
+    padding: 0;
+  }
+  .container-desktop .footer-terms .footer {
+    max-width: 536px;
+    margin: auto;
+  }
+  .container-desktop .content-signin,
+  .container-desktop .content-signup {
+    max-width: 100%;
+  }
+  .container-desktop .content-signin wrapper,
+  .container-desktop .content-signup wrapper {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 302px;
+  }
+  .container-desktop .content-myAccount {
+    max-width: 100%;
+  }
+  .container-desktop .content-myAccount wrapper {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 536px;
+  }
+  .container-desktop .content-myAccount wrapper .action-myAccount {
+    margin: 73px 0 141px;
+  }
+  .container-desktop .content-myAccount wrapper .action-myAccount > .btn-circle {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=index.css.map */

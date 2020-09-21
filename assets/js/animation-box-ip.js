@@ -4,8 +4,8 @@ var firstAnimation = true;
 var duration = 0.2;
 
 // default box variables
-var defaultWidth = 141;
-var defaultHeight = 141;
+var defaultWidth = $('.container-custom').innerWidth() / 2 - 47;
+var defaultHeight = $('.container-custom').innerWidth() / 2 - 47;
 var defaultGapLeft = 19;
 var defaultGapTop = 20;
 var defaultRadius = 25;
@@ -33,6 +33,10 @@ var $item = $('.animation-box--item');
 var heightForm = $form.innerHeight()
 
 $parent.height(defaultHeight * 2 + inactiveGapTop)
+$item.css({
+    width: defaultWidth,
+    height: defaultHeight
+})
 $('.animation-box--item').on('click', function (e) {
     var $this = $(this);
     if ($this.hasClass('active')) {
