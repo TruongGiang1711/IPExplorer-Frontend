@@ -52,7 +52,6 @@
     line-height: 16px;
   }
   .content-index .action-index > :first-child {
-    height: 50px;
     margin-bottom: 20px;
   }
   .content-index .list-partner {
@@ -81,9 +80,23 @@
     display: none;
   }
   .content-terms .logo,
-  .content-myAccount .logo {
+  .content-myAccount .logo,
+  .content-intangibles .logo,
+  .content-business .logo,
+  .content-ip .logo,
+  .content-unregisteredCopyright .logo,
+  .content-chart .logo,
+  .content-report .logo {
     margin-bottom: 0;
     padding-bottom: 30px;
+  }
+  .content-myAccount wrapper > div,
+  .content-business wrapper > div,
+  .content-ip wrapper > div,
+  .content-unregisteredCopyright wrapper > div,
+  .content-chart wrapper > div,
+  .content-report wrapper > div {
+    margin-top: 20px;
   }
   .content-terms {
     font-family: "Calibri-Light";
@@ -111,6 +124,10 @@
     background-image: linear-gradient(#ffffff50, white);
     /* Standard syntax (must be last) */
   }
+  .content-signup .form .form-group,
+  .content-signin .form .form-group {
+    margin-bottom: 84px;
+  }
   .content-signup .form .form-group > div label,
   .content-signin .form .form-group > div label {
     margin: 20px 0 10px;
@@ -121,9 +138,8 @@
     font-size: 14px;
     line-height: 16px;
   }
-  .content-signup .form .action a.btn,
-  .content-signin .form .action a.btn {
-    height: 50px;
+  .content-signup .form .action .btn,
+  .content-signin .form .action .btn {
     margin-bottom: 20px;
   }
   .content-signup .form .action.action-signIn,
@@ -134,26 +150,33 @@
   .content-signin .form .action.action-signUp {
     margin-bottom: 25px;
   }
-  .content-signin .form .form-group {
-    margin-bottom: 84px;
+  .content-signin wrapper > div {
+    margin-bottom: 210px;
   }
-  .content-signin .form .form-group > div .btn-forgot {
+  .content-signin wrapper > div .form .form-group > div .btn-forgot {
     font-family: "Raleway";
     font-size: 15px;
     line-height: 18px;
     margin: 0 23px 10px 0;
   }
-  .content-intangibles {
-    margin: 20px 0 55px 0;
+  .content-intangibles wrapper > div {
+    margin-top: 20px;
+    margin-bottom: 55px;
   }
-  .content-intangibles .figure .intangibles-model-lv1,
-  .content-intangibles .figure .intangibles-model-lv2,
-  .content-intangibles .figure .intangibles-model-lv3 {
+  .content-intangibles wrapper > div .title {
+    margin-bottom: 30px;
+  }
+  .content-intangibles wrapper > div .figure {
+    max-width: 300px;
+  }
+  .content-intangibles wrapper > div .figure .intangibles-model-lv1,
+  .content-intangibles wrapper > div .figure .intangibles-model-lv2,
+  .content-intangibles wrapper > div .figure .intangibles-model-lv3 {
     width: 100%;
   }
-  .content-intangibles .figure .intangibles-model-lv1 span,
-  .content-intangibles .figure .intangibles-model-lv2 span,
-  .content-intangibles .figure .intangibles-model-lv3 span {
+  .content-intangibles wrapper > div .figure .intangibles-model-lv1 span,
+  .content-intangibles wrapper > div .figure .intangibles-model-lv2 span,
+  .content-intangibles wrapper > div .figure .intangibles-model-lv3 span {
     font-family: "Calibri-Bold";
     font-size: 12px;
     line-height: 14px;
@@ -161,72 +184,73 @@
     position: absolute;
     bottom: 10px;
   }
-  .content-intangibles .figure .intangibles-model-lv1 {
+  .content-intangibles wrapper > div .figure .intangibles-model-lv1 {
     border-radius: 60px;
     background-color: #71b4c4;
     height: 300px;
-    max-width: 300px;
     position: relative;
   }
-  .content-intangibles .figure .intangibles-model-lv2 {
+  .content-intangibles wrapper > div .figure .intangibles-model-lv2 {
     border-radius: 48px;
     background-color: #429bb0;
     height: 240px;
     max-width: 240px;
     position: absolute;
   }
-  .content-intangibles .figure .intangibles-model-lv3 {
+  .content-intangibles wrapper > div .figure .intangibles-model-lv3 {
     border-radius: 36px;
     background-color: #007f9c;
     height: 180px;
     max-width: 180px;
     position: absolute;
   }
-  .content-intangibles .figure .intangibles-model-lv3 span {
+  .content-intangibles wrapper > div .figure .intangibles-model-lv3 span {
     bottom: unset;
   }
-  .content-intangibles .figure .figure-caption {
+  .content-intangibles wrapper > div .figure .figure-caption {
     font-family: "Calibri-Light";
     font-size: 12px;
     line-height: 14px;
     color: black;
     margin: 10px 0 20px;
   }
-  .content-intangibles .intangibles-details .intangibles-details_lv3,
-  .content-intangibles .intangibles-details .intangibles-details_lv2,
-  .content-intangibles .intangibles-details .intangibles-details_lv1 {
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_lv3,
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_lv2,
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_lv1 {
     height: 50px;
     max-width: 50px;
     width: 100%;
     border-radius: 10px;
     margin-right: 10px;
   }
-  .content-intangibles .intangibles-details .intangibles-details_lv3 {
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_lv3 {
     background-color: #007f9c;
   }
-  .content-intangibles .intangibles-details .intangibles-details_lv2 {
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_lv2 {
     background-color: #429bb0;
   }
-  .content-intangibles .intangibles-details .intangibles-details_lv1 {
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_lv1 {
     background-color: #71b4c4;
   }
-  .content-intangibles .intangibles-details .intangibles-details_title {
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_title {
     font-family: "Raleway";
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
     margin: 15px 0 10px 0;
   }
-  .content-intangibles .intangibles-details .intangibles-details_content {
+  .content-intangibles wrapper > div .intangibles-details .intangibles-details_content {
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 16px;
   }
-  .content-intangibles .intangibles-details .intangibles-details_content:last-child {
-    margin-bottom: 20px;
+  .content-intangibles wrapper > div .intangibles-details > div {
+    margin-bottom: 4px;
   }
-  .content-myAccount {
-    margin: 24px 0 0 0;
+  .content-intangibles wrapper > div .intangibles-details > div.intangibles-details_content {
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .content-myAccount wrapper > div > div {
     padding-right: 30px;
@@ -263,6 +287,7 @@
     font-family: "Calibri-Light";
     font-size: 16px;
     line-height: 23px;
+    height: 16px;
     width: auto;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -271,7 +296,7 @@
     margin: 35px 0;
   }
   .content-myAccount wrapper .action-myAccount {
-    margin: 73px 0 40px;
+    margin: 72px 0 40px;
   }
   .content-myAccount wrapper .action-myAccount > .btn-circle {
     -webkit-box-pack: end;
@@ -280,6 +305,7 @@
   }
   .content-business .title {
     padding: 0 30px;
+    margin-bottom: 20px;
   }
   .content-business .form-group {
     padding: 0 30px;
@@ -293,6 +319,9 @@
   }
   .content-business .form-group > div .card:first-child .list-accordion > div:first-child {
     margin-bottom: 10px;
+  }
+  .content-business .btn-group-footer {
+    padding: 0 37px;
   }
   .list-group-item {
     padding: 20px;
@@ -322,6 +351,38 @@
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 16px;
+  }
+  .content-ip .title {
+    margin-bottom: 20px;
+  }
+  .content-ip.ip .animation-box {
+    margin-top: 55px;
+  }
+  .content-ip.ip .animation-box--item > div .name {
+    font-size: 18px;
+    line-height: 16px;
+  }
+  .content-ip.ip .animation-box .form-group {
+    margin-bottom: 20px;
+  }
+  .content-ip.ip .animation-box .form-group > div input {
+    margin-bottom: 10px;
+  }
+  .content-ip.IntellectualAssets .animation-box {
+    margin-top: 20px;
+  }
+  .content-ip.IntellectualAssets .animation-box .ipIntellectualAssets-list {
+    display: none;
+  }
+  .content-ip.IntellectualAssets .animation-box .ipIntellectualAssets-list.active {
+    display: block;
+  }
+  .content-ip.IntellectualAssets .animation-box--item > div .name {
+    font-size: 15px;
+    line-height: 16px;
+  }
+  .content-ip.IntellectualAssets .animation-box .action-ipIntellectualAssets {
+    margin-top: 10px;
   }
   .content-ip .animation-box {
     margin: 55px auto 0;
@@ -400,7 +461,8 @@
     margin-right: 15px;
   }
   .content-ip .animation-box--item > div.active .name {
-    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 16px;
   }
   .content-ip .animation-box--item > div.active .animation-box--tooltip-icon {
     top: unset;
@@ -415,8 +477,6 @@
   }
   .content-ip .animation-box--item > div .name {
     font-family: "Raleway";
-    font-size: 18px;
-    line-height: 16px;
     word-break: break-word;
   }
   .content-ip .animation-box--item > div .animation-box--tooltip-icon {
@@ -432,23 +492,8 @@
     font-size: 18px;
     line-height: 16px;
   }
-  .content-ip.ip .form-group {
+  .content-unregisteredCopyright .title {
     margin-bottom: 20px;
-  }
-  .content-ip.ip .form-group > div input {
-    margin-bottom: 10px;
-  }
-  .content-ip.IntellectualAssets .animation-box {
-    margin: 20px 0 0;
-  }
-  .content-ip.IntellectualAssets .animation-box .ipIntellectualAssets-list {
-    display: none;
-  }
-  .content-ip.IntellectualAssets .animation-box .ipIntellectualAssets-list.active {
-    display: block;
-  }
-  .content-ip.IntellectualAssets .animation-box .action-ipIntellectualAssets {
-    margin-top: 20px;
   }
   .content-unregisteredCopyright .unregisteredCopyright-list {
     margin-top: 55px;
@@ -456,31 +501,43 @@
   .content-unregisteredCopyright .unregisteredCopyright-list .list-group-item:last-child {
     margin-bottom: 0;
   }
-  .content-report .report-info h5 {
+  .content-chart wrapper .title {
+    margin-bottom: 20px;
+  }
+  .content-report wrapper .title {
+    margin-bottom: 20px;
+  }
+  .content-report wrapper .report-info {
+    margin-top: 30px;
+  }
+  .content-report wrapper .report-info > div {
+    margin-bottom: 20px;
+  }
+  .content-report wrapper .report-info h5 {
     font-family: "Raleway";
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
   }
-  .content-report .report-info h5.score {
+  .content-report wrapper .report-info h5.score {
     font-size: 21px;
     line-height: 25px;
   }
-  .content-report .report-info p {
+  .content-report wrapper .report-info p {
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 16px;
   }
-  .content-report .report-info .title-try {
+  .content-report wrapper .report-info .title-try {
     margin: 50px auto 20px;
   }
-  .content-report .report-info .info-try p {
+  .content-report wrapper .report-info .info-try p {
     font-family: "Raleway";
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 20px;
   }
-  .content-report .report-info .info-company {
+  .content-report wrapper .report-info .info-company {
     font-family: "Raleway";
     font-size: 12px;
     line-height: 14px;
@@ -508,9 +565,6 @@
 }
 
 @media (min-width: 1366px) {
-  .container-desktop .logo {
-    margin-bottom: 30px;
-  }
   .container-desktop .language {
     margin: 50px 50px -13px;
   }
@@ -555,11 +609,25 @@
     font-size: 14px;
     line-height: 14px;
   }
-  .container-desktop .content-terms {
+  .container-desktop .content-terms,
+  .container-desktop .content-myAccount,
+  .container-desktop .content-intangibles,
+  .container-desktop .content-business,
+  .container-desktop .content-ip,
+  .container-desktop .content-unregisteredCopyright,
+  .container-desktop .content-chart,
+  .container-desktop .content-report {
     max-width: 536px;
     margin: auto;
   }
-  .container-desktop .content-terms wrapper {
+  .container-desktop .content-terms wrapper,
+  .container-desktop .content-myAccount wrapper,
+  .container-desktop .content-intangibles wrapper,
+  .container-desktop .content-business wrapper,
+  .container-desktop .content-ip wrapper,
+  .container-desktop .content-unregisteredCopyright wrapper,
+  .container-desktop .content-chart wrapper,
+  .container-desktop .content-report wrapper {
     padding: 0;
   }
   .container-desktop .footer-terms .footer {
@@ -576,21 +644,60 @@
     margin: 0 auto;
     max-width: 302px;
   }
-  .container-desktop .content-myAccount {
-    max-width: 100%;
+  .container-desktop .content-signup wrapper > div {
+    margin-bottom: 120px;
   }
-  .container-desktop .content-myAccount wrapper {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 536px;
+  .container-desktop .content-myAccount .action-myAccount {
+    margin: 75px 0 140px;
   }
-  .container-desktop .content-myAccount wrapper .action-myAccount {
-    margin: 73px 0 141px;
-  }
-  .container-desktop .content-myAccount wrapper .action-myAccount > .btn-circle {
+  .container-desktop .content-myAccount .action-myAccount > .btn-circle {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .container-desktop .content-intangibles wrapper > div {
+    margin-bottom: 50px;
+  }
+  .container-desktop .content-intangibles wrapper > div .intangibles-details > div.intangibles-details_content {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .container-desktop .content-intangibles wrapper > div .btn-custom {
+    max-width: 302px;
+    margin: auto;
+  }
+  .container-desktop .content-ip .btn-group-footer,
+  .container-desktop .content-business .btn-group-footer,
+  .container-desktop .content-unregisteredCopyright .btn-group-footer {
+    max-width: 302px;
+    margin: 50px auto;
+  }
+  .container-desktop .content-ip.ip .animation-box, .container-desktop .content-ip.IntellectualAssets .animation-box {
+    max-width: 302px;
+    margin-top: 40px;
+  }
+  .container-desktop .content-business .form-control-range {
+    max-width: 302px;
+  }
+  .container-desktop .content-business .form-control-range + span {
+    max-width: 302px;
+  }
+  .container-desktop .content-business .btn-group-footer {
+    padding: 0;
+  }
+  .container-desktop .content-unregisteredCopyright .unregisteredCopyright-list {
+    max-width: 302px;
+    margin: auto;
+  }
+  .container-desktop .content-chart .btn-group-footer {
+    max-width: 302px;
+    margin: 40px auto 140px;
+  }
+  .container-desktop .content-report wrapper .report-info {
+    margin-top: 50px;
+  }
+  .container-desktop .content-report wrapper .report-info > div {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=index.css.map */

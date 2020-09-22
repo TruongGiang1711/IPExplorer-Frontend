@@ -24,142 +24,156 @@
 </head>
 
 <body>
-    <div class="container-custom">
-        <div class="d-flex flex-column align-items-center w-100">
-            <header class="sticky-top w-100">
-                <div class="m-auto">
-                    <div class="d-flex align-items-end position-relative logo">
-                        <div>
-                            <img width="50" src="./assets/images/logo.svg">
-                        </div>
-                        <div class="nametag">
-                            <div>Intellectual Property</div>
-                            <div></div>
-                        </div>
-                        <div class="progress position-absolute w-100">
-                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 0%;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <wrapper class="overflow-auto h-100">
-                <div class="content content-ip ip">
-                    <div class="title">Next, any registered IP you already have</div>
-                    <div>
-                        <div class="description">Patents, trademarks and designs all have to be officially
-                            registered at Dir Jen Haki.</br>Copyright can also be registered, but this is optional.
-                        </div>
-                    </div>
-                    <div class="animation-box">
-                        <form class="needs-validation" action="" novalidate
-                            style="display: none; padding: 60px 0 30px 0">
-                            <div class="form-group text-left">
-                                <div class="">
-                                    <input type="text" class="form-control" id="validationCustom02" value=""
-                                        placeholder="Prefix / Number" required>
+    <div class="container-desktop">
+        <div class="d-flex">
+            <div class="container-custom content-ip ip">
+                <div class="d-flex flex-column align-items-center w-100">
+                    <header class="sticky-top w-100">
+                        <div class="m-auto">
+                            <div class="d-flex align-items-end position-relative logo">
+                                <div>
+                                    <img width="50" src="./assets/images/logo.svg">
                                 </div>
-                                <div class="">
-                                    <input type="text" class="form-control" id="validationCustom03" value=""
-                                        placeholder="Prefix / Number" required>
+                                <div class="nametag">
+                                    <div>Intellectual Property</div>
+                                    <div></div>
+                                </div>
+                                <div class="progress position-absolute w-100">
+                                    <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 0%;"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between">
-                                <a class="btn btn-circle btn-addRow">
-                                    <span><i class="fas fa-plus"></i></span>
-                                    <span>Add Row</span>
-                                </a>
-                                <a class="btn btn-circle" href="">
-                                    <span><i class="fas fa-save"></i></span>
-                                    <span>Save</span>
-                                </a>
+                        </div>
+                    </header>
+                    <wrapper class="overflow-auto h-100">
+                        <div class="content">
+                            <div class="title">Next, any registered IP you already have</div>
+                            <div>
+                                <div class="description">Patents, trademarks and designs all have to be officially
+                                    registered at Dir Jen Haki.</br>Copyright can also be registered, but this is
+                                    optional.
+                                </div>
                             </div>
-                        </form>
+                            <div class="animation-box">
+                                <form class="needs-validation" action="" novalidate
+                                    style="display: none; padding: 60px 0 30px 0">
+                                    <div class="form-group text-left">
+                                        <div class="">
+                                            <input type="text" class="form-control" id="validationCustom02" value=""
+                                                placeholder="Prefix / Number" required>
+                                        </div>
+                                        <div class="">
+                                            <input type="text" class="form-control" id="validationCustom03" value=""
+                                                placeholder="Prefix / Number" required>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-circle btn-addRow">
+                                            <span><i class="fas fa-plus"></i></span>
+                                            <span>Add Row</span>
+                                        </a>
+                                        <a class="btn btn-circle" href="">
+                                            <span><i class="fas fa-save"></i></span>
+                                            <span>Save</span>
+                                        </a>
+                                    </div>
+                                </form>
 
-                        <div class="animation-box--item" style="background-color: #5B2080; top: 0px; left: 0px;">
-                            <div class="">
-                                <span><i class="fas fa-lightbulb"></i></span>
-                                <div class="name">Patent</div>
-                                <button data-tooltip="1"
-                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-question"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="animation-box--item" style="background-color: #7A58A1; top: 0px; left: 160px;">
-                            <div class="">
-                                <span><i class="fas fa-trademark"></i></i></span>
-                                <div class="name">Trademark</div>
-                                <button type="button" data-tooltip="2"
-                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-question"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="animation-box--item" style="background-color: #3C8D74; top: 161px; left: 0px;">
-                            <div class="">
-                                <span><i class="fas fa-pencil-ruler"></i></span>
-                                <div class="name">Design</div>
-                                <button type="button" data-tooltip="3"
-                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-question"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="animation-box--item" style="background-color: #096E4A; top: 161px; left: 160px;">
-                            <div class="">
-                                <span><i class="far fa-copyright"></i></span>
-                                <div class="name">Copyright</div>
-                                <button type="button" data-tooltip="4"
-                                    class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
-                                    <i class="fas fa-question"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- <div class="animation-box--item" style="background-color: #3C8D74; top: 322px; left: 0px;">
+                                <div class="animation-box--item"
+                                    style="background-color: #5B2080; top: 0px; left: 0px;">
+                                    <div class="">
+                                        <span><i class="fas fa-lightbulb"></i></span>
+                                        <div class="name">Patent</div>
+                                        <button data-tooltip="1"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-question"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="animation-box--item"
+                                    style="background-color: #7A58A1; top: 0px; left: 160px;">
+                                    <div class="">
+                                        <span><i class="fas fa-trademark"></i></i></span>
+                                        <div class="name">Trademark</div>
+                                        <button type="button" data-tooltip="2"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-question"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="animation-box--item"
+                                    style="background-color: #3C8D74; top: 161px; left: 0px;">
+                                    <div class="">
+                                        <span><i class="fas fa-pencil-ruler"></i></span>
+                                        <div class="name">Design</div>
+                                        <button type="button" data-tooltip="3"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-question"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="animation-box--item"
+                                    style="background-color: #096E4A; top: 161px; left: 160px;">
+                                    <div class="">
+                                        <span><i class="far fa-copyright"></i></span>
+                                        <div class="name">Copyright</div>
+                                        <button type="button" data-tooltip="4"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-question"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- <div class="animation-box--item" style="background-color: #3C8D74; top: 322px; left: 0px;">
                                 Patent 22</div>
                             <div class="animation-box--item"
                                 style="background-color: #096E4A; top: 322px; left: 160px;">Trademark 22</div> -->
-                    </div>
-                    <div class="d-flex justify-content-between btn-group-footer">
-                        <a class="btn btn-custom btn-custom-outline" href="./business.html">Previous</a>
-                        <a class="btn btn-custom btn-Allports" href="./unregisteredCopyrights.html">Continue</a>
-                    </div>
+                            </div>
+                            <div class="d-flex justify-content-between btn-group-footer">
+                                <a class="btn btn-custom btn-custom-outline" href="./business.html">Previous</a>
+                                <a class="btn btn-custom btn-Allports" href="./unregisteredCopyrights.html">Continue</a>
+                            </div>
+                        </div>
+                    </wrapper>
                 </div>
-            </wrapper>
+            </div>
+            <div class="tooltip-box" data-tooltip="1">
+                <div class="tooltip-box--content">
+                    Patent --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been
+                    the
+                    industry's standard dummy text ever since the 1500s, when an unknown print
+                </div>
+            </div>
+            <div class="tooltip-box" data-tooltip="2">
+                <div class="tooltip-box--content">
+                    Trademark --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has
+                    been the
+                    industry's standard dummy text ever since the 1500s, when an unknown print
+                </div>
+            </div>
+            <div class="tooltip-box" data-tooltip="3">
+                <div class="tooltip-box--content">
+                    Design --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been
+                    the
+                    industry's standard dummy text ever since the 1500s, when an unknown print
+                </div>
+            </div>
+            <div class="tooltip-box" data-tooltip="4">
+                <div class="tooltip-box--content">
+                    Copyright --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has
+                    been the
+                    industry's standard dummy text ever since the 1500s, when an unknown print
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="tooltip-box" data-tooltip="1">
-        <div class="tooltip-box--content">
-            Patent --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been
-            the
-            industry's standard dummy text ever since the 1500s, when an unknown print
-        </div>
-    </div>
-    <div class="tooltip-box" data-tooltip="2">
-        <div class="tooltip-box--content">
-            Trademark --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has
-            been the
-            industry's standard dummy text ever since the 1500s, when an unknown print
-        </div>
-    </div>
-    <div class="tooltip-box" data-tooltip="3">
-        <div class="tooltip-box--content">
-            Design --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been
-            the
-            industry's standard dummy text ever since the 1500s, when an unknown print
-        </div>
-    </div>
-    <div class="tooltip-box" data-tooltip="4">
-        <div class="tooltip-box--content">
-            Copyright --- Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has
-            been the
-            industry's standard dummy text ever since the 1500s, when an unknown print
-        </div>
+        <footer class="footer-index">
+            <div class="contact-name">Contact Us</div>
+            <div class="contact-mail d-flex align-items-center"><i class="far fa-envelope mr-2"></i>ipexplorer@rouse.com
+            </div>
+        </footer>
     </div>
 
     <!-- Optional JavaScript -->

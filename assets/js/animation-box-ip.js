@@ -4,8 +4,8 @@ var firstAnimation = true;
 var duration = 0.2;
 
 // default box variables
-var defaultWidth = $('.container-custom').innerWidth() / 2 - 47;
-var defaultHeight = $('.container-custom').innerWidth() / 2 - 47;
+var defaultWidth = 141;
+var defaultHeight = 141;
 var defaultGapLeft = 19;
 var defaultGapTop = 20;
 var defaultRadius = 25;
@@ -33,10 +33,18 @@ var $item = $('.animation-box--item');
 var heightForm = $form.innerHeight()
 
 $parent.height(defaultHeight * 2 + inactiveGapTop)
-$item.css({
-    width: defaultWidth,
-    height: defaultHeight
-})
+$item.each(function (index, el) {
+    $itemThis = $(this);
+    gsap.to($itemThis, {
+        width: defaultWidth,
+        height: defaultHeight,
+        top: (defaultWidth + defaultGapLeft) * (index % defaultItemsPerRow),
+        left: Math.floor(index / defaultItemsPerRow) * (
+            defaultGapTop + defaultHeight),
+        borderRadius: defaultRadius,
+        duration: duration
+    });
+});
 $('.animation-box--item').on('click', function (e) {
     var $this = $(this);
     if ($this.hasClass('active')) {
@@ -95,7 +103,7 @@ $('.animation-box--item').on('click', function (e) {
     }
     setTimeout(function () {
         calcPositionTooltips();
-        // ResetHeightForm();
+        ResetHeightForm();
     }, duration * 1000);
 });
 
@@ -202,6 +210,7 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
 });
 
 function addRowInput(value) {
+    value = value ?? "";
     $form.children('.form-group').append('<div class="prefix-number-add"><input type="text" class="form-control txt-prefix-number" id="validationCustom03" value="' + value + '" placeholder="Prefix / Number" required></div>')
     ResetHeightForm()
     $('.animation-box--item.inactive').each(function (index, el) {

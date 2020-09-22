@@ -22,42 +22,54 @@
 </head>
 
 <body>
-    <div class="container-custom">
-        <div class="d-flex flex-column align-items-center w-100">
-            <header class="sticky-top w-100">
-                <div class="m-auto">
-                    <div class="d-flex align-items-end position-relative logo">
-                        <div>
-                            <img width="50" src="./assets/images/logo.svg">
+    <div class="container-desktop">
+        <div class="d-flex">
+            <div class="container-custom content-chart">
+                <div class="d-flex flex-column align-items-center w-100">
+                    <header class="sticky-top w-100">
+                        <div class="m-auto">
+                            <div class="d-flex align-items-end position-relative logo">
+                                <div>
+                                    <img width="50" src="./assets/images/logo.svg">
+                                </div>
+                                <div class="nametag">
+                                    <div>Analysis</div>
+                                    <div></div>
+                                </div>
+                                <div class="progress position-absolute w-100">
+                                    <div class="progress-bar progress-bar-custom" role="progressbar"
+                                        style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="nametag">
-                            <div>Analysis</div>
-                            <div></div>
+                    </header>
+                    <wrapper class="overflow-auto h-100">
+                        <div class="content">
+                            <div class="title">Congratulations! You’ve found your IP and intellectual assets.</div>
+                            <div>
+                                <div class="description">
+                                    Click on any section if you need to return to it. Click ‘FINISH’ to access your
+                                    report.
+                                </div>
+                            </div>
+                            <div class="m-auto" style="max-width: 243px;"><canvas id="myChart" width="400"
+                                    height="400"></canvas></div>
+                            <div class="d-flex justify-content-between btn-group-footer">
+                                <a class="btn btn-custom btn-custom-outline"
+                                    href="./ipIntellectualAssets.html">Previous</a>
+                                <a class="btn btn-custom btn-Allports" href="./report.html">Continue</a>
+                            </div>
                         </div>
-                        <div class="progress position-absolute w-100">
-                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 100%;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
+                    </wrapper>
                 </div>
-            </header>
-            <wrapper class="overflow-auto h-100">
-                <div class="content content-chart">
-                    <div class="title">Congratulations! You’ve found your IP and intellectual assets.</div>
-                    <div>
-                        <div class="description">
-                            Click on any section if you need to return to it. Click ‘FINISH’ to access your report.
-                        </div>
-                    </div>
-                    <div class="m-auto" style="max-width: 243px;"><canvas id="myChart" width="400"
-                            height="400"></canvas></div>
-                    <div class="d-flex justify-content-between btn-group-footer">
-                        <a class="btn btn-custom btn-custom-outline" href="./ipIntellectualAssets.html">Previous</a>
-                        <a class="btn btn-custom btn-Allports" href="./report.html">Continue</a>
-                    </div>
-                </div>
-            </wrapper>
+            </div>
         </div>
+        <footer class="footer-index">
+            <div class="contact-name">Contact Us</div>
+            <div class="contact-mail d-flex align-items-center"><i class="far fa-envelope mr-2"></i>ipexplorer@rouse.com
+            </div>
+        </footer>
     </div>
 
     <!-- Optional JavaScript -->

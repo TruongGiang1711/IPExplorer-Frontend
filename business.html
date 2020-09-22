@@ -24,458 +24,552 @@
 </head>
 
 <body>
-    <div class="container-custom">
-        <div class="d-flex flex-column align-items-center w-100">
-            <header class="sticky-top w-100">
-                <div class="m-auto">
-                    <div class="d-flex align-items-end position-relative logo">
-                        <div>
-                            <img width="50" src="./assets/images/logo.svg">
+    <div class="container-desktop">
+        <div class="d-flex">
+            <div class="container-custom content-business">
+                <div class="d-flex flex-column align-items-center w-100">
+                    <header class="sticky-top w-100">
+                        <div class="m-auto">
+                            <div class="d-flex align-items-end position-relative logo">
+                                <div>
+                                    <img width="50" src="./assets/images/logo.svg">
+                                </div>
+                                <div class="nametag">
+                                    <div>Your Business</div>
+                                    <div></div>
+                                </div>
+                                <div class="progress position-absolute w-100">
+                                    <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 0%;"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="nametag">
-                            <div>Your Business</div>
-                            <div></div>
+                    </header>
+                    <wrapper class="overflow-auto p-0">
+                        <div class="content">
+                            <div class="title">Before we begin, tell us a bit about your business!</div>
+                            <form>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="validationCustom02">Your Business Name</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value=""
+                                            placeholder="Business Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group p-0">
+                                    <div class="">
+                                        <label for="" style="margin-bottom: 10px; padding: 0 30px;">Your Business Sector
+                                            &
+                                            Subsector</label>
+                                        <div
+                                            style="margin-bottom: 20px; font-family: 'Calibri-Light'; font-size: 12px; line-height: 14px; padding: 0 30px;">
+                                            Please select one sector & subsector.</div>
+                                        <div>
+                                            <div class="row">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingCreative">
+                                                        <h2 class="mb-0">
+                                                            <button class="btn btn-block collapsed" type="button">
+                                                                Creative
+                                                            </button>
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header" id="headingConsumerGoods">
+                                                        <h2 class="mb-0">
+                                                            <button class="btn btn-block collapsed" type="button">
+                                                                Consumer Goods
+                                                            </button>
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card">
+                                                    <div id="collapseCreative" class="collapse">
+                                                        <div class="card-body">
+                                                            <div class="list-accordion">
+                                                                <div class="d-inline-flex">
+                                                                    <div class="item">Advertising & Media Services
+                                                                    </div>
+                                                                    <div class="item">TV, Broadcast, Radio & Cable
+                                                                    </div>
+                                                                    <div class="item">Visual Comms & Design</div>
+                                                                    <div class="item">Publishing, Books & Magazines
+                                                                    </div>
+                                                                    <div class="item">Performing Arts</div>
+                                                                    <div class="item">Film, Content, Animation &
+                                                                        Video
+                                                                    </div>
+                                                                    <div class="item">Games, Exports & App
+                                                                        Developers
+                                                                    </div>
+                                                                    <div class="item">Architecture</div>
+                                                                    <div class="item">Product Design</div>
+                                                                </div>
+                                                                <div class="d-inline-flex">
+                                                                    <div class="item">Fashion Design</div>
+                                                                    <div class="item">Interior Design</div>
+                                                                    <div class="item">ISPs</div>
+                                                                    <div class="item">Fine Arts</div>
+                                                                    <div class="item">Photography</div>
+                                                                    <div class="item">Crafts & Handicrafts</div>
+                                                                    <div class="item">Music</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div id="collapseConsumerGoods" class="collapse">
+                                                        <div class="card-body">
+                                                            <div class="list-accordion">
+                                                                <div class="d-inline-flex">
+                                                                    <div class="item">
+                                                                        Auto Products & Parts
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        Household Home & Personal Care
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        Leisure Goods & Toys
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        Apparel and Footwear & Fashion Design
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        Foods, Beverages & Tobacco
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="accordion" id="accordionExample">
+                                            <div class="card">
+                                                <div class="card-header" id="headingCreative">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Creative
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseCreative" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">Advertising & Media Services
+                                                                </div>
+                                                                <div class="item">TV, Broadcast, Radio & Cable
+                                                                </div>
+                                                                <div class="item">Visual Comms & Design</div>
+                                                                <div class="item">Publishing, Books & Magazines
+                                                                </div>
+                                                                <div class="item">Performing Arts</div>
+                                                                <div class="item">Film, Content, Animation &
+                                                                    Video
+                                                                </div>
+                                                                <div class="item">Games, Exports & App
+                                                                    Developers
+                                                                </div>
+                                                                <div class="item">Architecture</div>
+                                                                <div class="item">Product Design</div>
+                                                            </div>
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">Fashion Design</div>
+                                                                <div class="item">Interior Design</div>
+                                                                <div class="item">ISPs</div>
+                                                                <div class="item">Fine Arts</div>
+                                                                <div class="item">Photography</div>
+                                                                <div class="item">Crafts & Handicrafts</div>
+                                                                <div class="item">Music</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingConsumerGoods">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Consumer Goods
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseConsumerGoods" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Auto Products & Parts
+                                                                </div>
+                                                                <div class="item">
+                                                                    Household Home & Personal Care
+                                                                </div>
+                                                                <div class="item">
+                                                                    Leisure Goods & Toys
+                                                                </div>
+                                                                <div class="item">
+                                                                    Apparel and Footwear & Fashion Design
+                                                                </div>
+                                                                <div class="item">
+                                                                    Foods, Beverages & Tobacco
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingConsumerServices">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Consumer Services
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseConsumerServices" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Tourism, Hotels & Leisure
+                                                                </div>
+                                                                <div class="item">
+                                                                    Restaurant Warung & Culinary
+                                                                </div>
+                                                                <div class="item">
+                                                                    Education
+                                                                </div>
+                                                                <div class="item">
+                                                                    Online Sellers, Retail & Shops
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingIT">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            IT
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseIT" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    IT Services
+                                                                </div>
+                                                                <div class="item">
+                                                                    Software
+                                                                </div>
+                                                                <div class="item">
+                                                                    IT Hardware & Equipment and Components
+                                                                </div>
+                                                                <div class="item">
+                                                                    Consumer Electronics & Phones
+                                                                </div>
+                                                                <div class="item">
+                                                                    Telecom Services
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingCommercial_ProfessionalServices">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Commercial & Professional Services
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseCommercial_ProfessionalServices" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Trading Companies & Distributors
+                                                                </div>
+                                                                <div class="item">
+                                                                    Commercial Services & Supplies
+                                                                </div>
+                                                                <div class="item">
+                                                                    Professional Services
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingHealth">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Health
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseHealth" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Medical Equipment
+                                                                </div>
+                                                                <div class="item">
+                                                                    Medical Services
+                                                                </div>
+                                                                <div class="item">
+                                                                    Pharma Products
+                                                                </div>
+                                                                <div class="item">
+                                                                    Healthcare Products
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingIndustrials">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Industrials
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseIndustrials" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Aerospace & Defense
+                                                                </div>
+                                                                <div class="item">
+                                                                    Building Products
+                                                                </div>
+                                                                <div class="item">
+                                                                    Construction & Engineering
+                                                                </div>
+                                                                <div class="item">
+                                                                    Electrical Equipment
+                                                                </div>
+                                                                <div class="item">
+                                                                    Industrial Conglomerates
+                                                                </div>
+                                                                <div class="item">
+                                                                    Machinery
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingMaterials">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Materials
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseMaterials" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Chemicals
+                                                                </div>
+                                                                <div class="item">
+                                                                    Construction Materials
+                                                                </div>
+                                                                <div class="item">
+                                                                    Packaging
+                                                                </div>
+                                                                <div class="item">
+                                                                    Metals, Mining & Forestry
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingEnergy">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Energy
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseEnergy" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Oil
+                                                                </div>
+                                                                <div class="item">
+                                                                    Gas
+                                                                </div>
+                                                                <div class="item">
+                                                                    Renewables
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingTransport">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Transport
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseTransport" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Air, Sea, Land Transport (Passenger & Freight)
+                                                                </div>
+                                                                <div class="item">
+                                                                    Transport Infrastructure
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingRealEstate">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Real Estate
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseRealEstate" class="collapse">
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingUtilities">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Utilities
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="collapseUtilities" class="collapse">
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="">Your Role in the Business</label>
+                                        <div class="list-accordion">
+                                            <div class="d-inline-flex">
+                                                <div class="item">
+                                                    Director
+                                                </div>
+                                                <div class="item">
+                                                    Owner
+                                                </div>
+                                                <div class="item">
+                                                    Employee
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="">How is Your Business Funded?</label>
+                                        <div class="list-accordion">
+                                            <div class="d-inline-flex">
+                                                <div class="item">
+                                                    Profits & Cashflow
+                                                </div>
+                                                <div class="item">
+                                                    Bank Lending
+                                                </div>
+                                                <div class="item">
+                                                    Venture Capital
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="">How Many Years Trading?</label>
+                                        <input type="range" class="form-control-range" />
+                                        <span class="d-flex justify-content-between">
+                                            <div style="padding-left: 5px;">0</div>
+                                            <div style="padding-left: 15px;">5</div>
+                                            <div>10+</div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="">Your Gender</label>
+                                        <div class="list-accordion">
+                                            <div class="d-inline-flex">
+                                                <div class="item">
+                                                    Male
+                                                </div>
+                                                <div class="item">
+                                                    Female
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <label for="">Your Trading Region</label>
+                                        <div class="list-accordion">
+                                            <div class="d-inline-flex">
+                                                <div class="item">
+                                                    Indonesia
+                                                </div>
+                                                <div class="item">
+                                                    Indonesia & Abroad
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between btn-group-footer">
+                                    <a class="btn btn-custom btn-custom-outline" href="./intangibles.html">Previous</a>
+                                    <a class="btn btn-custom btn-Allports" href="./ip.html">Continue</a>
+                                </div>
+                            </form>
                         </div>
-                        <div class="progress position-absolute w-100">
-                            <div class="progress-bar progress-bar-custom" role="progressbar" style="width: 0%;"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
+                    </wrapper>
                 </div>
-            </header>
-            <wrapper class="overflow-auto p-0">
-                <div class="content content-business">
-                    <div class="title">Before we begin, tell us a bit about your business!</div>
-                    <form>
-                        <div class="form-group">
-                            <div class="">
-                                <label for="validationCustom02">Your Business Name</label>
-                                <input type="text" class="form-control" id="validationCustom02" value=""
-                                    placeholder="Business Name" required>
-                            </div>
-                        </div>
-                        <div class="form-group p-0">
-                            <div class="">
-                                <label for="" style="margin-bottom: 10px; padding: 0 30px;">Your Business Sector &
-                                    Subsector</label>
-                                <div
-                                    style="margin-bottom: 20px; font-family: 'Calibri-Light'; font-size: 12px; line-height: 14px; padding: 0 30px;">
-                                    Please select one sector & subsector.</div>
-                                <div class="accordion" id="accordionExample">
-                                    <div class="card">
-                                        <div class="card-header" id="headingCreative">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Creative
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseCreative" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">Advertising & Media Services
-                                                        </div>
-                                                        <div class="item">TV, Broadcast, Radio & Cable
-                                                        </div>
-                                                        <div class="item">Visual Comms & Design</div>
-                                                        <div class="item">Publishing, Books & Magazines
-                                                        </div>
-                                                        <div class="item">Performing Arts</div>
-                                                        <div class="item">Film, Content, Animation &
-                                                            Video
-                                                        </div>
-                                                        <div class="item">Games, Exports & App
-                                                            Developers
-                                                        </div>
-                                                        <div class="item">Architecture</div>
-                                                        <div class="item">Product Design</div>
-                                                    </div>
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">Fashion Design</div>
-                                                        <div class="item">Interior Design</div>
-                                                        <div class="item">ISPs</div>
-                                                        <div class="item">Fine Arts</div>
-                                                        <div class="item">Photography</div>
-                                                        <div class="item">Crafts & Handicrafts</div>
-                                                        <div class="item">Music</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingConsumerGoods">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Consumer Goods
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseConsumerGoods" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Auto Products & Parts
-                                                        </div>
-                                                        <div class="item">
-                                                            Household Home & Personal Care
-                                                        </div>
-                                                        <div class="item">
-                                                            Leisure Goods & Toys
-                                                        </div>
-                                                        <div class="item">
-                                                            Apparel and Footwear & Fashion Design
-                                                        </div>
-                                                        <div class="item">
-                                                            Foods, Beverages & Tobacco
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingConsumerServices">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Consumer Services
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseConsumerServices" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Tourism, Hotels & Leisure
-                                                        </div>
-                                                        <div class="item">
-                                                            Restaurant Warung & Culinary
-                                                        </div>
-                                                        <div class="item">
-                                                            Education
-                                                        </div>
-                                                        <div class="item">
-                                                            Online Sellers, Retail & Shops
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingIT">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    IT
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseIT" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            IT Services
-                                                        </div>
-                                                        <div class="item">
-                                                            Software
-                                                        </div>
-                                                        <div class="item">
-                                                            IT Hardware & Equipment and Components
-                                                        </div>
-                                                        <div class="item">
-                                                            Consumer Electronics & Phones
-                                                        </div>
-                                                        <div class="item">
-                                                            Telecom Services
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingCommercial_ProfessionalServices">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Commercial & Professional Services
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseCommercial_ProfessionalServices" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Trading Companies & Distributors
-                                                        </div>
-                                                        <div class="item">
-                                                            Commercial Services & Supplies
-                                                        </div>
-                                                        <div class="item">
-                                                            Professional Services
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingHealth">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Health
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseHealth" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Medical Equipment
-                                                        </div>
-                                                        <div class="item">
-                                                            Medical Services
-                                                        </div>
-                                                        <div class="item">
-                                                            Pharma Products
-                                                        </div>
-                                                        <div class="item">
-                                                            Healthcare Products
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingIndustrials">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Industrials
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseIndustrials" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Aerospace & Defense
-                                                        </div>
-                                                        <div class="item">
-                                                            Building Products
-                                                        </div>
-                                                        <div class="item">
-                                                            Construction & Engineering
-                                                        </div>
-                                                        <div class="item">
-                                                            Electrical Equipment
-                                                        </div>
-                                                        <div class="item">
-                                                            Industrial Conglomerates
-                                                        </div>
-                                                        <div class="item">
-                                                            Machinery
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingMaterials">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Materials
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseMaterials" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Chemicals
-                                                        </div>
-                                                        <div class="item">
-                                                            Construction Materials
-                                                        </div>
-                                                        <div class="item">
-                                                            Packaging
-                                                        </div>
-                                                        <div class="item">
-                                                            Metals, Mining & Forestry
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingEnergy">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Energy
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseEnergy" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Oil
-                                                        </div>
-                                                        <div class="item">
-                                                            Gas
-                                                        </div>
-                                                        <div class="item">
-                                                            Renewables
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingTransport">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Transport
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseTransport" class="collapse">
-                                            <div class="card-body">
-                                                <div class="list-accordion">
-                                                    <div class="d-inline-flex">
-                                                        <div class="item">
-                                                            Air, Sea, Land Transport (Passenger & Freight)
-                                                        </div>
-                                                        <div class="item">
-                                                            Transport Infrastructure
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingRealEstate">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Real Estate
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseRealEstate" class="collapse">
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header" id="headingUtilities">
-                                            <h2 class="mb-0">
-                                                <button class="btn btn-block collapsed" type="button">
-                                                    Utilities
-                                                </button>
-                                            </h2>
-                                        </div>
-                                        <div id="collapseUtilities" class="collapse">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="">
-                                <label for="">Your Role in the Business</label>
-                                <div class="list-accordion">
-                                    <div class="d-inline-flex">
-                                        <div class="item">
-                                            Director
-                                        </div>
-                                        <div class="item">
-                                            Owner
-                                        </div>
-                                        <div class="item">
-                                            Employee
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="">
-                                <label for="">How is Your Business Funded?</label>
-                                <div class="list-accordion">
-                                    <div class="d-inline-flex">
-                                        <div class="item">
-                                            Profits & Cashflow
-                                        </div>
-                                        <div class="item">
-                                            Bank Lending
-                                        </div>
-                                        <div class="item">
-                                            Venture Capital
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="">
-                                <label for="">How Many Years Trading?</label>
-                                <input type="range" class="form-control-range" />
-                                <span class="d-flex justify-content-between">
-                                    <div style="padding-left: 5px;">0</div>
-                                    <div style="padding-left: 15px;">5</div>
-                                    <div>10+</div>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="">
-                                <label for="">Your Gender</label>
-                                <div class="list-accordion">
-                                    <div class="d-inline-flex">
-                                        <div class="item">
-                                            Male
-                                        </div>
-                                        <div class="item">
-                                            Female
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="">
-                                <label for="">Your Trading Region</label>
-                                <div class="list-accordion">
-                                    <div class="d-inline-flex">
-                                        <div class="item">
-                                            Indonesia
-                                        </div>
-                                        <div class="item">
-                                            Indonesia & Abroad
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between btn-group-footer" style="padding: 0 30px;">
-                            <a class="btn btn-custom btn-custom-outline" href="./intangibles.html">Previous</a>
-                            <a class="btn btn-custom btn-Allports" href="./ip.html">Continue</a>
-                        </div>
-                    </form>
-                </div>
-            </wrapper>
+            </div>
         </div>
-    </div>`
+        <footer class="footer-index">
+            <div class="contact-name">Contact Us</div>
+            <div class="contact-mail d-flex align-items-center"><i class="far fa-envelope mr-2"></i>ipexplorer@rouse.com
+            </div>
+        </footer>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, Font Awesome -->
@@ -487,10 +581,12 @@
     <script type="text/javascript">
         $(document).on('click', '.card-header', function () {
             var $this = $(this).parent('.card').index()
+            console.log($this);
             $(this).toggleClass('active');
-            $('.card').each(function (index, item) {
+            $('.collapse').each(function (index, item) {
+                console.log(index);
                 if (index === $this) {
-                    $(item).children('.collapse').fadeToggle(300);
+                    $(item).fadeToggle(300);
                 } else {
                     $(item).children('.card-header').removeClass('active')
                     $(item).children('.collapse').fadeOut(100);

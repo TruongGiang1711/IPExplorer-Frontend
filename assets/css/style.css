@@ -1,21 +1,3 @@
-.btn {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.btn:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 .color-Allports {
   color: #007f9c;
 }
@@ -36,7 +18,26 @@
   color: #096e4a;
 }
 
+.btn {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .btn-custom {
+  height: 50px;
   border-radius: 5px;
   padding: 17px 27px;
   color: white;
@@ -83,11 +84,6 @@
           box-shadow: 0 0 25px #71b4c429;
 }
 
-input::-ms-clear,
-input::-ms-reveal {
-  display: none;
-}
-
 .form-control-range {
   -webkit-appearance: none;
   width: 100%;
@@ -121,6 +117,11 @@ input::-ms-reveal {
   border-radius: 50%;
   background: #007f9c;
   cursor: pointer;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
 }
 
 .collapsing {
@@ -201,7 +202,7 @@ input::-ms-reveal {
     width: 100%;
   }
   .container-desktop .container-custom header {
-    padding: 50px 37px 40px;
+    padding: 50px 37px 30px;
     background-color: #fffffff0;
   }
   .container-desktop .container-custom header > div .logo {
@@ -232,9 +233,6 @@ input::-ms-reveal {
     width: 100%;
     padding: 0 37px;
   }
-  .container-desktop .container-custom wrapper .content {
-    margin: 20px 0;
-  }
   .container-desktop .container-custom .title {
     font-family: "Raleway";
     font-weight: bold;
@@ -246,9 +244,6 @@ input::-ms-reveal {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 20px;
-  }
-  .container-desktop .container-custom .form-group {
-    margin-bottom: 80px;
   }
   .container-desktop .container-custom .form-group > div label {
     font-family: "Raleway";
@@ -372,6 +367,9 @@ input::-ms-reveal {
     width: 100%;
     background-color: #2222220d;
     padding: 155px 95px 175px;
+  }
+  .container-desktop .sidebar-right .logo {
+    margin-bottom: 40px;
   }
   .container-desktop .sidebar-right .list-partner {
     font-size: 18px;

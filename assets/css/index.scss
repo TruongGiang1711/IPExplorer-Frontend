@@ -48,7 +48,6 @@
             font-family: "Raleway";
             @include font(14px, 16px);
             & > :first-child {
-                height: 50px;
                 margin-bottom: 20px;
             }
         }
@@ -75,10 +74,28 @@
     }
 
     .content-terms,
-    .content-myAccount {
+    .content-myAccount,
+    .content-intangibles,
+    .content-business,
+    .content-ip,
+    .content-unregisteredCopyright,
+    .content-chart,
+    .content-report {
         .logo {
             margin-bottom: 0;
             padding-bottom: 30px;
+        }
+    }
+    .content-myAccount,
+    .content-business,
+    .content-ip,
+    .content-unregisteredCopyright,
+    .content-chart,
+    .content-report {
+        wrapper {
+            > div {
+                margin-top: 20px;
+            }
         }
     }
 
@@ -112,6 +129,7 @@
     .content-signin {
         .form {
             .form-group {
+                margin-bottom: 84px;
                 > div {
                     label {
                         margin: 20px 0 10px;
@@ -121,8 +139,7 @@
             .action {
                 font-family: "Raleway";
                 @include font(14px, 16px);
-                a.btn {
-                    height: 50px;
+                .btn {
                     margin-bottom: 20px;
                 }
                 &.action-signIn {
@@ -136,14 +153,18 @@
     }
     // forgot sigin
     .content-signin {
-        .form {
-            .form-group {
-                margin-bottom: 84px;
-                > div {
-                    .btn-forgot {
-                        font-family: "Raleway";
-                        @include font(15px, 18px);
-                        margin: 0 23px 10px 0;
+        wrapper {
+            > div {
+                margin-bottom: 210px;
+                .form {
+                    .form-group {
+                        > div {
+                            .btn-forgot {
+                                font-family: "Raleway";
+                                @include font(15px, 18px);
+                                margin: 0 23px 10px 0;
+                            }
+                        }
                     }
                 }
             }
@@ -152,81 +173,93 @@
 
     // intangibles
     .content-intangibles {
-        margin: 20px 0 55px 0;
-        .figure {
-            .intangibles-model-lv1,
-            .intangibles-model-lv2,
-            .intangibles-model-lv3 {
-                width: 100%;
-                span {
-                    font-family: "Calibri-Bold";
-                    @include font(12px, 14px);
-                    color: white;
-                    position: absolute;
-                    bottom: 10px;
+        wrapper {
+            > div {
+                margin-top: 20px;
+                margin-bottom: 55px;
+                .title {
+                    margin-bottom: 30px;
                 }
-            }
-            .intangibles-model-lv1 {
-                border-radius: 60px;
-                background-color: $Glacier;
-                height: 300px;
-                max-width: 300px;
-                position: relative;
-            }
-            .intangibles-model-lv2 {
-                border-radius: 48px;
-                background-color: $Boston_Blue;
-                height: 240px;
-                max-width: 240px;
-                position: absolute;
-            }
-            .intangibles-model-lv3 {
-                border-radius: 36px;
-                background-color: $Allports;
-                height: 180px;
-                max-width: 180px;
-                position: absolute;
-                span {
-                    bottom: unset;
+                .figure {
+                    max-width: 300px;
+                    .intangibles-model-lv1,
+                    .intangibles-model-lv2,
+                    .intangibles-model-lv3 {
+                        width: 100%;
+                        span {
+                            font-family: "Calibri-Bold";
+                            @include font(12px, 14px);
+                            color: white;
+                            position: absolute;
+                            bottom: 10px;
+                        }
+                    }
+                    .intangibles-model-lv1 {
+                        border-radius: 60px;
+                        background-color: $Glacier;
+                        height: 300px;
+                        position: relative;
+                    }
+                    .intangibles-model-lv2 {
+                        border-radius: 48px;
+                        background-color: $Boston_Blue;
+                        height: 240px;
+                        max-width: 240px;
+                        position: absolute;
+                    }
+                    .intangibles-model-lv3 {
+                        border-radius: 36px;
+                        background-color: $Allports;
+                        height: 180px;
+                        max-width: 180px;
+                        position: absolute;
+                        span {
+                            bottom: unset;
+                        }
+                    }
+                    .figure-caption {
+                        font-family: "Calibri-Light";
+                        @include font(12px, 14px);
+                        color: black;
+                        margin: 10px 0 20px;
+                    }
                 }
-            }
-            .figure-caption {
-                font-family: "Calibri-Light";
-                @include font(12px, 14px);
-                color: black;
-                margin: 10px 0 20px;
-            }
-        }
-        .intangibles-details {
-            .intangibles-details_lv3,
-            .intangibles-details_lv2,
-            .intangibles-details_lv1 {
-                height: 50px;
-                max-width: 50px;
-                width: 100%;
-                border-radius: 10px;
-                margin-right: 10px;
-            }
-            .intangibles-details_lv3 {
-                background-color: $Allports;
-            }
-            .intangibles-details_lv2 {
-                background-color: $Boston_Blue;
-            }
-            .intangibles-details_lv1 {
-                background-color: $Glacier;
-            }
-            .intangibles-details_title {
-                font-family: "Raleway";
-                font-weight: bold;
-                @include font(15px, 18px);
-                margin: 15px 0 10px 0;
-            }
-            .intangibles-details_content {
-                font-family: "Calibri-Light";
-                @include font(14px, 16px);
-                &:last-child {
-                    margin-bottom: 20px;
+                .intangibles-details {
+                    .intangibles-details_lv3,
+                    .intangibles-details_lv2,
+                    .intangibles-details_lv1 {
+                        height: 50px;
+                        max-width: 50px;
+                        width: 100%;
+                        border-radius: 10px;
+                        margin-right: 10px;
+                    }
+                    .intangibles-details_lv3 {
+                        background-color: $Allports;
+                    }
+                    .intangibles-details_lv2 {
+                        background-color: $Boston_Blue;
+                    }
+                    .intangibles-details_lv1 {
+                        background-color: $Glacier;
+                    }
+                    .intangibles-details_title {
+                        font-family: "Raleway";
+                        font-weight: bold;
+                        @include font(15px, 18px);
+                        margin: 15px 0 10px 0;
+                    }
+                    .intangibles-details_content {
+                        font-family: "Calibri-Light";
+                        @include font(14px, 16px);
+                    }
+                    > div {
+                        margin-bottom: 4px;
+                        &.intangibles-details_content {
+                            margin-bottom: 30px;
+                            @include font(12px, 14px);
+                        }
+                    }
                 }
             }
         }
@@ -234,7 +267,6 @@
 
     // my Account
     .content-myAccount {
-        margin: 24px 0 0 0;
         wrapper {
             > div {
                 > div {
@@ -269,6 +301,7 @@
             .select {
                 font-family: "Calibri-Light";
                 @include font(16px, 23px);
+                height: 16px;
                 width: auto;
                 box-shadow: none;
             }
@@ -276,7 +309,7 @@
                 margin: 35px 0;
             }
             .action-myAccount {
-                margin: 73px 0 40px;
+                margin: 72px 0 40px;
                 > .btn-circle {
                     justify-content: flex-end;
                 }
@@ -288,6 +321,7 @@
     .content-business {
         .title {
             padding: 0 30px;
+            margin-bottom: 20px;
         }
         .form-group {
             padding: 0 30px;
@@ -309,6 +343,9 @@
                     }
                 }
             }
+        }
+        .btn-group-footer {
+            padding: 0 37px;
         }
     }
 
@@ -341,6 +378,48 @@
     }
     // ip, ip Intellectual Assets
     .content-ip {
+        .title {
+            margin-bottom: 20px;
+        }
+        &.ip {
+            .animation-box {
+                margin-top: 55px;
+                &--item {
+                    > div {
+                        .name {
+                            @include font(18px, 16px);
+                        }
+                    }
+                }
+                .form-group {
+                    margin-bottom: 20px;
+                    > div input {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        &.IntellectualAssets {
+            .animation-box {
+                margin-top: 20px;
+                .ipIntellectualAssets-list {
+                    display: none;
+                    &.active {
+                        display: block;
+                    }
+                }
+                &--item {
+                    > div {
+                        .name {
+                            @include font(15px, 16px);
+                        }
+                    }
+                }
+                .action-ipIntellectualAssets {
+                    margin-top: 10px;
+                }
+            }
+        }
         .animation-box {
             margin: 55px auto 0;
             width: 100%;
@@ -396,7 +475,7 @@
                             margin-right: 15px;
                         }
                         .name {
-                            font-family: "Raleway";
+                            @include font(18px, 16px);
                         }
                         .animation-box--tooltip-icon {
                             top: unset;
@@ -411,7 +490,6 @@
                     }
                     .name {
                         font-family: "Raleway";
-                        @include font(18px, 16px);
                         word-break: break-word;
                     }
                     .animation-box--tooltip-icon {
@@ -429,32 +507,13 @@
                 }
             }
         }
-        &.ip {
-            .form-group {
-                margin-bottom: 20px;
-                > div input {
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        &.IntellectualAssets {
-            .animation-box {
-                margin: 20px 0 0;
-                .ipIntellectualAssets-list {
-                    display: none;
-                    &.active {
-                        display: block;
-                    }
-                }
-                .action-ipIntellectualAssets {
-                    margin-top: 20px;
-                }
-            }
-        }
     }
 
     // unregistered Copyright
     .content-unregisteredCopyright {
+        .title {
+            margin-bottom: 20px;
+        }
         .unregisteredCopyright-list {
             margin-top: 55px;
             .list-group-item {
@@ -465,34 +524,52 @@
         }
     }
 
+    // chart
+    .content-chart {
+        wrapper {
+            .title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
     // report
     .content-report {
-        .report-info {
-            h5 {
-                font-family: "Raleway";
-                font-weight: bold;
-                @include font(15px, 18px);
-                &.score {
-                    @include font(21px, 25px);
-                }
+        wrapper {
+            .title {
+                margin-bottom: 20px;
             }
-            p {
-                font-family: "Calibri-Light";
-                @include font(14px, 16px);
-            }
-            .title-try {
-                margin: 50px auto 20px;
-            }
-            .info-try {
-                p {
-                    font-family: "Raleway";
-                    @include font(18px, 21px);
+            .report-info {
+                margin-top: 30px;
+                > div {
                     margin-bottom: 20px;
                 }
-            }
-            .info-company {
-                font-family: "Raleway";
-                @include font(12px, 14px);
+                h5 {
+                    font-family: "Raleway";
+                    font-weight: bold;
+                    @include font(15px, 18px);
+                    &.score {
+                        @include font(21px, 25px);
+                    }
+                }
+                p {
+                    font-family: "Calibri-Light";
+                    @include font(14px, 16px);
+                }
+                .title-try {
+                    margin: 50px auto 20px;
+                }
+                .info-try {
+                    p {
+                        font-family: "Raleway";
+                        @include font(18px, 21px);
+                        margin-bottom: 20px;
+                    }
+                }
+                .info-company {
+                    font-family: "Raleway";
+                    @include font(12px, 14px);
+                }
             }
         }
     }
@@ -537,9 +614,6 @@
 @media (min-width: 1366px) {
     .container-desktop {
         // index
-        .logo {
-            margin-bottom: 30px;
-        }
         .language {
             margin: 50px 50px -13px;
         }
@@ -578,14 +652,22 @@
             }
         }
 
-        // temrs
-        .content-terms {
+        .content-terms,
+        .content-myAccount,
+        .content-intangibles,
+        .content-business,
+        .content-ip,
+        .content-unregisteredCopyright,
+        .content-chart,
+        .content-report {
             max-width: 536px;
             margin: auto;
             wrapper {
                 padding: 0;
             }
         }
+
+        // temrs
         .footer-terms {
             .footer {
                 max-width: 536px;
@@ -603,18 +685,100 @@
                 max-width: 302px;
             }
         }
+        .content-signup {
+            wrapper {
+                > div {
+                    margin-bottom: 120px;
+                }
+            }
+        }
 
         // my Account
         .content-myAccount {
-            max-width: 100%;
+            .action-myAccount {
+                margin: 75px 0 140px;
+                > .btn-circle {
+                    justify-content: center;
+                }
+            }
+        }
+
+        // intangibles
+        .content-intangibles {
             wrapper {
+                > div {
+                    margin-bottom: 50px;
+                    .intangibles-details {
+                        > div {
+                            &.intangibles-details_content {
+                                margin-top: 10px;
+                                margin-bottom: 50px;
+                            }
+                        }
+                    }
+                    .btn-custom {
+                        max-width: 302px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+
+        .content-ip,
+        .content-business,
+        .content-unregisteredCopyright {
+            .btn-group-footer {
+                max-width: 302px;
+                margin: 50px auto;
+            }
+        }
+        // ip, ip Intellectual Assets
+        .content-ip {
+            &.ip,
+            &.IntellectualAssets {
+                .animation-box {
+                    max-width: 302px;
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        // business
+        .content-business {
+            .form-control-range {
+                max-width: 302px;
+            }
+            .form-control-range + span {
+                max-width: 302px;
+            }
+            .btn-group-footer {
                 padding: 0;
-                margin: 0 auto;
-                max-width: 536px;
-                .action-myAccount {
-                    margin: 73px 0 141px;
-                    > .btn-circle {
-                        justify-content: center;
+            }
+        }
+
+        // unregistered Copyright
+        .content-unregisteredCopyright {
+            .unregisteredCopyright-list {
+                max-width: 302px;
+                margin: auto;
+            }
+        }
+
+        // chart
+        .content-chart {
+            .btn-group-footer {
+                max-width: 302px;
+                margin: 40px auto 140px;
+            }
+        }
+
+        // report
+        .content-report {
+            wrapper {
+                .report-info {
+                    margin-top: 50px;
+                    > div {
+                        margin-bottom: 30px;
                     }
                 }
             }
