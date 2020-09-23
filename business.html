@@ -624,14 +624,19 @@
                     var $this = $(this)
                     if ($this.hasClass('active')) {
                         $this.parent('.collapse-group').children('.collapse').each(function (index, item) {
-                            if ($this.index() === index) {
-                                $('.card-header').removeClass('active')
-                                $(item).fadeOut(100)
-                            }
+                            // if ($this.index() === index) {
+                            $('.card-header').removeClass('active')
+                            $(item).fadeOut(100)
+                            // }
                         })
                     } else {
                         $this.addClass('active')
                         $('.card-header').not($this).removeClass('active')
+                    $('.collapse-group').each(function (index, item) {
+                        $(item).children('.collapse').each(function (index, item) {
+                            $(item).fadeOut(100)
+                        })
+                    })
                         $this.parent('.collapse-group').children('.collapse').each(function (index, item) {
                             $(item).fadeOut(100)
                             if ($this.index() === index) {
