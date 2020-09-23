@@ -53,7 +53,7 @@
                                     <div class="">
                                         <label for="validationCustom02">Your Business Name</label>
                                         <input type="text" class="form-control" id="validationCustom02" value=""
-                                            placeholder="Business Name" required>
+                                            style="max-width: 302px;" placeholder="Business Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group p-0">
@@ -64,83 +64,102 @@
                                         <div
                                             style="margin-bottom: 20px; font-family: 'Calibri-Light'; font-size: 12px; line-height: 14px; padding: 0 30px;">
                                             Please select one sector & subsector.</div>
-                                        <div>
-                                            <div class="row">
-                                                <div class="card">
-                                                    <div class="card-header" id="headingCreative">
-                                                        <h2 class="mb-0">
-                                                            <button class="btn btn-block collapsed" type="button">
-                                                                Creative
-                                                            </button>
-                                                        </h2>
-                                                    </div>
+                                        <div class="accordion accordion-desktop" id="accordionExample">
+                                            <div class="collapse-group d-flex flex-wrap w-100 align-items-start">
+                                                <div class="card-header col-6" id="Creative">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Creative
+                                                        </button>
+                                                    </h2>
                                                 </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingConsumerGoods">
-                                                        <h2 class="mb-0">
-                                                            <button class="btn btn-block collapsed" type="button">
-                                                                Consumer Goods
-                                                            </button>
-                                                        </h2>
-                                                    </div>
+                                                <div class="card-header col-6" id="ConsumerGoods">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Consumer Goods
+                                                        </button>
+                                                    </h2>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div class="card">
-                                                    <div id="collapseCreative" class="collapse">
-                                                        <div class="card-body">
-                                                            <div class="list-accordion">
-                                                                <div class="d-inline-flex">
-                                                                    <div class="item">Advertising & Media Services
-                                                                    </div>
-                                                                    <div class="item">TV, Broadcast, Radio & Cable
-                                                                    </div>
-                                                                    <div class="item">Visual Comms & Design</div>
-                                                                    <div class="item">Publishing, Books & Magazines
-                                                                    </div>
-                                                                    <div class="item">Performing Arts</div>
-                                                                    <div class="item">Film, Content, Animation &
-                                                                        Video
-                                                                    </div>
-                                                                    <div class="item">Games, Exports & App
-                                                                        Developers
-                                                                    </div>
-                                                                    <div class="item">Architecture</div>
-                                                                    <div class="item">Product Design</div>
+                                                <div id="Creative" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">Advertising & Media Services
                                                                 </div>
-                                                                <div class="d-inline-flex">
-                                                                    <div class="item">Fashion Design</div>
-                                                                    <div class="item">Interior Design</div>
-                                                                    <div class="item">ISPs</div>
-                                                                    <div class="item">Fine Arts</div>
-                                                                    <div class="item">Photography</div>
-                                                                    <div class="item">Crafts & Handicrafts</div>
-                                                                    <div class="item">Music</div>
+                                                                <div class="item">TV, Broadcast, Radio & Cable
+                                                                </div>
+                                                                <div class="item">Visual Comms & Design</div>
+                                                                <div class="item">Publishing, Books & Magazines
+                                                                </div>
+                                                                <div class="item">Performing Arts</div>
+                                                                <div class="item">Film, Content, Animation &
+                                                                    Video
+                                                                </div>
+                                                                <div class="item">Games, Exports & App
+                                                                    Developers
+                                                                </div>
+                                                                <div class="item">Architecture</div>
+                                                                <div class="item">Product Design</div>
+                                                            </div>
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">Fashion Design</div>
+                                                                <div class="item">Interior Design</div>
+                                                                <div class="item">ISPs</div>
+                                                                <div class="item">Fine Arts</div>
+                                                                <div class="item">Photography</div>
+                                                                <div class="item">Crafts & Handicrafts</div>
+                                                                <div class="item">Music</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="ConsumerGoods" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Auto Products & Parts
+                                                                </div>
+                                                                <div class="item">
+                                                                    Household Home & Personal Care
+                                                                </div>
+                                                                <div class="item">
+                                                                    Leisure Goods & Toys
+                                                                </div>
+                                                                <div class="item">
+                                                                    Apparel and Footwear & Fashion Design
+                                                                </div>
+                                                                <div class="item">
+                                                                    Foods, Beverages & Tobacco
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
-                                                    <div id="collapseConsumerGoods" class="collapse">
-                                                        <div class="card-body">
-                                                            <div class="list-accordion">
-                                                                <div class="d-inline-flex">
-                                                                    <div class="item">
-                                                                        Auto Products & Parts
-                                                                    </div>
-                                                                    <div class="item">
-                                                                        Household Home & Personal Care
-                                                                    </div>
-                                                                    <div class="item">
-                                                                        Leisure Goods & Toys
-                                                                    </div>
-                                                                    <div class="item">
-                                                                        Apparel and Footwear & Fashion Design
-                                                                    </div>
-                                                                    <div class="item">
-                                                                        Foods, Beverages & Tobacco
-                                                                    </div>
+                                            </div>
+                                            <div class="collapse-group d-flex flex-wrap w-100 align-items-start">
+                                                <div class="card-header col-6" id="ConsumerServices">
+                                                    <h2 class="mb-0">
+                                                        <button class="btn btn-block collapsed" type="button">
+                                                            Consumer Services
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div id="ConsumerServices" class="collapse">
+                                                    <div class="card-body">
+                                                        <div class="list-accordion">
+                                                            <div class="d-inline-flex">
+                                                                <div class="item">
+                                                                    Tourism, Hotels & Leisure
+                                                                </div>
+                                                                <div class="item">
+                                                                    Restaurant Warung & Culinary
+                                                                </div>
+                                                                <div class="item">
+                                                                    Education
+                                                                </div>
+                                                                <div class="item">
+                                                                    Online Sellers, Retail & Shops
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -148,7 +167,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="accordion" id="accordionExample">
+                                        <div class="accordion accordion-mobile" id="accordionExample">
                                             <div class="card">
                                                 <div class="card-header" id="headingCreative">
                                                     <h2 class="mb-0">
@@ -474,7 +493,7 @@
                                                 <div id="collapseUtilities" class="collapse">
                                                 </div>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -503,10 +522,10 @@
                                                 <div class="item">
                                                     Profits & Cashflow
                                                 </div>
-                                                <div class="item">
+                                                <div class="item" style="padding: 5px;">
                                                     Bank Lending
                                                 </div>
-                                                <div class="item">
+                                                <div class="item" style="padding: 0;">
                                                     Venture Capital
                                                 </div>
                                             </div>
@@ -547,7 +566,7 @@
                                                 <div class="item">
                                                     Indonesia
                                                 </div>
-                                                <div class="item">
+                                                <div class="item" style="padding: 20px;">
                                                     Indonesia & Abroad
                                                 </div>
                                             </div>
@@ -579,19 +598,63 @@
     <script src="./assets/js/all.min.js"></script>
     <!-- <script src="./assets/js/owl.carousel.min.js"></script> -->
     <script type="text/javascript">
-        $(document).on('click', '.card-header', function () {
-            var $this = $(this).parent('.card').index()
-            console.log($this);
-            $(this).toggleClass('active');
-            $('.collapse').each(function (index, item) {
-                console.log(index);
-                if (index === $this) {
-                    $(item).fadeToggle(300);
-                } else {
-                    $(item).children('.card-header').removeClass('active')
-                    $(item).children('.collapse').fadeOut(100);
-                }
-            })
+        $(window).on('resize load', function () {
+            var win = $(this); //this = window
+            if (win.height() < 768) {
+                console.log("mobile");
+                // mobile
+                $(document).on('click', '.card-header', function () {
+                    var $this = $(this).parent('.card').index()
+                    $(this).toggleClass('active');
+                    $('.card').each(function (index, item) {
+                        if (index === $this) {
+                            $(item).children('.collapse').fadeToggle(300);
+                        } else {
+                            $(item).children('.card-header').removeClass('active')
+                            $(item).children('.collapse').fadeOut(100);
+                        }
+                    })
+                });
+            }
+            if (win.width() > 769) {
+                console.log("desktop");
+                // desktop
+                var _true = true
+                $('.card-header').on('click', function () {
+                    var $this = $(this)
+                    if ($this.hasClass('active')) {
+                        $this.parent('.collapse-group').children('.collapse').each(function (index, item) {
+                            if ($this.index() === index) {
+                                $('.card-header').removeClass('active')
+                                $(item).fadeOut(100)
+                            }
+                        })
+                    } else {
+                        $this.addClass('active')
+                        $('.card-header').not($this).removeClass('active')
+                        $this.parent('.collapse-group').children('.collapse').each(function (index, item) {
+                            $(item).fadeOut(100)
+                            if ($this.index() === index) {
+                                $(item).fadeToggle(300)
+                            }
+                        })
+                    }
+
+
+                    // $('.collapse').each(function (index, item) {
+                    //     if ($this.index() === index) {
+                    //         $(item).addClass('active')
+                    //         $(item).fadeToggle(300).css({ "padding-top": $this.innerHeight() })
+                    //         $(".accordion").height($(item).innerHeight())
+                    //         _true = false
+                    //     } else {
+                    //         $(item).removeClass('active')
+                    //         $(item).fadeOut(100);
+                    //         _true = true
+                    //     }
+                    // })
+                });
+            }
         });
     </script>
 </body>

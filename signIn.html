@@ -141,17 +141,22 @@
             var eye_slash = $('.password').find('.fa-eye-slash');
             eye.css({ display: "none" })
             eye_slash.css({ display: "block" })
-            $('.password input').attr('type', 'password');
-            eye.on('click', function () {
-                $('.password input').attr('type', 'password');
-                eye.css({ display: "none" })
-                eye_slash.css({ display: "block" })
-            })
-            eye_slash.on('click', function () {
-                $('.password input').attr('type', 'text');
-                eye.css({ display: "block" })
-                eye_slash.css({ display: "none" })
-            })
+            $('body').on('click', '.pass-eye', function (e) {
+                e.preventDefault();
+                if ($(this).children('svg').hasClass('fa-eye')) {
+                    $('.password input.txt-password').attr('type', 'password');
+                    console.log($(this).data('id'));
+                    $('.password input.txt-password' + $(this).data('id')).attr('type', 'password');
+                    $(this).children('svg').removeClass('fa-eye');
+                    $(this).children('svg').addClass('fa-eye-slash');
+                } else {
+                    console.log($(this).data('id'));
+                    $('.password input.txt-password').attr('type', 'text');
+                    $('.password input.txt-password' + $(this).data('id')).attr('type', 'text');
+                    $(this).children('svg').removeClass('fa-eye-slash');
+                    $(this).children('svg').addClass('fa-eye');
+                }
+            });
         })
     </script>
 </body>

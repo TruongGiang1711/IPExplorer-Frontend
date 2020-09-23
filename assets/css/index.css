@@ -9,6 +9,9 @@
   .logo .nametag.welcome {
     margin: auto 0;
   }
+  .logo .nametag.terms {
+    margin: 7px 0 0;
+  }
   .language {
     margin: 20px 20px 17px 0;
     font-family: "Calibri-Bold";
@@ -403,6 +406,8 @@
     text-align: center;
     color: #ffffff;
     border-radius: 25px;
+    width: 140px;
+    height: 140px;
     padding: 9px 0;
     cursor: pointer;
   }
@@ -504,43 +509,51 @@
   .content-chart wrapper .title {
     margin-bottom: 20px;
   }
-  .content-report wrapper .title {
+  .content-report.container-custom wrapper .title {
     margin-bottom: 20px;
+    padding-right: 22px;
   }
-  .content-report wrapper .report-info {
+  .content-report.container-custom wrapper .report-info {
     margin-top: 30px;
   }
-  .content-report wrapper .report-info > div {
-    margin-bottom: 20px;
-  }
-  .content-report wrapper .report-info h5 {
+  .content-report.container-custom wrapper .report-info .report-info_title {
     font-family: "Raleway";
     font-weight: bold;
+    margin-bottom: 10px;
     font-size: 15px;
     line-height: 18px;
   }
-  .content-report wrapper .report-info h5.score {
+  .content-report.container-custom wrapper .report-info .report-info_title .score {
+    height: 18px;
     font-size: 21px;
     line-height: 25px;
   }
-  .content-report wrapper .report-info p {
+  .content-report.container-custom wrapper .report-info .report-info_des {
+    margin-bottom: 20px;
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 16px;
   }
-  .content-report wrapper .report-info .title-try {
-    margin: 50px auto 20px;
+  .content-report.container-custom wrapper .report-info > div:first-child .report-info_des {
+    margin-bottom: 20px;
   }
-  .content-report wrapper .report-info .info-try p {
+  .content-report.container-custom wrapper .report-info .title-try {
+    margin: 50px auto 20px;
+    padding-right: 50px;
+  }
+  .content-report.container-custom wrapper .report-info .info-try p {
     font-family: "Raleway";
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 20px;
   }
-  .content-report wrapper .report-info .info-company {
+  .content-report.container-custom wrapper .report-info .info-company {
     font-family: "Raleway";
     font-size: 12px;
     line-height: 14px;
+  }
+  .content-report.container-custom wrapper .btn-group-footer {
+    margin: 50px 0 70px;
   }
 }
 
@@ -693,11 +706,26 @@
     max-width: 302px;
     margin: 40px auto 140px;
   }
+  .container-desktop .content-report wrapper .title {
+    padding-right: 0;
+  }
   .container-desktop .content-report wrapper .report-info {
     margin-top: 50px;
   }
-  .container-desktop .content-report wrapper .report-info > div {
+  .container-desktop .content-report wrapper .report-info .report-info_title {
+    margin-bottom: 10px;
+  }
+  .container-desktop .content-report wrapper .report-info .report-info_des {
     margin-bottom: 30px;
+  }
+  .container-desktop .content-report wrapper .report-info .title-try {
+    padding-right: 280px;
+  }
+  .container-desktop .content-report wrapper .report-info .info-try p {
+    margin-bottom: 20px;
+  }
+  .container-desktop .content-report wrapper .btn-group-footer {
+    margin: 50px 0 50px 120px;
   }
 }
 /*# sourceMappingURL=index.css.map */

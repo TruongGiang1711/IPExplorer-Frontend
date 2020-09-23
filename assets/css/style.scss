@@ -243,15 +243,20 @@ input::-ms-reveal {
                     }
                     .password {
                         position: relative;
+                        input {
+                            padding-right: 40px;
+                        }
                         .pass-eye {
                             position: absolute;
                             top: 0;
                             right: 0;
                             height: 100%;
                             width: 50px;
+                            display: flex;
+                            justify-content: flex-end;
                             svg {
                                 width: 16px;
-                                margin: auto 10px 0 auto;
+                                margin-right: 10px;
                                 height: 100%;
                             }
                         }
@@ -273,7 +278,10 @@ input::-ms-reveal {
                 @include font(14px, 16px);
                 cursor: pointer;
             }
-            .accordion {
+            .accordion-desktop {
+                display: none;
+            }
+            .accordion-mobile {
                 .card {
                     border: 0;
                     margin-bottom: 10px;
@@ -388,6 +396,41 @@ input::-ms-reveal {
             header {
                 max-width: 536px;
                 padding: 50px 0 30px;
+            }
+            .accordion-desktop {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                .card-header {
+                    background: transparent;
+                    border: 1px solid $Allports;
+                    border-radius: 5px;
+                    margin-bottom: 0;
+                    padding: 0;
+                    // margin: 0 30px;
+                    transition: 0.2s;
+                    width: 50%;
+                    .btn-block {
+                        font-family: "Calibri-Light";
+                        @include font(14px, 21px);
+                        padding: 7px 0;
+                    }
+                    &.active {
+                        background-color: $Allports;
+                        .btn-block {
+                            color: white;
+                        }
+                    }
+                }
+                .collapse {
+                    overflow: auto;
+                    .card-body {
+                        padding: 0;
+                    }
+                }
+            }
+            .accordion-mobile {
+                display: none;
             }
         }
     }

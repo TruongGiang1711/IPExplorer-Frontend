@@ -33,18 +33,6 @@ var $item = $('.animation-box--item');
 var heightForm = $form.innerHeight()
 
 $parent.height(defaultHeight * 2 + inactiveGapTop)
-$item.each(function (index, el) {
-    $itemThis = $(this);
-    gsap.to($itemThis, {
-        width: defaultWidth,
-        height: defaultHeight,
-        top: (defaultWidth + defaultGapLeft) * (index % defaultItemsPerRow),
-        left: Math.floor(index / defaultItemsPerRow) * (
-            defaultGapTop + defaultHeight),
-        borderRadius: defaultRadius,
-        duration: duration
-    });
-});
 $('.animation-box--item').on('click', function (e) {
     var $this = $(this);
     if ($this.hasClass('active')) {

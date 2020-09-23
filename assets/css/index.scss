@@ -10,6 +10,9 @@
             &.welcome {
                 margin: auto 0;
             }
+            &.terms {
+                margin: 7px 0 0;
+            }
         }
     }
     .language {
@@ -433,6 +436,8 @@
                 text-align: center;
                 color: #ffffff;
                 border-radius: 25px;
+                width: 140px;
+                height: 140px;
                 padding: 9px 0;
                 cursor: pointer;
                 &.inactive {
@@ -535,40 +540,54 @@
 
     // report
     .content-report {
-        wrapper {
-            .title {
-                margin-bottom: 20px;
-            }
-            .report-info {
-                margin-top: 30px;
-                > div {
+        &.container-custom {
+            wrapper {
+                .title {
                     margin-bottom: 20px;
+                    padding-right: 22px;
                 }
-                h5 {
-                    font-family: "Raleway";
-                    font-weight: bold;
-                    @include font(15px, 18px);
-                    &.score {
-                        @include font(21px, 25px);
-                    }
-                }
-                p {
-                    font-family: "Calibri-Light";
-                    @include font(14px, 16px);
-                }
-                .title-try {
-                    margin: 50px auto 20px;
-                }
-                .info-try {
-                    p {
+                .report-info {
+                    margin-top: 30px;
+                    .report-info_title {
                         font-family: "Raleway";
-                        @include font(18px, 21px);
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        @include font(15px, 18px);
+                        .score {
+                            height: 18px;
+                            @include font(21px, 25px);
+                        }
+                    }
+                    .report-info_des {
                         margin-bottom: 20px;
+                        font-family: "Calibri-Light";
+                        @include font(14px, 16px);
+                    }
+                    > div {
+                        &:first-child {
+                            .report-info_des {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                    .title-try {
+                        margin: 50px auto 20px;
+                        padding-right: 50px;
+                    }
+                    .info-try {
+                        p {
+                            font-family: "Raleway";
+                            @include font(18px, 21px);
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .info-company {
+                        font-family: "Raleway";
+                        @include font(12px, 14px);
                     }
                 }
-                .info-company {
-                    font-family: "Raleway";
-                    @include font(12px, 14px);
+                .btn-group-footer {
+                    margin: 50px 0 70px;
                 }
             }
         }
@@ -775,11 +794,28 @@
         // report
         .content-report {
             wrapper {
+                .title{
+                    padding-right: 0;
+                }
                 .report-info {
                     margin-top: 50px;
-                    > div {
+                    .report-info_title {
+                        margin-bottom: 10px;
+                    }
+                    .report-info_des {
                         margin-bottom: 30px;
                     }
+                    .title-try {
+                        padding-right: 280px;
+                    }
+                    .info-try {
+                        p {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                .btn-group-footer {
+                    margin: 50px 0 50px 120px;
                 }
             }
         }
