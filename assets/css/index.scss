@@ -346,6 +346,25 @@
                     }
                 }
             }
+            &:nth-child(2) {
+                > div {
+                    label {
+                        margin-bottom: 10px;
+                        padding: 0 30px;
+                    }
+                    > div {
+                        margin-bottom: 20px;
+                        font-family: "Calibri-Light";
+                        font-size: 12px;
+                        line-height: 14px;
+                        padding: 0 30px;
+                    }
+                    .accordion-mobile,
+                    .card {
+                        padding: 0;
+                    }
+                }
+            }
         }
         .btn-group-footer {
             padding: 0 37px;
@@ -764,6 +783,53 @@
 
         // business
         .content-business {
+            max-width: 100%;
+            .title {
+                padding: 0;
+                max-width: 536px;
+                margin: auto;
+            }
+            .form-group {
+                max-width: 536px;
+                margin: auto;
+                padding: 0;
+                &.list-collapse-custom-desktop {
+                    max-width: 100%;
+                    width: calc(100% - 415px);
+                    margin: auto 0 auto auto;
+                    .card-header {
+                        min-width: 260px;
+                    }
+                }
+                &:nth-child(2) {
+                    label,
+                    > div div {
+                        padding: 0;
+                    }
+                }
+                .collapse-group {
+                    margin-bottom: 10px;
+                    div {
+                        &:first-child {
+                            .card-header {
+                                margin-right: 7.5px;
+                                margin-left: 0;
+                            }
+                        }
+                        .card-header {
+                            margin-left: 7.5px;
+                        }
+                    }
+                    .card-body {
+                        .list-accordion {
+                            margin: 0;
+                            > div {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
             .form-control-range {
                 max-width: 302px;
             }
@@ -794,7 +860,7 @@
         // report
         .content-report {
             wrapper {
-                .title{
+                .title {
                     padding-right: 0;
                 }
                 .report-info {

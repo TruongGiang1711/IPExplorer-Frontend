@@ -425,7 +425,6 @@ input::-ms-reveal {
     padding: 0;
     -webkit-transition: 0.2s;
     transition: 0.2s;
-    width: 50%;
   }
   .container-desktop .container-custom .accordion-desktop .card-header .btn-block {
     font-family: "Calibri-Light";
@@ -441,6 +440,7 @@ input::-ms-reveal {
   }
   .container-desktop .container-custom .accordion-desktop .collapse {
     overflow: auto;
+    width: 100%;
   }
   .container-desktop .container-custom .accordion-desktop .collapse .card-body {
     padding: 0;

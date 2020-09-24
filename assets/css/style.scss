@@ -409,7 +409,6 @@ input::-ms-reveal {
                     padding: 0;
                     // margin: 0 30px;
                     transition: 0.2s;
-                    width: 50%;
                     .btn-block {
                         font-family: "Calibri-Light";
                         @include font(14px, 21px);
@@ -424,6 +423,7 @@ input::-ms-reveal {
                 }
                 .collapse {
                     overflow: auto;
+                    width: 100%;
                     .card-body {
                         padding: 0;
                     }
