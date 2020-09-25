@@ -53,7 +53,7 @@
                                     <div class="">
                                         <label for="validationCustom02">Your Business Name</label>
                                         <input type="text" class="form-control" id="validationCustom02" value=""
-                                            style="max-width: 302px;" placeholder="Business Name" required>
+                                            placeholder="Business Name" required>
                                     </div>
                                 </div>
                                 <div class="form-group p-0 list-collapse-custom-desktop">
@@ -826,56 +826,60 @@
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/all.min.js"></script>
-    <!-- <script src="./assets/js/owl.carousel.min.js"></script> -->
     <script type="text/javascript">
-        $(window).on('resize load', function () {
-            var win = $(this); //this = window
-            if (win.width() < 768) {
-                console.log("mobile");
-                // mobile
-                $('.card-header').on('click', function () {
-                    var $this = $(this)
-                    // $(this).toggleClass('active');
-                    if ($this.hasClass('active')) {
-                        $this.removeClass('active')
-                        $this.parent('.card').children('.collapse').fadeOut(100);
-                    } else {
-                        $this.addClass('active')
-                        $('.card-header').not($this).removeClass('active')
-                        $('.card-header').not($this).parent('.card').children('.collapse').fadeOut(100);
-                        $this.parent('.card').children('.collapse').fadeToggle(300);
-                    }
-                });
-            }
-            if (win.width() > 769) {
-                console.log("desktop");
-                // desktop
-                var _true = true
-                $('.card-header').on('click', function () {
-                    var $this = $(this)
-                    if ($this.hasClass('active')) {
-                        $this.parents('.collapse-group').children('.collapse').each(function (index, item) {
-                            $('.card-header').removeClass('active')
-                            $(item).fadeOut(100)
-                        })
-                    } else {
-                        $this.addClass('active')
-                        $('.card-header').not($this).removeClass('active')
-                        $('.collapse-group').each(function (index, item) {
-                            $(item).children('.collapse').each(function (index, item) {
-                                $(item).fadeOut(100)
-                            })
-                        })
-                        $this.parents('.collapse-group').children('.collapse').each(function (index, item) {
-                            $(item).fadeOut(100)
-                            if ($this.index() === index) {
-                                $(item).fadeToggle(300)
-                            }
-                        })
-                    }
-                });
-            }
+        $(document).ready(function () {
+            resizeWindow()
+        })
+        $(window).resize(function () {
+            resizeWindow()
         });
+        function resizeWindow() {
+            if ($(window).width() < 1366) {
+                console.log("mobile");
+                $('.list-collapse-custom-desktop').css({ "margin-left": 0 })
+            }
+            if ($(window).width() >= 1366) {
+                console.log("desktop");
+                $('.card-header').removeClass('active')
+                $('.card-header').parents('.collapse-group').removeClass('active')
+                $('.card-header').parents('.collapse-group').children('.collapse').hide()
+                $('.list-collapse-custom-desktop').css({ "margin-left": $('header').offset().left })
+            }
+        }
+        $('.card-header').on('click', function () {
+            var $this = $(this)
+            if ($this.parents('.accordion').hasClass('accordion-desktop')) {
+                // desktop
+                if ($this.hasClass('active')) {
+                    $this.removeClass('active')
+                    $this.parents('.collapse-group').removeClass('active')
+                    $this.parents('.collapse-group').children('.collapse').hide()
+                } else {
+                    $this.addClass('active')
+                    $this.parents('.collapse-group').addClass('active')
+                    $('.card-header').not($this).removeClass('active')
+                }
+                $('.collapse-group.active').children('.collapse').each(function (index, item) {
+                    if ($this.attr("id") === $(item).attr("id")) {
+                        $(item).fadeIn(400)
+                    } else {
+                        $(item).hide()
+                    }
+                })
+            }
+            if ($this.parents('.accordion').hasClass('accordion-mobile')) {
+                // mobile
+                if ($this.hasClass('active')) {
+                    $this.removeClass('active')
+                    $this.parent('.card').children('.collapse').hide();
+                } else {
+                    $this.addClass('active')
+                    $('.card-header').not($this).removeClass('active')
+                    $('.card-header').not($this).parent('.card').children('.collapse').hide();
+                    $this.parent('.card').children('.collapse').fadeIn(400)
+                }
+            }
+        })
     </script>
 </body>
 

@@ -795,10 +795,17 @@
                 padding: 0;
                 &.list-collapse-custom-desktop {
                     max-width: 100%;
-                    width: calc(100% - 415px);
                     margin: auto 0 auto auto;
                     .card-header {
                         min-width: 260px;
+                    }
+                    .item {
+                        padding: 10px;
+                    }
+                }
+                &:nth-child(1) {
+                    input{
+                        max-width: 302px;
                     }
                 }
                 &:nth-child(2) {
