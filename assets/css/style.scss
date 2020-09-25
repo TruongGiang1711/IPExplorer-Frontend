@@ -277,6 +277,10 @@ input::-ms-reveal {
                 font-family: "Calibri-Light";
                 @include font(14px, 16px);
                 cursor: pointer;
+                &.active {
+                    background-color: $Allports;
+                    color: white;
+                }
             }
             .accordion-desktop {
                 display: none;

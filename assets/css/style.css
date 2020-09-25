@@ -309,6 +309,10 @@ input::-ms-reveal {
     line-height: 16px;
     cursor: pointer;
   }
+  .container-desktop .container-custom .item.active {
+    background-color: #007f9c;
+    color: white;
+  }
   .container-desktop .container-custom .accordion-desktop {
     display: none;
   }

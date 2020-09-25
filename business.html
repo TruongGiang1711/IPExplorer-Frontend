@@ -828,6 +828,10 @@
     <script src="./assets/js/all.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $('.item').on('click', function (e) {
+                e.preventDefault()
+                $(this).toggleClass('active')
+            })
             resizeWindow()
         })
         $(window).resize(function () {
