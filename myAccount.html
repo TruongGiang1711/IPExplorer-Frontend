@@ -111,8 +111,8 @@
     <script>
         // Custom Navigation Events
         $(document).on('click', '.item', function () {
-            n = $(this).index();
-            console.log(n)
+            n = $(this)
+            n.toggleClass('active')
         });
     </script>
 </body>

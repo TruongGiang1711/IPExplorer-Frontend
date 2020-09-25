@@ -138,10 +138,11 @@ input::-ms-reveal {
         width: 100%;
         left: 0;
         top: 0;
-        font-size: 12px;
         background: #ccc;
-        padding: 20px;
         text-align: left;
+        padding: 15px 19px;
+        font-size: 11px;
+        line-height: 15px;
     }
 }
 
@@ -277,8 +278,8 @@ input::-ms-reveal {
             .item {
                 border-radius: 20px;
                 border: 1px solid $Allports;
-                height: 95px;
-                width: 95px;
+                height: 94px;
+                width: 94px;
                 margin-right: 10px;
                 display: flex;
                 align-items: center;

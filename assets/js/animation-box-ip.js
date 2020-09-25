@@ -126,7 +126,7 @@ $('.tooltip-box--content').each(function () {
     $this.attr('data-height', height);
     $this.css({
         'width': width,
-        'height': height,
+        'height': height
     });
 });
 
@@ -190,7 +190,7 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
             height: tooltipHeight,
             top: tooltipTop,
             left: tooltipLeft,
-            padding: 20,
+            padding: "15px 19px",
             duration: duration
         });
     }

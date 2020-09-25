@@ -9,6 +9,7 @@
             margin-bottom: 10px;
             &.welcome {
                 margin: auto 0;
+                height: 36px;
                 .name {
                     height: 15px;
                 }
@@ -113,6 +114,9 @@
         @include font(12px, 14px);
         position: relative;
         padding-bottom: 100px;
+        .content {
+            padding-bottom: 20px;
+        }
     }
     .footer-terms {
         .gradient {
@@ -129,6 +133,9 @@
         background: white;
         width: 100%;
         padding: 0 30px 35px 30px;
+        .footer {
+            justify-content: space-around;
+        }
     }
 
     // sign Up, sign In
@@ -136,7 +143,6 @@
     .content-signin {
         .form {
             .form-group {
-                margin-bottom: 84px;
                 > div {
                     label {
                         margin: 20px 0 10px;
@@ -162,9 +168,10 @@
     .content-signin {
         wrapper {
             > div {
-                margin-bottom: 210px;
+                margin-bottom: 108px;
                 .form {
                     .form-group {
+                        margin-bottom: 84px;
                         > div {
                             .btn-forgot {
                                 font-family: "Raleway";
@@ -172,6 +179,17 @@
                                 margin: 0 23px 10px 0;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    .content-signup {
+        wrapper {
+            > div {
+                .form {
+                    .form-group {
+                        margin-bottom: 80px;
                     }
                 }
             }
@@ -350,6 +368,14 @@
                     }
                 }
             }
+            &:nth-child(1) {
+                &:nth-child(1) {
+                    input {
+                        font-family: "Calibri-Light";
+                        @include font(14px, 21px);
+                    }
+                }
+            }
             &:nth-child(2) {
                 > div {
                     label {
@@ -378,6 +404,7 @@
             max-width: 302px;
         }
         .btn-group-footer {
+            height: 50px;
             padding: 0 37px;
         }
     }
@@ -722,10 +749,11 @@
         // temrs
         .footer-terms {
             .footer {
+                justify-content: center;
                 max-width: 536px;
                 margin: auto auto 98px;
                 button {
-                    margin: auto 35.5px;
+                    margin: auto 37.5px;
                 }
             }
         }
@@ -744,6 +772,19 @@
             wrapper {
                 > div {
                     margin-bottom: 120px;
+                    .form {
+                        .form-group {
+                            margin-bottom: 84px;
+                        }
+                    }
+                }
+            }
+        }
+        // forgot sigin
+        .content-signin {
+            wrapper {
+                > div {
+                    margin-bottom: 245px;
                 }
             }
         }
@@ -752,13 +793,19 @@
         .content-myAccount {
             wrapper {
                 > div {
-                    margin-top: 22.5px;
+                    margin-top: 23.5px;
                     .action-myAccount {
                         margin: 75px 0 140px;
                         > .btn-circle {
                             justify-content: center;
                         }
                     }
+                }
+                .evaluation_sucess {
+                    margin-right: 270px;
+                }
+                .evaluation_select {
+                    margin-right: 240px;
                 }
             }
         }
@@ -806,6 +853,13 @@
         // business
         .content-business {
             max-width: 100%;
+            header {
+                max-width: 100%;
+                .logo {
+                    max-width: 536px;
+                    margin: auto;
+                }
+            }
             .title {
                 padding: 0;
                 max-width: 536px;
@@ -836,8 +890,6 @@
                 }
                 &:nth-child(1) {
                     input {
-                        font-family: "Calibri-Light";
-                        @include font(14px, 21px);
                         max-width: 302px;
                     }
                 }
