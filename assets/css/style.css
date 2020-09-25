@@ -84,6 +84,44 @@
           box-shadow: 0 0 25px #71b4c429;
 }
 
+.form-control::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1;
+  /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1;
+  /* Firefox */
+}
+
+.form-control::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1;
+  /* Firefox */
+}
+
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1;
+  /* Firefox */
+}
+
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+}
+
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
+}
+
 .form-control-range {
   -webkit-appearance: none;
   width: 100%;
@@ -137,7 +175,6 @@ input::-ms-reveal {
   width: 300px;
   height: 0;
   overflow: hidden;
-  z-index: 0;
 }
 
 .tooltip-box--content {
@@ -149,7 +186,6 @@ input::-ms-reveal {
   background: #ccc;
   padding: 20px;
   text-align: left;
-  z-index: 1;
 }
 
 /* width */
@@ -326,7 +362,7 @@ input::-ms-reveal {
     border-radius: 5px;
     margin-bottom: 0;
     padding: 0;
-    margin: 0 30px;
+    margin: 0 37px;
     -webkit-transition: 0.2s;
     transition: 0.2s;
   }
@@ -335,6 +371,7 @@ input::-ms-reveal {
     font-size: 14px;
     line-height: 21px;
     padding: 7px 0;
+    height: 40px;
   }
   .container-desktop .container-custom .accordion-mobile .card .card-header.active {
     background-color: #007f9c;
@@ -363,7 +400,19 @@ input::-ms-reveal {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
   .container-desktop .sidebar-right {
     display: block;
     text-align: center;
@@ -423,6 +472,7 @@ input::-ms-reveal {
     font-size: 14px;
     line-height: 21px;
     padding: 7px 0;
+    height: 40px;
   }
   .container-desktop .container-custom .accordion-desktop .card-header.active {
     background-color: #007f9c;
@@ -440,17 +490,5 @@ input::-ms-reveal {
   .container-desktop .container-custom .accordion-mobile {
     display: none;
   }
-}
-
-@media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-}
-
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
 }
 /*# sourceMappingURL=style.css.map */

@@ -126,7 +126,7 @@ $('.tooltip-box--content').each(function () {
     $this.attr('data-height', height);
     $this.css({
         'width': width,
-        'height': height
+        'height': height,
     });
 });
 

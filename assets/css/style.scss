@@ -61,6 +61,19 @@
     height: 40px;
     background-color: #2222221a;
     box-shadow: 0 0 25px #71b4c429;
+    &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: black;
+        opacity: 1; /* Firefox */
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: black;
+    }
+    &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: black;
+    }
 }
 
 .form-control-range {
@@ -120,7 +133,6 @@ input::-ms-reveal {
     width: 300px;
     height: 0;
     overflow: hidden;
-    z-index: 0;
     &--content {
         position: absolute;
         width: 100%;
@@ -130,7 +142,6 @@ input::-ms-reveal {
         background: #ccc;
         padding: 20px;
         text-align: left;
-        z-index: 1;
     }
 }
 
@@ -295,12 +306,13 @@ input::-ms-reveal {
                         border-radius: 5px;
                         margin-bottom: 0;
                         padding: 0;
-                        margin: 0 30px;
+                        margin: 0 37px;
                         transition: 0.2s;
                         .btn-block {
                             font-family: "Calibri-Light";
                             @include font(14px, 21px);
                             padding: 7px 0;
+                            height: 40px;
                         }
                         &.active {
                             background-color: $Allports;
@@ -343,6 +355,29 @@ input::-ms-reveal {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+}
+
+@media (min-width: 801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
     .container-desktop {
         .sidebar-right {
             display: block;
@@ -394,6 +429,7 @@ input::-ms-reveal {
                         font-family: "Calibri-Light";
                         @include font(14px, 21px);
                         padding: 7px 0;
+                        height: 40px;
                     }
                     &.active {
                         background-color: $Allports;
@@ -415,27 +451,4 @@ input::-ms-reveal {
             }
         }
     }
-}
-
-@media (min-width: 801px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-}
-
-@media (min-width: 1366px) {
 }

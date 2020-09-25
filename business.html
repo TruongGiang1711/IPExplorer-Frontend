@@ -65,7 +65,7 @@
                                         <div class="accordion accordion-desktop" id="accordionExample">
                                             <div class="collapse-group d-flex flex-wrap w-100 align-items-start">
                                                 <div>
-                                                    <div class="card-header" id="Creative">
+                                                    <div class="card-header" data-collapse="Creative">
                                                         <h2 class="mb-0">
                                                             <button class="btn btn-block collapsed" type="button">
                                                                 Creative
@@ -74,7 +74,7 @@
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <div class="card-header" id="ConsumerGoods">
+                                                    <div class="card-header" data-collapse="ConsumerGoods">
                                                         <h2 class="mb-0">
                                                             <button class="btn btn-block collapsed" type="button">
                                                                 Consumer Goods
@@ -82,7 +82,7 @@
                                                         </h2>
                                                     </div>
                                                 </div>
-                                                <div id="Creative" class="collapse">
+                                                <div data-collapse="Creative" class="collapse">
                                                     <div class="card-body">
                                                         <div class="list-accordion">
                                                             <div class="d-inline-flex">
@@ -115,7 +115,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div id="ConsumerGoods" class="collapse">
+                                                <div data-collapse="ConsumerGoods" class="collapse">
                                                     <div class="card-body">
                                                         <div class="list-accordion">
                                                             <div class="d-inline-flex">
@@ -766,9 +766,9 @@
                                     <div class="">
                                         <label for="">How Many Years Trading?</label>
                                         <input type="range" class="form-control-range" />
-                                        <span class="d-flex justify-content-between">
-                                            <div style="padding-left: 5px;">0</div>
-                                            <div style="padding-left: 15px;">5</div>
+                                        <span class="d-flex justify-content-between" style="margin-top: 15px;">
+                                            <div style="padding-left: 10px;">0</div>
+                                            <div style="padding-left: 5px;">5</div>
                                             <div>10+</div>
                                         </span>
                                     </div>
@@ -838,11 +838,11 @@
             resizeWindow()
         });
         function resizeWindow() {
-            if ($(window).width() < 768) {
+            if ($(window).width() < 1366) {
                 console.log("mobile");
                 $('.list-collapse-custom-desktop').css({ "margin-left": 0 })
             }
-            if ($(window).width() >= 768) {
+            if ($(window).width() >= 1366) {
                 console.log("desktop");
                 $('.card-header').removeClass('active')
                 $('.card-header').parents('.collapse-group').removeClass('active')
@@ -864,7 +864,7 @@
                     $('.card-header').not($this).removeClass('active')
                 }
                 $('.collapse-group.active').children('.collapse').each(function (index, item) {
-                    if ($this.attr("id") === $(item).attr("id")) {
+                    if ($this.attr("data-collapse") === $(item).attr("data-collapse")) {
                         $(item).fadeIn(400)
                     } else {
                         $(item).hide()

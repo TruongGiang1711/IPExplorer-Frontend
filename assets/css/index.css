@@ -9,6 +9,9 @@
   .logo .nametag.welcome {
     margin: auto 0;
   }
+  .logo .nametag.welcome .name {
+    height: 15px;
+  }
   .logo .nametag.terms {
     margin: 7px 0 0;
   }
@@ -93,6 +96,7 @@
     margin-bottom: 0;
     padding-bottom: 30px;
   }
+  .content-terms wrapper > div,
   .content-myAccount wrapper > div,
   .content-business wrapper > div,
   .content-ip wrapper > div,
@@ -307,11 +311,11 @@
             justify-content: flex-end;
   }
   .content-business .title {
-    padding: 0 30px;
+    padding: 0 37px;
     margin-bottom: 20px;
   }
   .content-business .form-group {
-    padding: 0 30px;
+    padding: 0 37px;
     margin-bottom: 20px;
   }
   .content-business .form-group > div {
@@ -325,18 +329,26 @@
   }
   .content-business .form-group:nth-child(2) > div label {
     margin-bottom: 10px;
-    padding: 0 30px;
+    padding: 0 37px;
   }
   .content-business .form-group:nth-child(2) > div > div {
-    margin-bottom: 20px;
     font-family: "Calibri-Light";
     font-size: 12px;
     line-height: 14px;
-    padding: 0 30px;
+    padding: 0 37px;
   }
   .content-business .form-group:nth-child(2) > div .accordion-mobile,
   .content-business .form-group:nth-child(2) > div .card {
     padding: 0;
+  }
+  .content-business .form-group:nth-child(2) > div .accordion-mobile {
+    margin-top: 20px;
+  }
+  .content-business .form-control-range + span {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 302px;
   }
   .content-business .btn-group-footer {
     padding: 0 37px;
@@ -384,6 +396,9 @@
     margin-bottom: 20px;
   }
   .content-ip.ip .animation-box .form-group > div input {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 21px;
     margin-bottom: 10px;
   }
   .content-ip.IntellectualAssets .animation-box {
@@ -506,6 +521,7 @@
     height: 40px;
     width: 40px;
     top: 50px;
+    z-index: 1;
   }
   .content-ip .animation-box--item > div .animation-box--tooltip-icon .fa-question {
     margin-bottom: 0;
@@ -580,7 +596,19 @@
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
   .container-desktop .language {
     margin: 50px 50px -13px;
   }
@@ -648,7 +676,10 @@
   }
   .container-desktop .footer-terms .footer {
     max-width: 536px;
-    margin: auto;
+    margin: auto auto 98px;
+  }
+  .container-desktop .footer-terms .footer button {
+    margin: auto 35.5px;
   }
   .container-desktop .content-signin,
   .container-desktop .content-signup {
@@ -663,10 +694,13 @@
   .container-desktop .content-signup wrapper > div {
     margin-bottom: 120px;
   }
-  .container-desktop .content-myAccount .action-myAccount {
+  .container-desktop .content-myAccount wrapper > div {
+    margin-top: 22.5px;
+  }
+  .container-desktop .content-myAccount wrapper > div .action-myAccount {
     margin: 75px 0 140px;
   }
-  .container-desktop .content-myAccount .action-myAccount > .btn-circle {
+  .container-desktop .content-myAccount wrapper > div .action-myAccount > .btn-circle {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -698,7 +732,8 @@
   .container-desktop .content-business .title {
     padding: 0;
     max-width: 536px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .container-desktop .content-business .form-group {
     max-width: 536px;
@@ -709,18 +744,26 @@
     max-width: 100%;
     margin: auto 0 auto auto;
   }
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop .card-header {
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop label,
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div {
+    margin-bottom: 10px;
+    padding: 0;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop label div,
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div div {
+    padding: 0;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop .accordion-desktop {
+    margin-top: 20px;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop .accordion-desktop .card-header {
     min-width: 260px;
   }
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop .item {
-    padding: 10px;
-  }
   .container-desktop .content-business .form-group:nth-child(1) input {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 21px;
     max-width: 302px;
-  }
-  .container-desktop .content-business .form-group:nth-child(2) label,
-  .container-desktop .content-business .form-group:nth-child(2) > div div {
-    padding: 0;
   }
   .container-desktop .content-business .form-group .collapse-group {
     margin-bottom: 10px;
@@ -752,7 +795,7 @@
   }
   .container-desktop .content-unregisteredCopyright .unregisteredCopyright-list {
     max-width: 302px;
-    margin: auto;
+    margin: 40px auto;
   }
   .container-desktop .content-chart .btn-group-footer {
     max-width: 302px;
@@ -779,17 +822,5 @@
   .container-desktop .content-report wrapper .btn-group-footer {
     margin: 50px 0 50px 120px;
   }
-}
-
-@media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-}
-
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
 }
 /*# sourceMappingURL=index.css.map */

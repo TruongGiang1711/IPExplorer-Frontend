@@ -9,6 +9,9 @@
             margin-bottom: 10px;
             &.welcome {
                 margin: auto 0;
+                .name {
+                    height: 15px;
+                }
             }
             &.terms {
                 margin: 7px 0 0;
@@ -89,6 +92,7 @@
             padding-bottom: 30px;
         }
     }
+    .content-terms,
     .content-myAccount,
     .content-business,
     .content-ip,
@@ -323,11 +327,11 @@
     // business
     .content-business {
         .title {
-            padding: 0 30px;
+            padding: 0 37px;
             margin-bottom: 20px;
         }
         .form-group {
-            padding: 0 30px;
+            padding: 0 37px;
             margin-bottom: 20px;
             > div {
                 margin-bottom: 20px;
@@ -350,21 +354,28 @@
                 > div {
                     label {
                         margin-bottom: 10px;
-                        padding: 0 30px;
+                        padding: 0 37px;
                     }
                     > div {
-                        margin-bottom: 20px;
                         font-family: "Calibri-Light";
                         font-size: 12px;
                         line-height: 14px;
-                        padding: 0 30px;
+                        padding: 0 37px;
                     }
                     .accordion-mobile,
                     .card {
                         padding: 0;
                     }
+                    .accordion-mobile {
+                        margin-top: 20px;
+                    }
                 }
             }
+        }
+        .form-control-range + span {
+            font-family: "Calibri-Light";
+            @include font(14px, 21px);
+            max-width: 302px;
         }
         .btn-group-footer {
             padding: 0 37px;
@@ -416,6 +427,8 @@
                 .form-group {
                     margin-bottom: 20px;
                     > div input {
+                        font-family: "Calibri-Light";
+                        @include font(14px, 21px);
                         margin-bottom: 10px;
                     }
                 }
@@ -523,6 +536,7 @@
                         height: 40px;
                         width: 40px;
                         top: 50px;
+                        z-index: 1;
                         .fa-question {
                             margin-bottom: 0;
                             @include font(18px, 16px);
@@ -627,6 +641,29 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+}
+
+@media (min-width: 801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
     .container-desktop {
         // index
         .language {
@@ -686,7 +723,10 @@
         .footer-terms {
             .footer {
                 max-width: 536px;
-                margin: auto;
+                margin: auto auto 98px;
+                button {
+                    margin: auto 35.5px;
+                }
             }
         }
 
@@ -710,10 +750,15 @@
 
         // my Account
         .content-myAccount {
-            .action-myAccount {
-                margin: 75px 0 140px;
-                > .btn-circle {
-                    justify-content: center;
+            wrapper {
+                > div {
+                    margin-top: 22.5px;
+                    .action-myAccount {
+                        margin: 75px 0 140px;
+                        > .btn-circle {
+                            justify-content: center;
+                        }
+                    }
                 }
             }
         }
@@ -764,7 +809,8 @@
             .title {
                 padding: 0;
                 max-width: 536px;
-                margin: auto;
+                margin-left: auto;
+                margin-right: auto;
             }
             .form-group {
                 max-width: 536px;
@@ -773,22 +819,26 @@
                 &.list-collapse-custom-desktop {
                     max-width: 100%;
                     margin: auto 0 auto auto;
-                    .card-header {
-                        min-width: 260px;
+                    label,
+                    > div {
+                        margin-bottom: 10px;
+                        padding: 0;
+                        div {
+                            padding: 0;
+                        }
                     }
-                    .item {
-                        padding: 10px;
+                    .accordion-desktop {
+                        margin-top: 20px;
+                        .card-header {
+                            min-width: 260px;
+                        }
                     }
                 }
                 &:nth-child(1) {
                     input {
+                        font-family: "Calibri-Light";
+                        @include font(14px, 21px);
                         max-width: 302px;
-                    }
-                }
-                &:nth-child(2) {
-                    label,
-                    > div div {
-                        padding: 0;
                     }
                 }
                 .collapse-group {
@@ -832,7 +882,7 @@
         .content-unregisteredCopyright {
             .unregisteredCopyright-list {
                 max-width: 302px;
-                margin: auto;
+                margin: 40px auto;
             }
         }
 
@@ -873,27 +923,4 @@
             }
         }
     }
-}
-
-@media (min-width: 801px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-}
-
-@media (min-width: 1366px) {
 }
