@@ -102,6 +102,7 @@
         appearance: none;
         width: 25px;
         height: 25px;
+        border: 0;
         border-radius: 50%;
         background: $Allports;
         cursor: pointer;
@@ -109,6 +110,7 @@
     &::-moz-range-thumb {
         width: 25px;
         height: 25px;
+        border: 0;
         border-radius: 50%;
         background: $Allports;
         cursor: pointer;

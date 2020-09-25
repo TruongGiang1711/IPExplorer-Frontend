@@ -780,21 +780,24 @@
   }
   .container-desktop .content-business .form-group.list-collapse-custom-desktop {
     max-width: 100%;
-    margin: auto 0 auto auto;
   }
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop label,
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div {
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div > div {
     margin-bottom: 10px;
     padding: 0;
+    max-width: 536px;
+    margin: auto;
   }
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop label div,
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div div {
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div > div div,
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div > div label {
     padding: 0;
   }
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop .accordion-desktop {
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div .accordion {
+    max-width: 100%;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div .accordion-desktop {
     margin-top: 20px;
   }
-  .container-desktop .content-business .form-group.list-collapse-custom-desktop .accordion-desktop .card-header {
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div .accordion-desktop .card-header {
     min-width: 260px;
   }
   .container-desktop .content-business .form-group:nth-child(1) input {

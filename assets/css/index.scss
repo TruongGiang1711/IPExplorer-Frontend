@@ -872,19 +872,26 @@
                 padding: 0;
                 &.list-collapse-custom-desktop {
                     max-width: 100%;
-                    margin: auto 0 auto auto;
-                    label,
+                    // margin: auto 0 auto auto;
                     > div {
-                        margin-bottom: 10px;
-                        padding: 0;
-                        div {
+                        > div {
+                            margin-bottom: 10px;
                             padding: 0;
+                            max-width: 536px;
+                            margin: auto;
+                            div,
+                            label {
+                                padding: 0;
+                            }
                         }
-                    }
-                    .accordion-desktop {
-                        margin-top: 20px;
-                        .card-header {
-                            min-width: 260px;
+                        .accordion {
+                            max-width: 100%;
+                        }
+                        .accordion-desktop {
+                            margin-top: 20px;
+                            .card-header {
+                                min-width: 260px;
+                            }
                         }
                     }
                 }
