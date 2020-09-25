@@ -838,11 +838,11 @@
             resizeWindow()
         });
         function resizeWindow() {
-            if ($(window).width() < 1366) {
+            if ($(window).width() < 768) {
                 console.log("mobile");
                 $('.list-collapse-custom-desktop').css({ "margin-left": 0 })
             }
-            if ($(window).width() >= 1366) {
+            if ($(window).width() >= 768) {
                 console.log("desktop");
                 $('.card-header').removeClass('active')
                 $('.card-header').parents('.collapse-group').removeClass('active')

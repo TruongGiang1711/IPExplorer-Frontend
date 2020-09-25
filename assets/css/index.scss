@@ -627,29 +627,6 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-}
-
-@media (min-width: 801px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}
-
-@media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-}
-
-@media (min-width: 1366px) {
     .container-desktop {
         // index
         .language {
@@ -804,7 +781,7 @@
                     }
                 }
                 &:nth-child(1) {
-                    input{
+                    input {
                         max-width: 302px;
                     }
                 }
@@ -827,11 +804,14 @@
                             margin-left: 7.5px;
                         }
                     }
-                    .card-body {
-                        .list-accordion {
-                            margin: 0;
-                            > div {
-                                margin-top: 10px;
+                    .collapse {
+                        overflow: auto;
+                        .card-body {
+                            .list-accordion {
+                                margin: 0;
+                                > div {
+                                    margin-top: 10px;
+                                }
                             }
                         }
                     }
@@ -893,4 +873,27 @@
             }
         }
     }
+}
+
+@media (min-width: 801px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
 }

@@ -363,19 +363,7 @@ input::-ms-reveal {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
-@media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-}
-
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .container-desktop .sidebar-right {
     display: block;
     text-align: center;
@@ -452,5 +440,17 @@ input::-ms-reveal {
   .container-desktop .container-custom .accordion-mobile {
     display: none;
   }
+}
+
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }
 /*# sourceMappingURL=style.css.map */

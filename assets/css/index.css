@@ -580,19 +580,7 @@
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
-@media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-}
-
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
-}
-
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .container-desktop .language {
     margin: 50px 50px -13px;
   }
@@ -744,10 +732,13 @@
   .container-desktop .content-business .form-group .collapse-group div .card-header {
     margin-left: 7.5px;
   }
-  .container-desktop .content-business .form-group .collapse-group .card-body .list-accordion {
+  .container-desktop .content-business .form-group .collapse-group .collapse {
+    overflow: auto;
+  }
+  .container-desktop .content-business .form-group .collapse-group .collapse .card-body .list-accordion {
     margin: 0;
   }
-  .container-desktop .content-business .form-group .collapse-group .card-body .list-accordion > div {
+  .container-desktop .content-business .form-group .collapse-group .collapse .card-body .list-accordion > div {
     margin-top: 10px;
   }
   .container-desktop .content-business .form-control-range {
@@ -788,5 +779,17 @@
   .container-desktop .content-report wrapper .btn-group-footer {
     margin: 50px 0 50px 120px;
   }
+}
+
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }
 /*# sourceMappingURL=index.css.map */
