@@ -297,6 +297,7 @@ input::-ms-reveal {
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 21px;
+    color: black;
   }
   .container-desktop .container-custom .form-group > div .input-validate small {
     position: absolute;
@@ -387,7 +388,7 @@ input::-ms-reveal {
   }
   .container-desktop .container-custom .card-body .list-accordion {
     overflow: auto;
-    margin: 0 0 0 30px;
+    margin: 0 0 0 37px;
     padding-right: 30px;
   }
   .container-desktop .container-custom .btn-group-footer {
@@ -403,12 +404,27 @@ input::-ms-reveal {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 
+@media (min-width: 768px) {
+  .container-desktop .container-custom {
+    zoom: 1.5;
+  }
+}
+
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 
+@media (min-width: 992px) {
+  .container-desktop .container-custom {
+    zoom: 2;
+  }
+}
+
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
+  .container-desktop .container-custom {
+    zoom: 1;
+  }
 }
 
 @media (min-width: 1281px) {

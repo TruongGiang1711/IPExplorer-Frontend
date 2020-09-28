@@ -6,15 +6,12 @@
   .logo .nametag {
     margin-bottom: 10px;
   }
-  .logo .nametag.welcome {
+  .logo .nametag.welcome, .logo .nametag.terms {
     margin: auto 0;
     height: 36px;
   }
-  .logo .nametag.welcome .name {
+  .logo .nametag.welcome .name, .logo .nametag.terms .name {
     height: 15px;
-  }
-  .logo .nametag.terms {
-    margin: 7px 0 0;
   }
   .language {
     margin: 20px 20px 17px 0;
@@ -333,6 +330,7 @@
   }
   .content-business .form-group > div label {
     margin-bottom: 10px;
+    padding: 0;
   }
   .content-business .form-group > div .card:first-child .list-accordion > div:first-child {
     margin-bottom: 10px;
@@ -341,10 +339,6 @@
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 21px;
-  }
-  .content-business .form-group:nth-child(2) > div label {
-    margin-bottom: 10px;
-    padding: 0 37px;
   }
   .content-business .form-group:nth-child(2) > div > div {
     font-family: "Calibri-Light";

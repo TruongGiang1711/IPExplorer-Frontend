@@ -249,6 +249,7 @@ input::-ms-reveal {
                         input {
                             font-family: "Calibri-Light";
                             @include font(14px, 21px);
+                            color: black;
                         }
                         small {
                             position: absolute;
@@ -332,7 +333,7 @@ input::-ms-reveal {
             .card-body {
                 .list-accordion {
                     overflow: auto;
-                    margin: 0 0 0 30px;
+                    margin: 0 0 0 37px;
                     padding-right: 30px;
                 }
             }
@@ -358,6 +359,11 @@ input::-ms-reveal {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+    .container-desktop {
+        .container-custom {
+            zoom: 1.5;
+        }
+    }
 }
 
 @media (min-width: 801px) {
@@ -366,10 +372,20 @@ input::-ms-reveal {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    .container-desktop {
+        .container-custom {
+            zoom: 2;
+        }
+    }
 }
 
 @media (min-width: 1025px) {
     /* big landscape tablets, laptops, and desktops */
+    .container-desktop {
+        .container-custom {
+            zoom: 1;
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)

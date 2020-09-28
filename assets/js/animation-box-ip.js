@@ -4,8 +4,8 @@ var firstAnimation = true;
 var duration = 0.2;
 
 // default box variables
-var defaultWidth = 141;
-var defaultHeight = 141;
+var defaultWidth = 140;
+var defaultHeight = 140;
 var defaultGapLeft = 19;
 var defaultGapTop = 20;
 var defaultRadius = 25;
@@ -110,7 +110,7 @@ function calcPositionTooltips() {
         var sTop = top - height;
         $tooltipContent.css({
             'top': sTop,
-            'left': oLeft
+            'left': oLeft,
         });
         $tooltipContent.attr('data-top', sTop);
         $tooltipContent.attr('data-left', oLeft);
@@ -126,7 +126,7 @@ $('.tooltip-box--content').each(function () {
     $this.attr('data-height', height);
     $this.css({
         'width': width,
-        'height': height
+        'height': height,
     });
 });
 
@@ -161,7 +161,7 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
             top: thisTop,
             left: thisLeft,
             padding: 0,
-            duration: duration
+            duration: duration,
         });
 
     } else {
@@ -175,7 +175,7 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
             'left': thisLeft,
             'width': 0,
             'height': 0,
-            'overflow': 'hidden'
+            'overflow': 'hidden',
         });
 
         tooltipTop = $tooltipContent.attr('data-top');
@@ -191,10 +191,10 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
             top: tooltipTop,
             left: tooltipLeft,
             padding: "15px 19px",
-            duration: duration
+            duration: duration,
+            zoom: ($(window).width() >= 992) ? 2 : (($(window).width() >= 768) ? 1.5 : 1)
         });
     }
-
 });
 
 function addRowInput(value) {

@@ -58,8 +58,10 @@
                                 </div>
                                 <div class="form-group p-0 list-collapse-custom-desktop">
                                     <div class="">
-                                        <div for=""><label>Your Business Sector & Subsector</label></div>
-                                        <div> Please select one sector & subsector.</div>
+                                        <div>
+                                            <label>Your Business Sector & Subsector</label>
+                                            <div> Please select one sector & subsector.</div>
+                                        </div>
                                         <div class="accordion accordion-desktop" id="accordionExample">
                                             <div class="collapse-group d-flex flex-wrap w-100 align-items-start">
                                                 <div class="d-flex m-auto">
@@ -848,11 +850,11 @@
             resizeWindow()
         });
         function resizeWindow() {
-            if ($(window).width() < 1366) {
+            if ($(window).width() < 1200) {
                 console.log("mobile");
-                $('.list-collapse-custom-desktop').css({ "margin-left": 0 })
+                $('.list-collapse-custom-desktop').find('.collapse').css({ "margin-left": 0 })
             }
-            if ($(window).width() >= 1366) {
+            if ($(window).width() >= 1200) {
                 console.log("desktop");
                 $('.card-header').removeClass('active')
                 $('.card-header').parents('.collapse-group').removeClass('active')
