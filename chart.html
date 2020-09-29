@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="stylesheet" href="./assets/css/chart.min.css">
 
     <title>IPEXPLORER</title>
 </head>
@@ -53,8 +52,8 @@
                                     report.
                                 </div>
                             </div>
-                            <div class="m-auto" style="max-width: 243px;"><canvas id="myChart" width="400"
-                                    height="400"></canvas></div>
+                            <div class="m-auto">
+                                <canvas id="myChart" width="" height="400"></canvas></div>
                             <div class="d-flex justify-content-between btn-group-footer">
                                 <a class="btn btn-custom btn-custom-outline"
                                     href="./ipIntellectualAssets.html">Previous</a>
@@ -78,67 +77,59 @@
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/all.min.js"></script>
-    <script src="./assets/js/chart.min.js"></script>
+    <script src="./assets/js/gauge.min.js"></script>
     <script>
-        var data = {
-            // labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 0.1, 3],
-                backgroundColor: [
-                    'rgba(78, 129, 189, 1)',
-                    'rgba(192, 80, 77, 1)',
-                    'rgba(155, 186, 88, 1)',
-                    'rgba(128, 100, 161, 1)',
-                    'rgba(75, 171, 198, 1)',
-                    'rgba(247, 150, 69, 1)'
-                ],
-                borderColor: [
-                    'rgba(255, 255, 255, 1)',
-                    'rgba(255, 255, 255, 1)',
-                    'rgba(255, 255, 255, 1)',
-                    'rgba(255, 255, 255, 1)',
-                    'rgba(255, 255, 255, 1)',
-                    'rgba(255, 255, 255, 1)',
-                ],
-                borderWidth: 1
-            }]
-        };
-        var options = {
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        var value = data.datasets[0].data[tooltipItem.index];
-                        var label = data.labels[tooltipItem.index];
-
-                        if (value === 0.1) {
-                            value = 0;
-                        }
-
-                        return label + ': ' + value + ' %';
-                    }
-                }
+        var opts = {
+            angle: -0.5, // The span of the gauge arc
+            lineWidth: 0.3, // The line thickness
+            radiusScale: 1, // Relative radius
+            pointer: {
+                length: 0.5, // // Relative to gauge radius
+                strokeWidth: 0.031, // The thickness
+                color: 'rgb(100,100,100)' // Fill color
             },
-            // scales: {
-            //     yAxes: [{
-            //         ticks: {
-            //             beginAtZero: true
-            //         },
-            //     }]
+            limitMax: false,     // If false, max value increases automatically if value > maxValue
+            limitMin: false,     // If true, the min value of the gauge will be fixed
+            colorStart: '#6FADCF',   // Colors
+            colorStop: '#8FC0DA',    // just experiment with them
+            strokeColor: '#E0E0E0',  // to see which ones work best for you
+            generateGradient: true,
+            highDpiSupport: true,     // High resolution support
+            // staticLabels: {
+            //     font: "10px sans-serif",  // Specifies font
+            //     labels: [100, 130, 150, 220.1, 260, 300],  // Print labels at these values
+            //     color: "#000000",  // Optional: Label text color
+            //     fractionDigits: 0  // Optional: Numerical precision. 0=round off.
             // },
-        }
-        var ctx = document.getElementById('myChart');
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var ctx = $('#myChart');
-        var ctx = 'myChart';
-        $(document).ready(function () {
-            $('[data-toggle="popover"]').popover();
-            var myPieChart = new Chart(ctx, {
-                type: 'pie',
-                data: data,
-                options: options,
-            });
-        });
+            staticZones: [
+                { strokeStyle: "#F03E3E", min: 10, max: 30 }, // Red from 100 to 130
+                { strokeStyle: "#FFDD00", min: 30, max: 70 }, // Yellow
+                { strokeStyle: "#30B32D", min: 70, max: 90 }, // Green
+                { strokeStyle: "#000000", min: 90, max: 10 }
+            ],
+            // pointer: {
+            //     // Extra optional pointer options:
+            //     iconPath: 'myicon.png',  // Icon image source
+            //     iconScale: 1,    // Size scaling factor
+            //     iconAngle: 90.0  // Rotation offset angle, degrees
+            // },
+            // renderTicks: {
+            //     divisions: 5,
+            //     divWidth: 1.1,
+            //     divLength: 0.7,
+            //     divColor: '#333333',
+            //     subDivisions: 3,
+            //     subLength: 0.5,
+            //     subWidth: 0.6,
+            //     subColor: '#666666'
+            // }
+        };
+        var target = document.getElementById('myChart'); // your canvas element
+        var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+        gauge.maxValue = 100; // set max gauge value
+        gauge.minValue = 0;  // Prefer setter over gauge.minValue = 0
+        gauge.animationSpeed = 1; // set animation speed (32 is default value)
+        gauge.set(0); // set actual value
     </script>
 </body>
 
