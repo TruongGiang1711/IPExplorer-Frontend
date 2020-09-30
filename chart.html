@@ -53,9 +53,39 @@
                                 </div>
                             </div>
                             <div class="text-center position-relative">
-                                <canvas id="myChart" width="" height="" style="width:100%; height: 400px;"></canvas>
+                                <canvas id="myChart" width="" height="" style="width: 100%; height: 400px;"></canvas>
                                 <label class="position-absolute text-white"
-                                    style="right: 0; bottom: 55px; left: 0; font-size: 30px;">IP Score</label>
+                                    style="right: 0; bottom: 55px; left: 0; font-size: 30px;">IP SCORE</label>
+                            </div>
+                            <div class="infoChart">
+                                Analysis:
+                                <ul>
+                                    <li>
+                                        <div class="name">Black</div>
+                                        <div class="des">- You have not selected any registered rights or intellectual
+                                            assets. Please check each of the categories to see what you can identify.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="name">Red</div>
+                                        <div class="des">- It loogs like you are at the start of your journey with
+                                            intellectual property. Take a lood at your customized report to find ways in
+                                            which you should be looking to strengthen your position.</div>
+                                    </li>
+                                    <li>
+                                        <div class="name">Amber</div>
+                                        <div class="des">- You look like you are on the right track, but there is more
+                                            you could be doing to protect and exploit your assets. Your report will show
+                                            you some steps you can take to do this.</div>
+                                    </li>
+                                    <li>
+                                        <div class="name">Green</div>
+                                        <div class="des">- Congratulations, you are clearly producing a range of
+                                            intellectual assets and taking their protection seriously. Have a look at
+                                            your report to find out how you can strengthen your position and utilize
+                                            your assets more effectively.</div>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="d-flex justify-content-between btn-group-footer">
                                 <a class="btn btn-custom btn-custom-outline"
@@ -82,6 +112,20 @@
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/gauge.min.js"></script>
     <script>
+        var radius = 0;
+        $(document).ready(function () {
+            resizeWindow()
+        })
+        $(window).resize(function () {
+            resizeWindow()
+        });
+        function resizeWindow() {
+            if ($(window).width() < 1200) {
+            }
+            if ($(window).width() >= 1200) {
+                radius = 1;
+            }
+        }
         var opts = {
             angle: -0.5, // The span of the gauge arc
             lineWidth: 0.25, // The line thickness
@@ -105,10 +149,10 @@
                 fractionDigits: 0  // Optional: Numerical precision. 0=round off.
             },
             staticZones: [
-                { strokeStyle: "#F03E3E", min: 10, max: 30 }, // Red from 100 to 130
-                { strokeStyle: "#FFDD00", min: 30, max: 70 }, // Yellow
-                { strokeStyle: "#30B32D", min: 70, max: 90 }, // Green
-                { strokeStyle: "#000000", min: 90, max: 10 }
+                { strokeStyle: "#F03E3E", min: 10, max: 30, name: "Red" }, // Red from 100 to 130
+                { strokeStyle: "#FFDD00", min: 30, max: 70, name: "Amber" }, // Yellow
+                { strokeStyle: "#30B32D", min: 70, max: 90, name: "Green" }, // Green
+                { strokeStyle: "#000000", min: 90, max: 10, name: "Black" }
             ],
             // pointer: {
             //     // Extra optional pointer options:
@@ -116,23 +160,46 @@
             //     iconScale: 1,    // Size scaling factor
             //     iconAngle: 90.0  // Rotation offset angle, degrees
             // },
-            renderTicks: {
-                divisions: 5,
-                divWidth: 1.1,
-                divLength: 0.7,
-                divColor: '#333333',
-                subDivisions: 3,
-                subLength: 0.5,
-                subWidth: 0.6,
-                subColor: '#666666'
-            }
+            // renderTicks: {
+            //     divisions: 5,
+            //     divWidth: 1.1,
+            //     divLength: 0.7,
+            //     divColor: '#333333',
+            //     subDivisions: 3,
+            //     subLength: 0.5,
+            //     subWidth: 0.6,
+            //     subColor: '#666666'
+            // }
         };
         var target = document.getElementById('myChart'); // your canvas element
         var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
         gauge.maxValue = 100; // set max gauge value
         gauge.minValue = 0;  // Prefer setter over gauge.minValue = 0
         gauge.animationSpeed = 1; // set animation speed (32 is default value)
-        gauge.set(5); // set actual value
+        gauge.set(15); // set actual value
+
+
+
+        // console.log(gauge.value);
+        $('.infoChart .name').parent().hide()
+        gauge.options.staticZones.some(mapItem)
+        function mapItem(item) {
+            // console.log(item);
+            var _this = item
+            $('.infoChart .name').each(function (index, item) {
+                if (_this.min < gauge.value && gauge.value < _this.max && _this.name === $(item).text()) {
+                    // console.log(item);
+                    $(item).parent().show()
+                }
+            })
+        }
+        // if (gauge.value < 10) {
+        //     $('.infoChar .content').append()
+        // } else if (gauge.value > 10) {
+        //     $('.infoChar .content').append("10")
+        // } else if (gauge.value > 30) {
+        //     $('.infoChar .content').append("30")
+        // }
     </script>
 </body>
 

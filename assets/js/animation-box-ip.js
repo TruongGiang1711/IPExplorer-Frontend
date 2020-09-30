@@ -158,7 +158,8 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
             left: thisLeft,
             padding: 0,
             duration: duration,
-            // zoom: ($(window).width() >= 1200) ? 1 : (($(window).width() >= 992) ? 2 : (($(window).width() >= 768) ? 1.5 : 1))
+            opacity: 0,
+            zoom: ($(window).width() >= 1200) ? 1 : (($(window).width() >= 992) ? 2 : (($(window).width() >= 768) ? 1.5 : 1))
         });
     } else {
         $this.addClass('open');
@@ -172,8 +173,8 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
             'width': 0,
             'height': 0,
             'overflow': 'hidden',
-            'opacity': 0
-            // 'zoom': ($(window).width() >= 1200) ? 1 : (($(window).width() >= 992) ? 2 : (($(window).width() >= 768) ? 1.5 : 1))
+            'opacity': 0,
+            'zoom': ($(window).width() >= 1200) ? 1 : (($(window).width() >= 992) ? 2 : (($(window).width() >= 768) ? 1.5 : 1))
         });
 
         tooltipTop = $tooltipContent.attr('data-top');
@@ -190,7 +191,7 @@ $('.animation-box--tooltip-icon').on('click', function (e) {
             left: tooltipLeft,
             padding: "15px 19px",
             duration: duration,
-            opacity: 1
+            opacity: 1,
             // zoom: ($(window).width() >= 1200) ? 1 : (($(window).width() >= 992) ? 2 : (($(window).width() >= 768) ? 1.5 : 1))
         });
     }

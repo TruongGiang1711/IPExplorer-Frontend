@@ -614,6 +614,244 @@
   /* big landscape tablets, laptops, and desktops */
 }
 
+@media (min-width: 1200px) {
+  .container-desktop .language {
+    margin: 50px 50px -13px;
+  }
+  .container-desktop .content-index {
+    max-width: 100%;
+  }
+  .container-desktop .content-index .logo,
+  .container-desktop .content-index .language,
+  .container-desktop .content-index .list-partner {
+    margin: 0;
+    display: none;
+  }
+  .container-desktop .content-index wrapper {
+    padding: 185px 0 240px;
+    margin: 0 auto;
+    max-width: 302px;
+  }
+  .container-desktop .content-index .action-index {
+    margin-bottom: 0;
+  }
+  .container-desktop .footer-index {
+    padding: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-desktop .footer-index .contact-name {
+    font-family: "Raleway";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-right: 50px;
+    height: 21px;
+  }
+  .container-desktop .footer-index .contact-mail {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .container-desktop .content-terms,
+  .container-desktop .content-myAccount,
+  .container-desktop .content-intangibles,
+  .container-desktop .content-business,
+  .container-desktop .content-ip,
+  .container-desktop .content-unregisteredCopyright,
+  .container-desktop .content-chart,
+  .container-desktop .content-report {
+    max-width: 536px;
+    margin: auto;
+  }
+  .container-desktop .content-terms wrapper,
+  .container-desktop .content-myAccount wrapper,
+  .container-desktop .content-intangibles wrapper,
+  .container-desktop .content-business wrapper,
+  .container-desktop .content-ip wrapper,
+  .container-desktop .content-unregisteredCopyright wrapper,
+  .container-desktop .content-chart wrapper,
+  .container-desktop .content-report wrapper {
+    padding: 0;
+  }
+  .container-desktop .footer-terms .footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 536px;
+    margin: auto auto 98px;
+  }
+  .container-desktop .footer-terms .footer button {
+    margin: auto 37.5px;
+  }
+  .container-desktop .content-signin,
+  .container-desktop .content-signup {
+    max-width: 100%;
+  }
+  .container-desktop .content-signin wrapper,
+  .container-desktop .content-signup wrapper {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 302px;
+  }
+  .container-desktop .content-signup wrapper > div {
+    margin-bottom: 120px;
+  }
+  .container-desktop .content-signup wrapper > div .form .form-group {
+    margin-bottom: 84px;
+  }
+  .container-desktop .content-signin wrapper > div {
+    margin-bottom: 245px;
+  }
+  .container-desktop .content-myAccount wrapper > div {
+    margin-top: 23.5px;
+  }
+  .container-desktop .content-myAccount wrapper > div .action-myAccount {
+    margin: 75px 0 140px;
+  }
+  .container-desktop .content-myAccount wrapper > div .action-myAccount > .btn-circle {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container-desktop .content-myAccount wrapper .evaluation_sucess {
+    margin-right: 270px;
+  }
+  .container-desktop .content-myAccount wrapper .evaluation_select {
+    margin-right: 240px;
+  }
+  .container-desktop .content-intangibles wrapper > div {
+    margin-bottom: 50px;
+  }
+  .container-desktop .content-intangibles wrapper > div .intangibles-details > div.intangibles-details_content {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .container-desktop .content-intangibles wrapper > div .btn-custom {
+    max-width: 302px;
+    margin: auto;
+  }
+  .container-desktop .content-ip .btn-group-footer,
+  .container-desktop .content-business .btn-group-footer,
+  .container-desktop .content-unregisteredCopyright .btn-group-footer {
+    max-width: 302px;
+    margin: 50px auto;
+  }
+  .container-desktop .content-ip.ip .animation-box, .container-desktop .content-ip.IntellectualAssets .animation-box {
+    max-width: 302px;
+    margin-top: 40px;
+  }
+  .container-desktop .content-business {
+    max-width: 100%;
+  }
+  .container-desktop .content-business header {
+    max-width: 100%;
+  }
+  .container-desktop .content-business header .logo {
+    max-width: 536px;
+    margin: auto;
+  }
+  .container-desktop .content-business .title {
+    padding: 0;
+    max-width: 536px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-desktop .content-business .form-group {
+    max-width: 536px;
+    margin: auto;
+    padding: 0;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop {
+    max-width: 100%;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div > div {
+    margin-bottom: 10px;
+    padding: 0;
+    max-width: 536px;
+    margin: auto;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div > div div,
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div > div label {
+    padding: 0;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div .accordion {
+    max-width: 100%;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div .accordion-desktop {
+    margin-top: 20px;
+  }
+  .container-desktop .content-business .form-group.list-collapse-custom-desktop > div .accordion-desktop .card-header {
+    min-width: 260px;
+  }
+  .container-desktop .content-business .form-group:nth-child(1) input {
+    max-width: 302px;
+  }
+  .container-desktop .content-business .form-group .collapse-group {
+    margin-bottom: 10px;
+  }
+  .container-desktop .content-business .form-group .collapse-group div:first-child .card-header {
+    margin-right: 7.5px;
+    margin-left: 0;
+  }
+  .container-desktop .content-business .form-group .collapse-group div .card-header {
+    margin-left: 7.5px;
+  }
+  .container-desktop .content-business .form-group .collapse-group .collapse {
+    overflow: auto;
+  }
+  .container-desktop .content-business .form-group .collapse-group .collapse .card-body .list-accordion {
+    margin: 0;
+  }
+  .container-desktop .content-business .form-group .collapse-group .collapse .card-body .list-accordion > div {
+    margin-top: 10px;
+  }
+  .container-desktop .content-business .form-control-range {
+    max-width: 302px;
+  }
+  .container-desktop .content-business .form-control-range + span {
+    max-width: 302px;
+  }
+  .container-desktop .content-business .btn-group-footer {
+    padding: 0;
+  }
+  .container-desktop .content-unregisteredCopyright .unregisteredCopyright-list {
+    max-width: 302px;
+    margin: 40px auto;
+  }
+  .container-desktop .content-chart .btn-group-footer {
+    max-width: 302px;
+    margin: 40px auto 140px;
+  }
+  .container-desktop .content-report wrapper .title {
+    padding-right: 0;
+  }
+  .container-desktop .content-report wrapper .report-info {
+    margin-top: 50px;
+  }
+  .container-desktop .content-report wrapper .report-info .report-info_title {
+    margin-bottom: 10px;
+  }
+  .container-desktop .content-report wrapper .report-info .report-info_des {
+    margin-bottom: 30px;
+  }
+  .container-desktop .content-report wrapper .report-info .title-try {
+    padding-right: 280px;
+  }
+  .container-desktop .content-report wrapper .report-info .info-try p {
+    margin-bottom: 20px;
+  }
+  .container-desktop .content-report wrapper .btn-group-footer {
+    margin: 50px 0 50px 120px;
+  }
+}
+
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
 }

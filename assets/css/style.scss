@@ -390,13 +390,6 @@ input::-ms-reveal {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-}
-
-@media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-}
-
-@media (min-width: 1366px) {
     .container-desktop {
         .sidebar-right {
             display: block;
@@ -470,4 +463,11 @@ input::-ms-reveal {
             }
         }
     }
+}
+
+@media (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+}
+
+@media (min-width: 1366px) {
 }
