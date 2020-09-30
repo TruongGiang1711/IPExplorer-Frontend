@@ -52,8 +52,11 @@
                                     report.
                                 </div>
                             </div>
-                            <div class="m-auto">
-                                <canvas id="myChart" width="" height="400"></canvas></div>
+                            <div class="text-center position-relative">
+                                <canvas id="myChart" width="" height="" style="width:100%; height: 400px;"></canvas>
+                                <label class="position-absolute text-white"
+                                    style="right: 0; bottom: 55px; left: 0; font-size: 30px;">IP Score</label>
+                            </div>
                             <div class="d-flex justify-content-between btn-group-footer">
                                 <a class="btn btn-custom btn-custom-outline"
                                     href="./ipIntellectualAssets.html">Previous</a>
@@ -81,7 +84,7 @@
     <script>
         var opts = {
             angle: -0.5, // The span of the gauge arc
-            lineWidth: 0.3, // The line thickness
+            lineWidth: 0.25, // The line thickness
             radiusScale: 1, // Relative radius
             pointer: {
                 length: 0.5, // // Relative to gauge radius
@@ -95,12 +98,12 @@
             strokeColor: '#E0E0E0',  // to see which ones work best for you
             generateGradient: true,
             highDpiSupport: true,     // High resolution support
-            // staticLabels: {
-            //     font: "10px sans-serif",  // Specifies font
-            //     labels: [100, 130, 150, 220.1, 260, 300],  // Print labels at these values
-            //     color: "#000000",  // Optional: Label text color
-            //     fractionDigits: 0  // Optional: Numerical precision. 0=round off.
-            // },
+            staticLabels: {
+                font: "20px sans-serif",  // Specifies font
+                labels: [100, 130, 150, 220.1, 260],  // Print labels at these values
+                color: "#000000",  // Optional: Label text color
+                fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+            },
             staticZones: [
                 { strokeStyle: "#F03E3E", min: 10, max: 30 }, // Red from 100 to 130
                 { strokeStyle: "#FFDD00", min: 30, max: 70 }, // Yellow
@@ -113,23 +116,23 @@
             //     iconScale: 1,    // Size scaling factor
             //     iconAngle: 90.0  // Rotation offset angle, degrees
             // },
-            // renderTicks: {
-            //     divisions: 5,
-            //     divWidth: 1.1,
-            //     divLength: 0.7,
-            //     divColor: '#333333',
-            //     subDivisions: 3,
-            //     subLength: 0.5,
-            //     subWidth: 0.6,
-            //     subColor: '#666666'
-            // }
+            renderTicks: {
+                divisions: 5,
+                divWidth: 1.1,
+                divLength: 0.7,
+                divColor: '#333333',
+                subDivisions: 3,
+                subLength: 0.5,
+                subWidth: 0.6,
+                subColor: '#666666'
+            }
         };
         var target = document.getElementById('myChart'); // your canvas element
         var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
         gauge.maxValue = 100; // set max gauge value
         gauge.minValue = 0;  // Prefer setter over gauge.minValue = 0
         gauge.animationSpeed = 1; // set animation speed (32 is default value)
-        gauge.set(0); // set actual value
+        gauge.set(5); // set actual value
     </script>
 </body>
 
