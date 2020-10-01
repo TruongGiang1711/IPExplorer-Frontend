@@ -586,10 +586,14 @@
 
     // chart
     .content-chart {
-        wrapper {
-            .title {
-                margin-bottom: 20px;
-            }
+        .title {
+            margin-bottom: 20px;
+        }
+        .score-ip {
+            right: 0;
+            bottom: 95px;
+            left: 0;
+            font-size: 20px;
         }
     }
 
@@ -617,13 +621,6 @@
                         margin-bottom: 20px;
                         font-family: "Calibri-Light";
                         @include font(14px, 16px);
-                    }
-                    > div {
-                        &:first-child {
-                            .report-info_des {
-                                margin-bottom: 20px;
-                            }
-                        }
                     }
                     .title-try {
                         margin: 50px auto 20px;
@@ -663,6 +660,12 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+    // chart
+    .content-chart {
+        .score-ip {
+            font-size: 20px;
+        }
+    }
 }
 
 @media (min-width: 801px) {
@@ -935,6 +938,10 @@
 
         // chart
         .content-chart {
+            .score-ip {
+                font-size: 30px;
+                bottom: 60px;
+            }
             .btn-group-footer {
                 max-width: 302px;
                 margin: 40px auto 140px;
