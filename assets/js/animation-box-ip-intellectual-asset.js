@@ -70,6 +70,7 @@ $('.animation-box--item').on('click', function (e) {
         });
     } else {
         // height 200px test, actually height auto
+        window.scrollTo(0, 0);
         $($list).each(function (index, el) {
             if ($this.parent($parent).find($list).hasClass($this.find('.name').text()) && $this.index() === index + 1) {
                 $(el).addClass('active')
