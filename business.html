@@ -775,9 +775,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="">
+                                    <div style="position:relative; margin:auto;">
                                         <label for="">How Many Years Trading?</label>
-                                        <input type="range" class="form-control-range" />
+                                        <span style="position:absolute; color:#007f9c; min-width:100px;">
+                                            <span id="myValue"></span>
+                                        </span>
+                                        <input type="range" class="form-control-range" id="myRange" max="10" min="0">
                                         <span class="d-flex justify-content-between" style="margin-top: 15px;">
                                             <div style="padding-left: 10px;">0</div>
                                             <div style="padding-left: 5px;">5</div>
@@ -844,6 +847,32 @@
                 e.preventDefault()
                 $(this).toggleClass('active')
             })
+
+            var myRange = document.querySelector('#myRange');
+            var myValue = document.querySelector('#myValue');
+            var myUnits = 'years';
+            var off = myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
+            var px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off + 25) - (myValue.offsetParent.offsetWidth / 2);
+
+            myValue.parentElement.style.left = px + 'px';
+            myValue.parentElement.style.top = myRange.offsetHeight * 30 + 'px';
+            myValue.innerHTML = myRange.value + ' ' + myUnits;
+
+            myRange.oninput = function () {
+                let px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (myValue.offsetWidth / 2);
+                console.log(myRange.valueAsNumber);
+                switch (myRange.valueAsNumber) {
+                    case 0:
+                        px = px + 25
+                        break;
+                    case 10:
+                        px = px - 40
+                        break;
+                }
+                myValue.innerHTML = myRange.value + ' ' + myUnits;
+                myValue.parentElement.style.left = px + 'px';
+            };
+
             resizeWindow()
         })
         $(window).resize(function () {

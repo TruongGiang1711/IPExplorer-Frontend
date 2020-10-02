@@ -132,7 +132,7 @@
   -webkit-transition: 0.2s;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  margin: 10px 0;
+  margin: 40px 0 10px;
 }
 
 .form-control-range:hover {
