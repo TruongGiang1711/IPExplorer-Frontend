@@ -165,13 +165,20 @@
 
 
 
-        // console.log(gauge.value);
+        console.log(gauge.options.staticZones);
         $('.infoChart .name').parent().hide()
         gauge.options.staticZones.some(mapItem)
+
         function mapItem(item) {
             var _this = item
             $('.infoChart .name').each(function (index, item) {
-                if (_this.min < gauge.value && gauge.value < _this.max && _this.name === $(item).text()) {
+                if ((_this.min < gauge.value && gauge.value < _this.max) && _this.name === $(item).text()) {
+                    $(item).parent().show()
+                }
+                if ($(item).text() === 'Black' && (gauge.value < 10 || gauge.value > 90)) {
+                    var a = _this.min
+                    _this.min = _this.max
+                    _this.max = a
                     $(item).parent().show()
                 }
             })

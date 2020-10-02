@@ -853,6 +853,14 @@
             var myUnits = 'years';
             var off = myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
             var px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off + 25) - (myValue.offsetParent.offsetWidth / 2);
+            switch (myRange.valueAsNumber) {
+                case 0:
+                    px = px + 25
+                    break;
+                case 10:
+                    px = px - 40
+                    break;
+            }
 
             myValue.parentElement.style.left = px + 'px';
             myValue.parentElement.style.top = myRange.offsetHeight * 30 + 'px';
@@ -860,7 +868,6 @@
 
             myRange.oninput = function () {
                 let px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (myValue.offsetWidth / 2);
-                console.log(myRange.valueAsNumber);
                 switch (myRange.valueAsNumber) {
                     case 0:
                         px = px + 25
