@@ -75,7 +75,23 @@
         }
     }
     .footer-index {
-        display: none;
+        padding: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        justify-content: center;
+        .contact-name {
+            font-family: "Raleway";
+            @include font(18px, 24px);
+            font-weight: bold;
+            margin-right: 0;
+            margin-bottom: 20px;
+            height: 21px;
+        }
+        .contact-mail {
+            font-family: "Calibri-Light";
+            @include font(14px, 14px);
+        }
     }
 
     .content-terms,
@@ -706,19 +722,9 @@
         }
         .footer-index {
             padding: 95px;
-            display: flex;
-            align-self: center;
-            justify-content: center;
             .contact-name {
-                font-family: "Raleway";
-                @include font(18px, 24px);
-                font-weight: bold;
                 margin-right: 50px;
-                height: 21px;
-            }
-            .contact-mail {
-                font-family: "Calibri-Light";
-                @include font(14px, 14px);
+                margin-bottom: 0;
             }
         }
 
@@ -984,295 +990,4 @@
 }
 
 @media (min-width: 1366px) {
-    .container-desktop {
-        // index
-        .language {
-            margin: 50px 50px -13px;
-        }
-        .content-index {
-            max-width: 100%;
-            .logo,
-            .language,
-            .list-partner {
-                margin: 0;
-                display: none;
-            }
-            wrapper {
-                padding: 185px 0 240px;
-                margin: 0 auto;
-                max-width: 302px;
-            }
-            .action-index {
-                margin-bottom: 0;
-            }
-        }
-        .footer-index {
-            padding: 95px;
-            display: flex;
-            align-self: center;
-            justify-content: center;
-            .contact-name {
-                font-family: "Raleway";
-                @include font(18px, 24px);
-                font-weight: bold;
-                margin-right: 50px;
-                height: 21px;
-            }
-            .contact-mail {
-                font-family: "Calibri-Light";
-                @include font(14px, 14px);
-            }
-        }
-
-        .content-terms,
-        .content-myAccount,
-        .content-intangibles,
-        .content-business,
-        .content-ip,
-        .content-unregisteredCopyright,
-        .content-chart,
-        .content-report {
-            max-width: 536px;
-            margin: auto;
-            wrapper {
-                padding: 0;
-            }
-        }
-
-        // temrs
-        .footer-terms {
-            .footer {
-                justify-content: center;
-                max-width: 536px;
-                margin: auto auto 98px;
-                button {
-                    margin: auto 37.5px;
-                }
-            }
-        }
-
-        // sign Up, sign In
-        .content-signin,
-        .content-signup {
-            max-width: 100%;
-            wrapper {
-                padding: 0;
-                margin: 0 auto;
-                max-width: 302px;
-            }
-        }
-        .content-signup {
-            wrapper {
-                > div {
-                    margin-bottom: 120px;
-                    .form {
-                        .form-group {
-                            margin-bottom: 84px;
-                        }
-                    }
-                }
-            }
-        }
-        // forgot sigin
-        .content-signin {
-            wrapper {
-                > div {
-                    margin-bottom: 245px;
-                }
-            }
-        }
-
-        // my Account
-        .content-myAccount {
-            wrapper {
-                > div {
-                    margin-top: 23.5px;
-                    .action-myAccount {
-                        margin: 75px 0 140px;
-                        > .btn-circle {
-                            justify-content: center;
-                        }
-                    }
-                }
-                .evaluation_sucess {
-                    margin-right: 270px;
-                }
-                .evaluation_select {
-                    margin-right: 240px;
-                }
-            }
-        }
-
-        // intangibles
-        .content-intangibles {
-            wrapper {
-                > div {
-                    margin-bottom: 50px;
-                    .intangibles-details {
-                        > div {
-                            &.intangibles-details_content {
-                                margin-top: 10px;
-                                margin-bottom: 50px;
-                            }
-                        }
-                    }
-                    .btn-custom {
-                        max-width: 302px;
-                        margin: auto;
-                    }
-                }
-            }
-        }
-
-        .content-ip,
-        .content-business,
-        .content-unregisteredCopyright {
-            .btn-group-footer {
-                max-width: 302px;
-                margin: 50px auto;
-            }
-        }
-        // ip, ip Intellectual Assets
-        .content-ip {
-            &.ip,
-            &.IntellectualAssets {
-                .animation-box {
-                    max-width: 302px;
-                    margin-top: 40px;
-                }
-            }
-        }
-
-        // business
-        .content-business {
-            max-width: 100%;
-            header {
-                max-width: 100%;
-                .logo {
-                    max-width: 536px;
-                    margin: auto;
-                }
-            }
-            .title {
-                padding: 0;
-                max-width: 536px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .form-group {
-                max-width: 536px;
-                margin: auto;
-                padding: 0;
-                &.list-collapse-custom-desktop {
-                    max-width: 100%;
-                    // margin: auto 0 auto auto;
-                    > div {
-                        > div {
-                            margin-bottom: 10px;
-                            padding: 0;
-                            max-width: 536px;
-                            margin: auto;
-                            div,
-                            label {
-                                padding: 0;
-                            }
-                        }
-                        .accordion {
-                            max-width: 100%;
-                        }
-                        .accordion-desktop {
-                            margin-top: 20px;
-                            .card-header {
-                                min-width: 260px;
-                            }
-                        }
-                    }
-                }
-                &:nth-child(1) {
-                    input {
-                        max-width: 302px;
-                    }
-                }
-                .collapse-group {
-                    margin-bottom: 10px;
-                    div {
-                        &:first-child {
-                            .card-header {
-                                margin-right: 7.5px;
-                                margin-left: 0;
-                            }
-                        }
-                        .card-header {
-                            margin-left: 7.5px;
-                        }
-                    }
-                    .collapse {
-                        overflow: auto;
-                        .card-body {
-                            .list-accordion {
-                                margin: 0;
-                                > div {
-                                    margin-top: 10px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .form-control-range {
-                max-width: 302px;
-            }
-            .form-control-range + span {
-                max-width: 302px;
-            }
-            .btn-group-footer {
-                padding: 0;
-            }
-        }
-
-        // unregistered Copyright
-        .content-unregisteredCopyright {
-            .unregisteredCopyright-list {
-                max-width: 302px;
-                margin: 40px auto;
-            }
-        }
-
-        // chart
-        .content-chart {
-            .btn-group-footer {
-                max-width: 302px;
-                margin: 40px auto 140px;
-            }
-        }
-
-        // report
-        .content-report {
-            wrapper {
-                .title {
-                    padding-right: 0;
-                }
-                .report-info {
-                    margin-top: 50px;
-                    .report-info_title {
-                        margin-bottom: 10px;
-                    }
-                    .report-info_des {
-                        margin-bottom: 30px;
-                    }
-                    .title-try {
-                        padding-right: 280px;
-                    }
-                    .info-try {
-                        p {
-                            margin-bottom: 20px;
-                        }
-                    }
-                }
-                .btn-group-footer {
-                    margin: 50px 0 50px 120px;
-                }
-            }
-        }
-    }
 }
