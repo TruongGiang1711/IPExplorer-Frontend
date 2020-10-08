@@ -81,7 +81,7 @@
     border: 0;
   }
   .footer-index {
-    padding: 70px;
+    padding: 50px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -94,12 +94,11 @@
             justify-content: center;
   }
   .footer-index .contact-name {
+    margin-right: 50px;
     font-family: "Raleway";
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
-    margin-right: 0;
-    margin-bottom: 20px;
     height: 21px;
   }
   .footer-index .contact-mail {
@@ -670,10 +669,6 @@
   }
   .container-desktop .footer-index {
     padding: 95px;
-  }
-  .container-desktop .footer-index .contact-name {
-    margin-right: 50px;
-    margin-bottom: 0;
   }
   .container-desktop .content-terms,
   .container-desktop .content-myAccount,

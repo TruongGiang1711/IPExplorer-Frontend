@@ -75,17 +75,16 @@
         }
     }
     .footer-index {
-        padding: 70px;
+        padding: 50px 0px;
         display: flex;
         flex-wrap: wrap;
         align-self: center;
         justify-content: center;
         .contact-name {
+            margin-right: 50px;
             font-family: "Raleway";
             @include font(18px, 24px);
             font-weight: bold;
-            margin-right: 0;
-            margin-bottom: 20px;
             height: 21px;
         }
         .contact-mail {
@@ -722,10 +721,6 @@
         }
         .footer-index {
             padding: 95px;
-            .contact-name {
-                margin-right: 50px;
-                margin-bottom: 0;
-            }
         }
 
         .content-terms,
