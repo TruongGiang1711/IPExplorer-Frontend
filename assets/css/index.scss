@@ -604,23 +604,40 @@
         .title {
             margin-bottom: 20px;
         }
-        .infoChart {
-            span {
-                font-family: "Raleway";
-                font-weight: bold;
-                font-size: 15px;
-                line-height: 18px;
+        .content {
+            .infoChart {
+                span {
+                    font-family: "Raleway";
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+                .name {
+                    font-family: "Calibri-Bold";
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+                .des {
+                    font-family: "Calibri-Light";
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
             }
             .name {
-                font-family: "Calibri-Bold";
-                font-size: 14px;
-                line-height: 16px;
+                font-family: "Raleway";
+                font-weight: bold;
+                margin-bottom: 10px;
+                @include font(15px, 18px);
+                .score {
+                    height: 18px;
+                    @include font(21px, 25px);
+                }
             }
             .des {
-                font-family: "Calibri-Light";
-                font-size: 14px;
-                line-height: 16px;
                 margin-bottom: 20px;
+                font-family: "Calibri-Light";
+                @include font(14px, 16px);
             }
         }
     }
@@ -632,6 +649,25 @@
                 .title {
                     margin-bottom: 20px;
                     padding-right: 22px;
+                }
+                .infoChart {
+                    span {
+                        font-family: "Raleway";
+                        font-weight: bold;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                    .name {
+                        font-family: "Calibri-Bold";
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                    .des {
+                        font-family: "Calibri-Light";
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-bottom: 20px;
+                    }
                 }
                 .report-info {
                     margin-top: 30px;

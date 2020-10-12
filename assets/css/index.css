@@ -573,26 +573,61 @@
   .content-chart .title {
     margin-bottom: 20px;
   }
-  .content-chart .infoChart span {
+  .content-chart .content .infoChart span {
     font-family: "Raleway";
     font-weight: bold;
     font-size: 15px;
     line-height: 18px;
   }
-  .content-chart .infoChart .name {
+  .content-chart .content .infoChart .name {
     font-family: "Calibri-Bold";
     font-size: 14px;
     line-height: 16px;
   }
-  .content-chart .infoChart .des {
+  .content-chart .content .infoChart .des {
     font-family: "Calibri-Light";
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 20px;
   }
+  .content-chart .content .name {
+    font-family: "Raleway";
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .content-chart .content .name .score {
+    height: 18px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+  .content-chart .content .des {
+    margin-bottom: 20px;
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+  }
   .content-report.container-custom wrapper .title {
     margin-bottom: 20px;
     padding-right: 22px;
+  }
+  .content-report.container-custom wrapper .infoChart span {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .content-report.container-custom wrapper .infoChart .name {
+    font-family: "Calibri-Bold";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-report.container-custom wrapper .infoChart .des {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
   }
   .content-report.container-custom wrapper .report-info {
     margin-top: 30px;
