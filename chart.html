@@ -166,11 +166,12 @@
         ctx.textAlign = "center";
         ctx.fillText("IP SCORE", target.width / 2, target.height - 80);
 
+        // convert canvas to img base 64
         var img = new Image();
         img.src = target.toDataURL();
         // document.body.appendChild(img); // thêm img sau khi convert canvas
 
-        console.log(gauge.options.staticZones);
+        // console.log(gauge.options.staticZones);
         $('.infoChart .name').parent().hide()
         gauge.options.staticZones.some(mapItem)
 
