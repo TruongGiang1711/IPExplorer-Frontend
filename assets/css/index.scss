@@ -604,11 +604,24 @@
         .title {
             margin-bottom: 20px;
         }
-        .score-ip {
-            right: 0;
-            bottom: 95px;
-            left: 0;
-            font-size: 20px;
+        .infoChart {
+            span {
+                font-family: "Raleway";
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 18px;
+            }
+            .name {
+                font-family: "Calibri-Bold";
+                font-size: 14px;
+                line-height: 16px;
+            }
+            .des {
+                font-family: "Calibri-Light";
+                font-size: 14px;
+                line-height: 16px;
+                margin-bottom: 20px;
+            }
         }
     }
 

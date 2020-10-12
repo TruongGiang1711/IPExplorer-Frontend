@@ -573,11 +573,22 @@
   .content-chart .title {
     margin-bottom: 20px;
   }
-  .content-chart .score-ip {
-    right: 0;
-    bottom: 95px;
-    left: 0;
-    font-size: 20px;
+  .content-chart .infoChart span {
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .content-chart .infoChart .name {
+    font-family: "Calibri-Bold";
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .content-chart .infoChart .des {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
   }
   .content-report.container-custom wrapper .title {
     margin-bottom: 20px;

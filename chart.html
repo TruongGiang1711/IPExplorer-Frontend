@@ -54,7 +54,7 @@
                             </div>
                             <canvas id="myChart" width="" height="" style="width: 100%; height: 400px;"></canvas>
                             <div class="infoChart">
-                                Analysis:
+                                <span>Analysis:</span>
                                 <ul>
                                     <li>
                                         <div class="name">Black</div>
@@ -168,7 +168,7 @@
 
         var img = new Image();
         img.src = target.toDataURL();
-        document.body.appendChild(img);
+        // document.body.appendChild(img); // thêm img sau khi convert canvas
 
         console.log(gauge.options.staticZones);
         $('.infoChart .name').parent().hide()
