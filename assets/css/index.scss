@@ -650,25 +650,6 @@
                     margin-bottom: 20px;
                     padding-right: 22px;
                 }
-                .infoChart {
-                    span {
-                        font-family: "Raleway";
-                        font-weight: bold;
-                        font-size: 15px;
-                        line-height: 18px;
-                    }
-                    .name {
-                        font-family: "Calibri-Bold";
-                        font-size: 14px;
-                        line-height: 16px;
-                    }
-                    .des {
-                        font-family: "Calibri-Light";
-                        font-size: 14px;
-                        line-height: 16px;
-                        margin-bottom: 20px;
-                    }
-                }
                 .report-info {
                     margin-top: 30px;
                     .report-info_title {
@@ -700,6 +681,61 @@
                     .info-company {
                         font-family: "Raleway";
                         @include font(12px, 14px);
+                    }
+                    .infoChart {
+                        span {
+                            font-family: "Raleway";
+                            font-weight: bold;
+                            font-size: 15px;
+                            line-height: 18px;
+                        }
+                        .name {
+                            font-family: "Calibri-Bold";
+                            font-size: 14px;
+                            line-height: 16px;
+                        }
+                        .des {
+                            font-family: "Calibri-Light";
+                            font-size: 14px;
+                            line-height: 16px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .card {
+                        margin-top: 50px;
+                        .card-header {
+                            text-align: center;
+                            &.success {
+                                background-color: green;
+                                color: white;
+                            }
+                            &.warning {
+                                background-color: yellow;
+                            }
+                            &.error {
+                                background-color: red;
+                                color: white;
+                            }
+                            &.die {
+                                background-color: black;
+                                color: white;
+                            }
+                        }
+                        .card-body {
+                            text-align: left;
+                            .card {
+                                margin-top: 20px;
+                                box-shadow: 0px 0px 15px 0px grey;
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+                        .card-footer {
+                            button {
+                                margin-left: auto;
+                            }
+                        }
                     }
                 }
                 .btn-group-footer {
