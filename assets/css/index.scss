@@ -683,28 +683,30 @@
                         @include font(12px, 14px);
                     }
                     .infoChart {
+                        font-family: "Calibri-Light";
+                        @include font(14px, 16px);
                         span {
                             font-family: "Raleway";
                             font-weight: bold;
-                            font-size: 15px;
-                            line-height: 18px;
+                            @include font(15px, 18px);
                         }
                         .name {
                             font-family: "Calibri-Bold";
-                            font-size: 14px;
-                            line-height: 16px;
+                            @include font(14px, 16px);
                         }
                         .des {
-                            font-family: "Calibri-Light";
-                            font-size: 14px;
-                            line-height: 16px;
                             margin-bottom: 20px;
                         }
                     }
                     .card {
                         margin-top: 50px;
+                        font-family: "Calibri-Light";
+                        @include font(14px, 16px);
                         .card-header {
                             text-align: center;
+                            font-family: "Raleway";
+                            font-weight: bold;
+                            @include font(15px, 18px);
                             &.success {
                                 background-color: green;
                                 color: white;

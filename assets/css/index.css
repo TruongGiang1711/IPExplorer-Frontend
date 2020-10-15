@@ -648,6 +648,11 @@
     font-size: 12px;
     line-height: 14px;
   }
+  .content-report.container-custom wrapper .report-info .infoChart {
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
+  }
   .content-report.container-custom wrapper .report-info .infoChart span {
     font-family: "Raleway";
     font-weight: bold;
@@ -660,16 +665,20 @@
     line-height: 16px;
   }
   .content-report.container-custom wrapper .report-info .infoChart .des {
-    font-family: "Calibri-Light";
-    font-size: 14px;
-    line-height: 16px;
     margin-bottom: 20px;
   }
   .content-report.container-custom wrapper .report-info .card {
     margin-top: 50px;
+    font-family: "Calibri-Light";
+    font-size: 14px;
+    line-height: 16px;
   }
   .content-report.container-custom wrapper .report-info .card .card-header {
     text-align: center;
+    font-family: "Raleway";
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
   }
   .content-report.container-custom wrapper .report-info .card .card-header.success {
     background-color: green;
