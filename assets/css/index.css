@@ -575,9 +575,9 @@
   }
   .content-chart .content .infoChart span {
     font-family: "Raleway";
-    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
+    font-weight: bold;
   }
   .content-chart .content .infoChart .name {
     font-family: "Calibri-Bold";
@@ -926,13 +926,24 @@
     max-width: 302px;
     margin: 40px auto;
   }
-  .container-desktop .content-chart .score-ip {
+  .container-desktop .content-chart .content {
+    min-height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .container-desktop .content-chart .content .score-ip {
     font-size: 30px;
     bottom: 60px;
   }
-  .container-desktop .content-chart .btn-group-footer {
+  .container-desktop .content-chart .content .btn-group-footer {
     max-width: 302px;
-    margin: 40px auto 140px;
+    width: 100%;
+    margin: auto auto 0;
   }
   .container-desktop .content-report wrapper .title {
     padding-right: 0;

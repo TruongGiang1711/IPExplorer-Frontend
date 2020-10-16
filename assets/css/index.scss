@@ -394,8 +394,7 @@
                 > div {
                     > div {
                         font-family: "Calibri-Light";
-                        font-size: 12px;
-                        line-height: 14px;
+                        @include font(12px, 14px);
                         padding: 0 37px;
                     }
                     .accordion-mobile,
@@ -608,19 +607,16 @@
             .infoChart {
                 span {
                     font-family: "Raleway";
+                    @include font(15px, 18px);
                     font-weight: bold;
-                    font-size: 15px;
-                    line-height: 18px;
                 }
                 .name {
                     font-family: "Calibri-Bold";
-                    font-size: 14px;
-                    line-height: 16px;
+                    @include font(14px, 16px);
                 }
                 .des {
                     font-family: "Calibri-Light";
-                    font-size: 14px;
-                    line-height: 16px;
+                    @include font(14px, 16px);
                     margin-bottom: 20px;
                 }
             }
@@ -1026,13 +1022,19 @@
 
         // chart
         .content-chart {
-            .score-ip {
-                font-size: 30px;
-                bottom: 60px;
-            }
-            .btn-group-footer {
-                max-width: 302px;
-                margin: 40px auto 140px;
+            .content {
+                min-height: 500px;
+                display: flex;
+                flex-flow: column;
+                .score-ip {
+                    font-size: 30px;
+                    bottom: 60px;
+                }
+                .btn-group-footer {
+                    max-width: 302px;
+                    width: 100%;
+                    margin: auto auto 0;
+                }
             }
         }
 
