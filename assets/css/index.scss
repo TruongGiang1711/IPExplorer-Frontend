@@ -527,10 +527,8 @@
                             height: 30px;
                             width: 30px;
                             top: 30px;
-                            .fa-question {
-                                @include font(14px, 16px);
-                            }
                             svg {
+                                @include font(14px, 16px);
                                 margin: 0;
                             }
                         }
@@ -552,7 +550,7 @@
                         }
                         .animation-box--tooltip-icon {
                             top: unset;
-                            .fa-question {
+                            svg {
                                 margin-right: 0;
                             }
                         }
@@ -573,7 +571,7 @@
                         width: 40px;
                         top: 50px;
                         z-index: 1;
-                        .fa-question {
+                        svg {
                             margin-bottom: 0;
                             @include font(18px, 16px);
                         }

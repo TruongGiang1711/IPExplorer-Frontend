@@ -447,6 +447,10 @@
                                     <div class="">
                                         <span><i class="fas fa-scroll"></i></span>
                                         <div class="name">Contracts</div>
+                                        <button type="button" data-tooltip="1"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-question"></i>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="animation-box--item"
@@ -454,6 +458,10 @@
                                     <div class="">
                                         <span><i class="fas fa-tree"></i></span>
                                         <div class="name">Resources</div>
+                                        <button type="button" data-tooltip="2"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-times"></i>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="animation-box--item"
@@ -461,6 +469,10 @@
                                     <div class="">
                                         <span><i class="fas fa-heart"></i></span>
                                         <div class="name">Relationships</div>
+                                        <button type="button" data-tooltip="3"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-question"></i>
+                                        </button>
                                     </div>
                                 </div>
                                 <div class="animation-box--item"
@@ -468,6 +480,10 @@
                                     <div class="">
                                         <span><i class="far fa-handshake"></i></span>
                                         <div class="name">Recommendations</div>
+                                        <button type="button" data-tooltip="4"
+                                            class="btn rounded-circle animation-box--tooltip-icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-question"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -483,7 +499,8 @@
         </div>
         <footer class="footer-index">
             <div class="contact-name">Contact Us</div>
-            <div class="contact-mail d-flex align-items-center"><i class="far fa-envelope mr-2"></i>support@ipexplorer.biz
+            <div class="contact-mail d-flex align-items-center"><i
+                    class="far fa-envelope mr-2"></i>support@ipexplorer.biz
             </div>
         </footer>
     </div>
@@ -500,7 +517,7 @@
     <script>
         $(document).ready(function () {
             $('.animation-box--item').each(function (index, el) {
-                $(el).find('button.question').css('color', $(el).css('background-color'))
+                $(el).find('button.animation-box--tooltip-icon').css('color', $(el).css('background-color'))
             })
             $('.animation-box--item').on('click', function () {
                 $('.btn-circle').css('color', $(this).css('background-color'))

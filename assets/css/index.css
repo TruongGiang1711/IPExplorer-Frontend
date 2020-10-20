@@ -496,11 +496,9 @@
     width: 30px;
     top: 30px;
   }
-  .content-ip .animation-box--item.inactive > div .animation-box--tooltip-icon .fa-question {
+  .content-ip .animation-box--item.inactive > div .animation-box--tooltip-icon svg {
     font-size: 14px;
     line-height: 16px;
-  }
-  .content-ip .animation-box--item.inactive > div .animation-box--tooltip-icon svg {
     margin: 0;
   }
   .content-ip .animation-box--item > div {
@@ -535,7 +533,7 @@
   .content-ip .animation-box--item > div.active .animation-box--tooltip-icon {
     top: unset;
   }
-  .content-ip .animation-box--item > div.active .animation-box--tooltip-icon .fa-question {
+  .content-ip .animation-box--item > div.active .animation-box--tooltip-icon svg {
     margin-right: 0;
   }
   .content-ip .animation-box--item > div svg {
@@ -556,7 +554,7 @@
     top: 50px;
     z-index: 1;
   }
-  .content-ip .animation-box--item > div .animation-box--tooltip-icon .fa-question {
+  .content-ip .animation-box--item > div .animation-box--tooltip-icon svg {
     margin-bottom: 0;
     font-size: 18px;
     line-height: 16px;
