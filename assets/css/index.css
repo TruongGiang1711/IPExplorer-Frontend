@@ -571,40 +571,20 @@
   .content-chart .title {
     margin-bottom: 20px;
   }
-  .content-chart .content .infoChart span {
-    font-family: "Raleway";
-    font-size: 15px;
-    line-height: 18px;
-    font-weight: bold;
+  .content-chart .content {
+    min-height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
   }
-  .content-chart .content .infoChart .name {
-    font-family: "Calibri-Bold";
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .content-chart .content .infoChart .des {
-    font-family: "Calibri-Light";
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 20px;
-  }
-  .content-chart .content .name {
-    font-family: "Raleway";
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 15px;
-    line-height: 18px;
-  }
-  .content-chart .content .name .score {
-    height: 18px;
-    font-size: 21px;
-    line-height: 25px;
-  }
-  .content-chart .content .des {
-    margin-bottom: 20px;
-    font-family: "Calibri-Light";
-    font-size: 14px;
-    line-height: 16px;
+  .content-chart .content .btn-group-footer {
+    max-width: 302px;
+    width: 100%;
+    margin: auto auto 0;
   }
   .content-report.container-custom wrapper .title {
     margin-bottom: 20px;
@@ -631,7 +611,7 @@
     font-size: 14px;
     line-height: 16px;
   }
-  .content-report.container-custom wrapper .report-info .title-try {
+  .content-report.container-custom wrapper .report-info .title-try p {
     margin: 50px auto 20px;
     padding-right: 50px;
   }
@@ -641,7 +621,8 @@
     line-height: 21px;
     margin-bottom: 20px;
   }
-  .content-report.container-custom wrapper .report-info .info-company {
+  .content-report.container-custom wrapper .report-info .info-company p {
+    margin-bottom: 0;
     font-family: "Raleway";
     font-size: 12px;
     line-height: 14px;
@@ -721,6 +702,9 @@
 }
 
 @media (min-width: 768px) {
+  .footer-index {
+    zoom: 1.5;
+  }
   .content-chart .score-ip {
     font-size: 20px;
   }
@@ -730,8 +714,17 @@
   /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 
+@media (min-width: 992px) {
+  .footer-index {
+    zoom: 2;
+  }
+}
+
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
+  .footer-index {
+    zoom: 1;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -926,22 +919,6 @@
   }
   .container-desktop .content-chart .content {
     min-height: 500px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-  }
-  .container-desktop .content-chart .content .score-ip {
-    font-size: 30px;
-    bottom: 60px;
-  }
-  .container-desktop .content-chart .content .btn-group-footer {
-    max-width: 302px;
-    width: 100%;
-    margin: auto auto 0;
   }
   .container-desktop .content-report wrapper .title {
     padding-right: 0;

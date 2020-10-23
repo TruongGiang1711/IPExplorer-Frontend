@@ -602,37 +602,49 @@
             margin-bottom: 20px;
         }
         .content {
-            .infoChart {
-                span {
-                    font-family: "Raleway";
-                    @include font(15px, 18px);
-                    font-weight: bold;
-                }
-                .name {
-                    font-family: "Calibri-Bold";
-                    @include font(14px, 16px);
-                }
-                .des {
-                    font-family: "Calibri-Light";
-                    @include font(14px, 16px);
-                    margin-bottom: 20px;
-                }
+            min-height: 450px;
+            display: flex;
+            flex-flow: column;
+            // .score-ip {
+            //     font-size: 30px;
+            //     bottom: 60px;
+            // }
+            .btn-group-footer {
+                max-width: 302px;
+                width: 100%;
+                margin: auto auto 0;
             }
-            .name {
-                font-family: "Raleway";
-                font-weight: bold;
-                margin-bottom: 10px;
-                @include font(15px, 18px);
-                .score {
-                    height: 18px;
-                    @include font(21px, 25px);
-                }
-            }
-            .des {
-                margin-bottom: 20px;
-                font-family: "Calibri-Light";
-                @include font(14px, 16px);
-            }
+            // .infoChart {
+            //     span {
+            //         font-family: "Raleway";
+            //         @include font(15px, 18px);
+            //         font-weight: bold;
+            //     }
+            //     .name {
+            //         font-family: "Calibri-Bold";
+            //         @include font(14px, 16px);
+            //     }
+            //     .des {
+            //         font-family: "Calibri-Light";
+            //         @include font(14px, 16px);
+            //         margin-bottom: 20px;
+            //     }
+            // }
+            // .name {
+            //     font-family: "Raleway";
+            //     font-weight: bold;
+            //     margin-bottom: 10px;
+            //     @include font(15px, 18px);
+            //     .score {
+            //         height: 18px;
+            //         @include font(21px, 25px);
+            //     }
+            // }
+            // .des {
+            //     margin-bottom: 20px;
+            //     font-family: "Calibri-Light";
+            //     @include font(14px, 16px);
+            // }
         }
     }
 
@@ -661,7 +673,7 @@
                         font-family: "Calibri-Light";
                         @include font(14px, 16px);
                     }
-                    .title-try {
+                    .title-try p {
                         margin: 50px auto 20px;
                         padding-right: 50px;
                     }
@@ -672,7 +684,8 @@
                             margin-bottom: 20px;
                         }
                     }
-                    .info-company {
+                    .info-company p {
+                        margin-bottom: 0;
                         font-family: "Raleway";
                         @include font(12px, 14px);
                     }
@@ -756,6 +769,9 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+    .footer-index {
+        zoom: 1.5;
+    }
     // chart
     .content-chart {
         .score-ip {
@@ -770,10 +786,16 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    .footer-index {
+        zoom: 2;
+    }
 }
 
 @media (min-width: 1025px) {
     /* big landscape tablets, laptops, and desktops */
+    .footer-index {
+        zoom: 1;
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -1022,17 +1044,6 @@
         .content-chart {
             .content {
                 min-height: 500px;
-                display: flex;
-                flex-flow: column;
-                .score-ip {
-                    font-size: 30px;
-                    bottom: 60px;
-                }
-                .btn-group-footer {
-                    max-width: 302px;
-                    width: 100%;
-                    margin: auto auto 0;
-                }
             }
         }
 

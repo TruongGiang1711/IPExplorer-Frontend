@@ -22,6 +22,35 @@
 
     <title>IPEXPLORER</title>
 </head>
+<style>
+    @-webkit-keyframes sdb04 {
+        0% {
+            -webkit-transform: translate(0, 0);
+        }
+
+        20% {
+            -webkit-transform: translate(0, 10px);
+        }
+
+        40% {
+            -webkit-transform: translate(0, 0);
+        }
+    }
+
+    @keyframes sdb04 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        20% {
+            transform: translate(0, 10px);
+        }
+
+        40% {
+            transform: translate(0, 0);
+        }
+    }
+</style>
 
 <body>
     <div class="container-desktop">
@@ -411,14 +440,14 @@
                                         </div>
                                         <div class="accordion accordion-mobile" id="accordionExample">
                                             <div class="card">
-                                                <div class="card-header" id="headingCreative">
+                                                <div class="card-header active" id="headingCreative">
                                                     <h2 class="mb-0">
                                                         <button class="btn btn-block collapsed" type="button">
                                                             Creative
                                                         </button>
                                                     </h2>
                                                 </div>
-                                                <div id="collapseCreative" class="collapse">
+                                                <div id="collapseCreative" class="collapse" style="display: block;">
                                                     <div class="card-body">
                                                         <div class="list-accordion">
                                                             <div class="d-inline-flex">
@@ -450,6 +479,12 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <a>
+                                                        <span class="position-absolute"
+                                                            style="top: 47%; right: 6%; opacity: 0.5;">
+                                                            <i class="fas fa-chevron-right fa-2x"></i>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -835,6 +870,9 @@
             </div>
         </footer>
     </div>
+    <span class="position-fixed text-center"
+        style="right: 0; bottom: 3%; left: 0; -webkit-animation: sdb04 2s infinite; animation: sdb04 2s infinite;"><i
+            class="fas fa-chevron-right fa-2x" style="opacity: 0.5; transform: rotate(90deg);"></i></span>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, Font Awesome -->
@@ -844,6 +882,11 @@
     <script src="./assets/js/all.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $(".fa-chevron-right").click(function () {
+                $(this).parents(".collapse").find('.list-accordion').animate({
+                    scrollLeft: $(window).width() + $(this).parents(".collapse").width()
+                }, 'slow');
+            });
             $('.item').on('click', function (e) {
                 e.preventDefault()
                 $(this).toggleClass('active')
@@ -889,7 +932,7 @@
         function resizeWindow() {
             if ($(window).width() < 1200) {
                 console.log("mobile");
-                $('.list-collapse-custom-desktop').find('.collapse').css({ "margin-left": 0 })
+                $('.list-collapse-custom-desktop').find('.collapse').css({ "margin-left": 0, "position": "relative" })
             }
             if ($(window).width() >= 1200) {
                 console.log("desktop");
