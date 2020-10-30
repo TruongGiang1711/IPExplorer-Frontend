@@ -1,0 +1,365 @@
+.badge-warning {
+  background-color: yellow;
+}
+
+section {
+  padding: 100px;
+}
+
+section.banner {
+  margin-bottom: 100px;
+}
+
+section.banner .sologan {
+  font-family: "Calibri";
+  font-size: 32px;
+  line-height: 34px;
+  padding: 20px 0 5px 15px;
+}
+
+section.banner .datetime {
+  font-family: "Calibri-Bold";
+  font-size: 22px;
+  line-height: 24px;
+  padding: 10px 0 20px 15px;
+}
+
+section .header > div {
+  padding: 10px 0;
+  border-bottom: 2px solid #007f9c;
+}
+
+section .header > div .title {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+section .content .title {
+  font-family: "Calibri-Bold";
+  font-size: 22px;
+  line-height: 24px;
+  color: #007f9c;
+  margin: 30px 0 20px;
+}
+
+section .content .table_of_contents .list-unstyled {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 20px;
+}
+
+section .content .table_of_contents .list-unstyled li {
+  margin-bottom: 5px;
+}
+
+section .content .table_of_contents .list-unstyled li span:nth-child(2) {
+  border-bottom: 2px dotted gray;
+  margin: 0 4px 4px;
+}
+
+section .content .table_of_contents .list-unstyled li span:nth-child(3) {
+  font-style: normal;
+}
+
+section .content .introduction p {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+section .content .introduction ol,
+section .content .introduction ul {
+  font-family: "Calibri-Bold";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+section .content .introduction .list-unstyled {
+  margin: 30px 0;
+}
+
+section .content .introduction .figure {
+  max-width: 300px;
+}
+
+section .content .introduction .figure .intangibles-model-lv1,
+section .content .introduction .figure .intangibles-model-lv2,
+section .content .introduction .figure .intangibles-model-lv3 {
+  width: 100%;
+}
+
+section .content .introduction .figure .intangibles-model-lv1 span,
+section .content .introduction .figure .intangibles-model-lv2 span,
+section .content .introduction .figure .intangibles-model-lv3 span {
+  font-family: "Calibri-Bold";
+  font-size: 12px;
+  line-height: 14px;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+}
+
+section .content .introduction .figure .intangibles-model-lv1 {
+  border-radius: 60px;
+  background-color: #71b4c4;
+  height: 300px;
+  position: relative;
+}
+
+section .content .introduction .figure .intangibles-model-lv2 {
+  border-radius: 48px;
+  background-color: #429bb0;
+  height: 240px;
+  max-width: 240px;
+  position: absolute;
+}
+
+section .content .introduction .figure .intangibles-model-lv3 {
+  border-radius: 36px;
+  background-color: #007f9c;
+  height: 180px;
+  max-width: 180px;
+  position: absolute;
+}
+
+section .content .introduction .figure .intangibles-model-lv3 span {
+  bottom: unset;
+}
+
+section .content .introduction .figure .figure-caption {
+  font-family: "Calibri-Light";
+  font-size: 12px;
+  line-height: 14px;
+  color: black;
+  margin: 10px 0 20px;
+}
+
+section .content .introduction .intangibles-details .intangibles-details_lv3,
+section .content .introduction .intangibles-details .intangibles-details_lv2,
+section .content .introduction .intangibles-details .intangibles-details_lv1 {
+  height: 50px;
+  max-width: 50px;
+  width: 100%;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+section .content .introduction .intangibles-details .intangibles-details_lv3 {
+  background-color: #007f9c;
+}
+
+section .content .introduction .intangibles-details .intangibles-details_lv2 {
+  background-color: #429bb0;
+}
+
+section .content .introduction .intangibles-details .intangibles-details_lv1 {
+  background-color: #71b4c4;
+}
+
+section .content .introduction .intangibles-details .intangibles-details_title {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 15px 0 10px 0;
+}
+
+section .content .introduction .intangibles-details .intangibles-details_content {
+  font-family: "Calibri-Light";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+section .content .introduction .intangibles-details > div {
+  margin-bottom: 4px;
+}
+
+section .content .introduction .intangibles-details > div.intangibles-details_content {
+  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+section .content .analysis__content {
+  padding-left: 50px;
+  margin-top: 30px;
+}
+
+section .content .analysis__content .report-info_title {
+  font-family: "Raleway";
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+section .content .analysis__content .report-info_title .score {
+  height: 18px;
+  font-size: 21px;
+  line-height: 25px;
+}
+
+section .content .analysis__content .report-info_des {
+  margin-bottom: 20px;
+  font-family: "Calibri-Light";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+section .content .analysis__content .infoChart {
+  font-family: "Calibri-Light";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+section .content .analysis__content .infoChart span {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+section .content .analysis__content .infoChart .name {
+  font-family: "Calibri-Bold";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+section .content .analysis__content .infoChart .des {
+  margin-bottom: 20px;
+}
+
+section .content .analysis__content .card {
+  margin-top: 50px;
+  font-family: "Calibri-Light";
+  font-size: 14px;
+  line-height: 16px;
+}
+
+section .content .analysis__content .card .card-header {
+  text-align: center;
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+section .content .analysis__content .card .card-header.success {
+  background-color: green;
+  color: white;
+}
+
+section .content .analysis__content .card .card-header.warning {
+  background-color: yellow;
+}
+
+section .content .analysis__content .card .card-header.error {
+  background-color: red;
+  color: white;
+}
+
+section .content .analysis__content .card .card-header.die {
+  background-color: black;
+  color: white;
+}
+
+section .content .analysis__content .card .card-body {
+  text-align: left;
+}
+
+section .content .analysis__content .card .card-body .card {
+  margin-top: 20px;
+  -webkit-box-shadow: 0px 0px 15px 0px grey;
+          box-shadow: 0px 0px 15px 0px grey;
+}
+
+section .content .analysis__content .card .card-body .card:first-child {
+  margin-top: 0;
+}
+
+section .content .analysis__content .card .card-footer button {
+  margin-left: auto;
+}
+
+section .content .business--title__child {
+  font-family: "Calibri";
+  font-size: 20px;
+  line-height: 22px;
+  color: #007f9c;
+  font-style: italic;
+  margin: 40px 0 20px;
+}
+
+section .content .business--content__child {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 50px;
+}
+
+section .content .registered_intellectual_property__content {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 50px;
+}
+
+section .content .unregistered_copyrights__content {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 50px;
+}
+
+section .content .other_intangible_assets__intellectual_assets--content {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 50px;
+}
+
+section .content .other_intangible_assets__intellectual_assets--content__child {
+  padding-left: 50px;
+  margin-top: 20px;
+}
+
+section .content .other_intangible_assets__intellectual_assets--title__child {
+  font-family: "Calibri";
+  font-size: 20px;
+  line-height: 22px;
+  color: #007f9c;
+}
+
+section .footer > div {
+  padding: 5px 0;
+  border-top: 2px solid #007f9c;
+}
+
+section .footer > div .title {
+  font-family: "Calibri";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (min-width: 768px) {
+  section {
+    zoom: 1.5;
+    padding: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  section {
+    zoom: 2;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  section {
+    zoom: 1;
+  }
+}
+/*# sourceMappingURL=pdf.css.map */

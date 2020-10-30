@@ -290,7 +290,7 @@
     line-height: 14px;
   }
   .content-myAccount wrapper > div > div {
-    padding-right: 30px;
+    padding-right: 37px;
   }
   .content-myAccount wrapper .title {
     margin-bottom: 20px;
@@ -311,7 +311,29 @@
   .content-myAccount wrapper .list-accordion {
     overflow: auto;
     margin-left: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    padding: 0 37px 20px 0;
+  }
+  .content-myAccount wrapper .list-accordion .item:last-child {
+    margin-right: 0;
+  }
+  .content-myAccount wrapper .list-accordion .item span {
+    bottom: -20px;
+    background-color: #007f9c;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    border-radius: 50%;
+  }
+  .content-myAccount wrapper .list-accordion .item span svg {
+    color: white;
+  }
+  .content-myAccount wrapper .list-accordion .item.active span, .content-myAccount wrapper .list-accordion .item.add-show-color span {
+    background-color: white;
+    border: 1px solid #007f9c;
+  }
+  .content-myAccount wrapper .list-accordion .item.active span svg, .content-myAccount wrapper .list-accordion .item.add-show-color span svg {
+    color: #007f9c;
   }
   .content-myAccount wrapper .language-select {
     font-family: "Raleway";

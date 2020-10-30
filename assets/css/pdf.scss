@@ -1,0 +1,310 @@
+@import "./../variables/variables";
+
+.badge-warning {
+    background-color: yellow;
+}
+section {
+    padding: 100px;
+    &.banner {
+        margin-bottom: 100px;
+        .sologan {
+            font-family: "Calibri";
+            @include font(32px, 34px);
+            padding: 20px 0 5px 15px;
+        }
+        .datetime {
+            font-family: "Calibri-Bold";
+            @include font(22px, 24px);
+            padding: 10px 0 20px 15px;
+        }
+    }
+    .header {
+        > div {
+            padding: 10px 0;
+            border-bottom: 2px solid $Allports;
+            .title {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+            }
+        }
+    }
+    .content {
+        .title {
+            font-family: "Calibri-Bold";
+            @include font(22px, 24px);
+            color: $Allports;
+            margin: 30px 0 20px;
+        }
+        .table_of_contents {
+            .list-unstyled {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+                padding-left: 20px;
+                li {
+                    margin-bottom: 5px;
+                    span {
+                        &:nth-child(1) {
+                            // white-space: nowrap;
+                        }
+                        &:nth-child(2) {
+                            border-bottom: 2px dotted gray;
+                            margin: 0 4px 4px;
+                        }
+                        &:nth-child(3) {
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+        }
+        .introduction {
+            p {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+            }
+            ol,
+            ul {
+                font-family: "Calibri-Bold";
+                @include font(16px, 18px);
+            }
+            .list-unstyled {
+                margin: 30px 0;
+            }
+            .figure {
+                max-width: 300px;
+                .intangibles-model-lv1,
+                .intangibles-model-lv2,
+                .intangibles-model-lv3 {
+                    width: 100%;
+                    span {
+                        font-family: "Calibri-Bold";
+                        @include font(12px, 14px);
+                        color: white;
+                        position: absolute;
+                        bottom: 10px;
+                    }
+                }
+                .intangibles-model-lv1 {
+                    border-radius: 60px;
+                    background-color: $Glacier;
+                    height: 300px;
+                    position: relative;
+                }
+                .intangibles-model-lv2 {
+                    border-radius: 48px;
+                    background-color: $Boston_Blue;
+                    height: 240px;
+                    max-width: 240px;
+                    position: absolute;
+                }
+                .intangibles-model-lv3 {
+                    border-radius: 36px;
+                    background-color: $Allports;
+                    height: 180px;
+                    max-width: 180px;
+                    position: absolute;
+                    span {
+                        bottom: unset;
+                    }
+                }
+                .figure-caption {
+                    font-family: "Calibri-Light";
+                    @include font(12px, 14px);
+                    color: black;
+                    margin: 10px 0 20px;
+                }
+            }
+            .intangibles-details {
+                .intangibles-details_lv3,
+                .intangibles-details_lv2,
+                .intangibles-details_lv1 {
+                    height: 50px;
+                    max-width: 50px;
+                    width: 100%;
+                    border-radius: 10px;
+                    margin-right: 10px;
+                }
+                .intangibles-details_lv3 {
+                    background-color: $Allports;
+                }
+                .intangibles-details_lv2 {
+                    background-color: $Boston_Blue;
+                }
+                .intangibles-details_lv1 {
+                    background-color: $Glacier;
+                }
+                .intangibles-details_title {
+                    font-family: "Raleway";
+                    font-weight: bold;
+                    @include font(15px, 18px);
+                    margin: 15px 0 10px 0;
+                }
+                .intangibles-details_content {
+                    font-family: "Calibri-Light";
+                    @include font(14px, 16px);
+                }
+                > div {
+                    margin-bottom: 4px;
+                    &.intangibles-details_content {
+                        margin-bottom: 30px;
+                        @include font(12px, 14px);
+                    }
+                }
+            }
+        }
+        .analysis {
+            &__content {
+                padding-left: 50px;
+                margin-top: 30px;
+                .report-info_title {
+                    font-family: "Raleway";
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    @include font(15px, 18px);
+                    .score {
+                        height: 18px;
+                        @include font(21px, 25px);
+                    }
+                }
+                .report-info_des {
+                    margin-bottom: 20px;
+                    font-family: "Calibri-Light";
+                    @include font(14px, 16px);
+                }
+                .infoChart {
+                    font-family: "Calibri-Light";
+                    @include font(14px, 16px);
+                    span {
+                        font-family: "Raleway";
+                        font-weight: bold;
+                        @include font(15px, 18px);
+                    }
+                    .name {
+                        font-family: "Calibri-Bold";
+                        @include font(14px, 16px);
+                    }
+                    .des {
+                        margin-bottom: 20px;
+                    }
+                }
+                .card {
+                    margin-top: 50px;
+                    font-family: "Calibri-Light";
+                    @include font(14px, 16px);
+                    .card-header {
+                        text-align: center;
+                        font-family: "Raleway";
+                        font-weight: bold;
+                        @include font(15px, 18px);
+                        &.success {
+                            background-color: green;
+                            color: white;
+                        }
+                        &.warning {
+                            background-color: yellow;
+                        }
+                        &.error {
+                            background-color: red;
+                            color: white;
+                        }
+                        &.die {
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                    .card-body {
+                        text-align: left;
+                        .card {
+                            margin-top: 20px;
+                            box-shadow: 0px 0px 15px 0px grey;
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                    .card-footer {
+                        button {
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .business {
+            &--title__child {
+                font-family: "Calibri";
+                @include font(20px, 22px);
+                color: $Allports;
+                font-style: italic;
+                margin: 40px 0 20px;
+            }
+            &--content__child {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+                padding-left: 50px;
+            }
+        }
+        .registered_intellectual_property {
+            &__content {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+                padding-left: 50px;
+            }
+        }
+        .unregistered_copyrights {
+            &__content {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+                padding-left: 50px;
+            }
+        }
+        .other_intangible_assets__intellectual_assets {
+            &--content {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+                padding-left: 50px;
+                &__child {
+                    padding-left: 50px;
+                    margin-top: 20px;
+                }
+            }
+            &--title__child {
+                font-family: "Calibri";
+                @include font(20px, 22px);
+                color: $Allports;
+            }
+        }
+    }
+    .footer {
+        > div {
+            padding: 5px 0;
+            border-top: 2px solid $Allports;
+            .title {
+                font-family: "Calibri";
+                @include font(16px, 18px);
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    section {
+        zoom: 1.5;
+        padding: 50px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    section {
+        zoom: 2;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    section {
+        zoom: 1;
+    }
+}

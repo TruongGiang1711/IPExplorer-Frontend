@@ -308,7 +308,7 @@
         wrapper {
             > div {
                 > div {
-                    padding-right: 30px;
+                    padding-right: 37px;
                 }
             }
             .title {
@@ -328,7 +328,34 @@
             .list-accordion {
                 overflow: auto;
                 margin-left: 0;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
+                padding: 0 37px 20px 0;
+                .item {
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    span {
+                        bottom: -20px;
+                        background-color: $Allports;
+                        height: 40px;
+                        width: 40px;
+                        z-index: 1;
+                        border-radius: 50%;
+                        svg {
+                            color: white;
+                        }
+                    }
+                    &.active,
+                    &.add-show-color {
+                        span {
+                            background-color: white;
+                            border: 1px solid $Allports;
+                            svg {
+                                color: $Allports;
+                            }
+                        }
+                    }
+                }
             }
             .language-select {
                 font-family: "Raleway";
