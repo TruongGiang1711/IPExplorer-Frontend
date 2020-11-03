@@ -72,9 +72,9 @@ section {
             }
             .figure {
                 max-width: 300px;
-                .intangibles-model-lv1,
-                .intangibles-model-lv2,
-                .intangibles-model-lv3 {
+                .intangibles-reportPage-lv1,
+                .intangibles-reportPage-lv2,
+                .intangibles-reportPage-lv3 {
                     width: 100%;
                     span {
                         font-family: "Calibri-Bold";
@@ -84,20 +84,20 @@ section {
                         bottom: 10px;
                     }
                 }
-                .intangibles-model-lv1 {
+                .intangibles-reportPage-lv1 {
                     border-radius: 60px;
                     background-color: $Glacier;
                     height: 300px;
                     position: relative;
                 }
-                .intangibles-model-lv2 {
+                .intangibles-reportPage-lv2 {
                     border-radius: 48px;
                     background-color: $Boston_Blue;
                     height: 240px;
                     max-width: 240px;
                     position: absolute;
                 }
-                .intangibles-model-lv3 {
+                .intangibles-reportPage-lv3 {
                     border-radius: 36px;
                     background-color: $Allports;
                     height: 180px;
@@ -112,43 +112,6 @@ section {
                     @include font(12px, 14px);
                     color: black;
                     margin: 10px 0 20px;
-                }
-            }
-            .intangibles-details {
-                .intangibles-details_lv3,
-                .intangibles-details_lv2,
-                .intangibles-details_lv1 {
-                    height: 50px;
-                    max-width: 50px;
-                    width: 100%;
-                    border-radius: 10px;
-                    margin-right: 10px;
-                }
-                .intangibles-details_lv3 {
-                    background-color: $Allports;
-                }
-                .intangibles-details_lv2 {
-                    background-color: $Boston_Blue;
-                }
-                .intangibles-details_lv1 {
-                    background-color: $Glacier;
-                }
-                .intangibles-details_title {
-                    font-family: "Raleway";
-                    font-weight: bold;
-                    @include font(15px, 18px);
-                    margin: 15px 0 10px 0;
-                }
-                .intangibles-details_content {
-                    font-family: "Calibri-Light";
-                    @include font(14px, 16px);
-                }
-                > div {
-                    margin-bottom: 4px;
-                    &.intangibles-details_content {
-                        margin-bottom: 30px;
-                        @include font(12px, 14px);
-                    }
                 }
             }
         }

@@ -22,35 +22,6 @@
 
     <title>IPEXPLORER</title>
 </head>
-<style>
-    @-webkit-keyframes sdb04 {
-        0% {
-            -webkit-transform: translate(0, 0);
-        }
-
-        20% {
-            -webkit-transform: translate(0, 10px);
-        }
-
-        40% {
-            -webkit-transform: translate(0, 0);
-        }
-    }
-
-    @keyframes sdb04 {
-        0% {
-            transform: translate(0, 0);
-        }
-
-        20% {
-            transform: translate(0, 10px);
-        }
-
-        40% {
-            transform: translate(0, 0);
-        }
-    }
-</style>
 
 <body>
     <div class="container-desktop">
@@ -448,6 +419,15 @@
                                                     </h2>
                                                 </div>
                                                 <div id="collapseCreative" class="collapse" style="display: block;">
+                                                    <span class="position-absolute" style="top: 47%;
+                                                                    left: 4%;
+                                                                    opacity: 0.5;
+                                                                    -webkit-animation: right-left 2s infinite;
+                                                                    animation: right-left 2s infinite;
+                                                                    color: #007F9C;
+                                                                ">
+                                                        <i class="fas fa-chevron-left fa-2x"></i>
+                                                    </span>
                                                     <div class="card-body">
                                                         <div class="list-accordion">
                                                             <div class="d-inline-flex">
@@ -479,8 +459,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <span class="position-absolute"
-                                                        style="top: 47%; right: 6%; opacity: 0.5;">
+                                                    <span class="position-absolute" style="
+                                                                    top: 47%;
+                                                                    right: 6%;
+                                                                    opacity: 0.5;
+                                                                    -webkit-animation: left-right 2s infinite;
+                                                                    animation: left-right 2s infinite;
+                                                                    color: #007F9C;
+                                                              ">
                                                         <i class="fas fa-chevron-right fa-2x"></i>
                                                     </span>
                                                 </div>
@@ -868,9 +854,17 @@
             </div>
         </footer>
     </div>
-    <span class="position-fixed text-center"
-        style="right: 0; bottom: 3%; left: 0; -webkit-animation: sdb04 2s infinite; animation: sdb04 2s infinite;"><i
-            class="fas fa-chevron-right fa-2x" style="opacity: 0.5; transform: rotate(90deg);"></i></span>
+    <span class="position-fixed text-center fa-chevron-right-rotate-bottom" style="
+        right: 0;
+        bottom: 3%;
+        left: 0;
+        -webkit-animation: top-bottom 2s infinite;
+        animation: top-bottom 2s infinite;
+        z-index: 4;
+        pointer-events: none;
+        color: #007F9C">
+        <i class="fas fa-chevron-right fa-2x" style="opacity: 0.5; transform: rotate(90deg);"></i>
+    </span>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS, Font Awesome -->
@@ -880,10 +874,20 @@
     <script src="./assets/js/all.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $(".fa-chevron-left").hide()
             $(".fa-chevron-right").click(function () {
                 $(this).parents(".collapse").find('.list-accordion').animate({
                     scrollLeft: $(window).width() + $(this).parents(".collapse").width()
                 }, 'slow');
+                $(this).hide()
+                $(".fa-chevron-left").show()
+            });
+            $(".fa-chevron-left").click(function () {
+                $(this).parents(".collapse").find('.list-accordion').animate({
+                    scrollLeft: 0
+                }, 'slow');
+                $(this).hide()
+                $(".fa-chevron-right").show()
             });
             $('.item').on('click', function (e) {
                 e.preventDefault()
@@ -923,21 +927,42 @@
             };
 
             resizeWindow()
+            resize_arrow()
         })
         $(window).resize(function () {
             resizeWindow()
+            resize_arrow()
         });
         function resizeWindow() {
             if ($(window).width() < 1200) {
-                console.log("mobile");
                 $('.list-collapse-custom-desktop').find('.collapse').css({ "margin-left": 0, "position": "relative" })
             }
             if ($(window).width() >= 1200) {
-                console.log("desktop");
                 $('.card-header').removeClass('active')
                 $('.card-header').parents('.collapse-group').removeClass('active')
                 $('.card-header').parents('.collapse-group').children('.collapse').hide()
                 $('.list-collapse-custom-desktop').find('.collapse').css({ "margin-left": $('header .logo').offset().left })
+            }
+        }
+        function resize_arrow() {
+            if ($(window).width() < 1200) {
+                $('.fa-chevron-right-rotate-bottom').show()
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                        $('.fa-chevron-right-rotate-bottom').hide()
+                    } else {
+                        $('.fa-chevron-right-rotate-bottom').show()
+                    }
+                });
+            } else {
+                $('.fa-chevron-right-rotate-bottom').hide()
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                        $('.fa-chevron-right-rotate-bottom').hide()
+                    } else {
+                        $('.fa-chevron-right-rotate-bottom').hide()
+                    }
+                });
             }
         }
         $('.card-header').on('click', function () {

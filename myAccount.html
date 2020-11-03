@@ -53,34 +53,66 @@
                                 <div class="evaluation_select">Click on any section below to review, or continue, your
                                     evaluation of your IP.</div>
                             </div>
-                            <div class="list-accordion">
-                                <div class="d-inline-flex">
-                                    <div class="item position-relative">
-                                        Intangibles
-                                        <span class="position-absolute d-flex align-items-center justify-content-center"><i
-                                                class="fas fa-times"></i></span>
-                                    </div>
-                                    <div class="item position-relative">
-                                        Business
-                                        <span class="position-absolute d-flex align-items-center justify-content-center"><i
-                                                class="fas fa-times"></i></span>
-                                    </div>
-                                    <div class="item position-relative">
-                                        Intellectual Property
-                                        <span class="position-absolute d-flex align-items-center justify-content-center"><i
-                                                class="fas fa-times"></i></span>
-                                    </div>
-                                    <div class="item position-relative">
-                                        Intellectual Assets
-                                        <span class="position-absolute d-flex align-items-center justify-content-center"><i
-                                                class="fas fa-times"></i></span>
-                                    </div>
-                                    <div class="item position-relative">
-                                        Your Analysis
-                                        <span class="position-absolute d-flex align-items-center justify-content-center"><i
-                                                class="fas fa-times"></i></span>
+                            <div class="position-relative">
+                                <span class="position-absolute" style="top: 27%;
+                                            left: -6%;
+                                            opacity: 0.5;
+                                            -webkit-animation: right-left 2s infinite;
+                                            animation: right-left 2s infinite;
+                                            color: #007F9C;
+                                        ">
+                                    <i class="fas fa-chevron-left fa-2x"></i>
+                                </span>
+                                <div class="list-accordion">
+                                    <div class="d-inline-flex">
+                                        <div class="item position-relative">
+                                            Intangibles
+                                            <span
+                                                class="position-absolute d-flex align-items-center justify-content-center"><i
+                                                    class="fas fa-times"></i></span>
+                                        </div>
+                                        <div class="item position-relative">
+                                            Business
+                                            <span
+                                                class="position-absolute d-flex align-items-center justify-content-center"><i
+                                                    class="fas fa-times"></i></span>
+                                        </div>
+                                        <div class="item position-relative">
+                                            Intellectual Property
+                                            <span
+                                                class="position-absolute d-flex align-items-center justify-content-center"><i
+                                                    class="fas fa-times"></i></span>
+                                        </div>
+                                        <div class="item position-relative">
+                                            Unregistered Copyrights
+                                            <span
+                                                class="position-absolute d-flex align-items-center justify-content-center"><i
+                                                    class="fas fa-times"></i></span>
+                                        </div>
+                                        <div class="item position-relative">
+                                            Intellectual Assets
+                                            <span
+                                                class="position-absolute d-flex align-items-center justify-content-center"><i
+                                                    class="fas fa-times"></i></span>
+                                        </div>
+                                        <div class="item position-relative">
+                                            Your Analysis
+                                            <span
+                                                class="position-absolute d-flex align-items-center justify-content-center"><i
+                                                    class="fas fa-times"></i></span>
+                                        </div>
                                     </div>
                                 </div>
+                                <span class="position-absolute" style="
+                                            top: 27%;
+                                            right: 6%;
+                                            opacity: 0.5;
+                                            -webkit-animation: left-right 2s infinite;
+                                            animation: left-right 2s infinite;
+                                            color: #007F9C;
+                                      ">
+                                    <i class="fas fa-chevron-right fa-2x"></i>
+                                </span>
                             </div>
                             <div>
                                 <div class="language-select">Language Preference</div>
@@ -120,10 +152,23 @@
     <script src="./assets/js/all.min.js"></script>
     <script src="./assets/js/owl.carousel.min.js"></script>
     <script>
-        // Custom Navigation Events
-        $(document).on('click', '.item', function () {
-            n = $(this)
-            n.toggleClass('active')
+        $(document).ready(function () {
+            $(".fa-chevron-left").hide()
+            $(".fa-chevron-right").click(function () {
+                console.log($(this).parents().parents().width());
+                $(this).parent().parents().find('.list-accordion').animate({
+                    scrollLeft: $(window).width() + $(this).parents().parents().width()
+                }, 'slow');
+                $(this).hide()
+                $(".fa-chevron-left").show()
+            });
+            $(".fa-chevron-left").click(function () {
+                $(this).parent().parents().find('.list-accordion').animate({
+                    scrollLeft: 0
+                }, 'slow');
+                $(this).hide()
+                $(".fa-chevron-right").show()
+            });
         });
     </script>
 </body>

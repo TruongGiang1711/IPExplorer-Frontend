@@ -84,15 +84,15 @@ section .content .introduction .figure {
   max-width: 300px;
 }
 
-section .content .introduction .figure .intangibles-model-lv1,
-section .content .introduction .figure .intangibles-model-lv2,
-section .content .introduction .figure .intangibles-model-lv3 {
+section .content .introduction .figure .intangibles-reportPage-lv1,
+section .content .introduction .figure .intangibles-reportPage-lv2,
+section .content .introduction .figure .intangibles-reportPage-lv3 {
   width: 100%;
 }
 
-section .content .introduction .figure .intangibles-model-lv1 span,
-section .content .introduction .figure .intangibles-model-lv2 span,
-section .content .introduction .figure .intangibles-model-lv3 span {
+section .content .introduction .figure .intangibles-reportPage-lv1 span,
+section .content .introduction .figure .intangibles-reportPage-lv2 span,
+section .content .introduction .figure .intangibles-reportPage-lv3 span {
   font-family: "Calibri-Bold";
   font-size: 12px;
   line-height: 14px;
@@ -101,14 +101,14 @@ section .content .introduction .figure .intangibles-model-lv3 span {
   bottom: 10px;
 }
 
-section .content .introduction .figure .intangibles-model-lv1 {
+section .content .introduction .figure .intangibles-reportPage-lv1 {
   border-radius: 60px;
   background-color: #71b4c4;
   height: 300px;
   position: relative;
 }
 
-section .content .introduction .figure .intangibles-model-lv2 {
+section .content .introduction .figure .intangibles-reportPage-lv2 {
   border-radius: 48px;
   background-color: #429bb0;
   height: 240px;
@@ -116,7 +116,7 @@ section .content .introduction .figure .intangibles-model-lv2 {
   position: absolute;
 }
 
-section .content .introduction .figure .intangibles-model-lv3 {
+section .content .introduction .figure .intangibles-reportPage-lv3 {
   border-radius: 36px;
   background-color: #007f9c;
   height: 180px;
@@ -124,7 +124,7 @@ section .content .introduction .figure .intangibles-model-lv3 {
   position: absolute;
 }
 
-section .content .introduction .figure .intangibles-model-lv3 span {
+section .content .introduction .figure .intangibles-reportPage-lv3 span {
   bottom: unset;
 }
 
@@ -134,52 +134,6 @@ section .content .introduction .figure .figure-caption {
   line-height: 14px;
   color: black;
   margin: 10px 0 20px;
-}
-
-section .content .introduction .intangibles-details .intangibles-details_lv3,
-section .content .introduction .intangibles-details .intangibles-details_lv2,
-section .content .introduction .intangibles-details .intangibles-details_lv1 {
-  height: 50px;
-  max-width: 50px;
-  width: 100%;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-
-section .content .introduction .intangibles-details .intangibles-details_lv3 {
-  background-color: #007f9c;
-}
-
-section .content .introduction .intangibles-details .intangibles-details_lv2 {
-  background-color: #429bb0;
-}
-
-section .content .introduction .intangibles-details .intangibles-details_lv1 {
-  background-color: #71b4c4;
-}
-
-section .content .introduction .intangibles-details .intangibles-details_title {
-  font-family: "Raleway";
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  margin: 15px 0 10px 0;
-}
-
-section .content .introduction .intangibles-details .intangibles-details_content {
-  font-family: "Calibri-Light";
-  font-size: 14px;
-  line-height: 16px;
-}
-
-section .content .introduction .intangibles-details > div {
-  margin-bottom: 4px;
-}
-
-section .content .introduction .intangibles-details > div.intangibles-details_content {
-  margin-bottom: 30px;
-  font-size: 12px;
-  line-height: 14px;
 }
 
 section .content .analysis__content {
