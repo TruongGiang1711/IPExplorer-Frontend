@@ -329,7 +329,7 @@
                 overflow: auto;
                 margin-left: 0;
                 margin-bottom: 20px;
-                padding: 0 37px 20px 0;
+                padding: 0 0 20px 0;
                 .item {
                     &:last-child {
                         margin-right: 0;
@@ -916,6 +916,9 @@
             wrapper {
                 > div {
                     margin-top: 23.5px;
+                    > div {
+                        padding-right: 0;
+                    }
                     .action-myAccount {
                         margin: 75px 0 140px;
                         > .btn-circle {

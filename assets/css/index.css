@@ -312,7 +312,7 @@
     overflow: auto;
     margin-left: 0;
     margin-bottom: 20px;
-    padding: 0 37px 20px 0;
+    padding: 0 0 20px 0;
   }
   .content-myAccount wrapper .list-accordion .item:last-child {
     margin-right: 0;
@@ -825,6 +825,9 @@
   }
   .container-desktop .content-myAccount wrapper > div {
     margin-top: 23.5px;
+  }
+  .container-desktop .content-myAccount wrapper > div > div {
+    padding-right: 0;
   }
   .container-desktop .content-myAccount wrapper > div .action-myAccount {
     margin: 75px 0 140px;

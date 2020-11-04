@@ -55,7 +55,6 @@
                             </div>
                             <div class="position-relative">
                                 <span class="position-absolute" style="top: 27%;
-                                            left: -6%;
                                             opacity: 0.5;
                                             -webkit-animation: right-left 2s infinite;
                                             animation: right-left 2s infinite;
@@ -105,7 +104,6 @@
                                 </div>
                                 <span class="position-absolute" style="
                                             top: 27%;
-                                            right: 6%;
                                             opacity: 0.5;
                                             -webkit-animation: left-right 2s infinite;
                                             animation: left-right 2s infinite;
@@ -155,7 +153,6 @@
         $(document).ready(function () {
             $(".fa-chevron-left").hide()
             $(".fa-chevron-right").click(function () {
-                console.log($(this).parents().parents().width());
                 $(this).parent().parents().find('.list-accordion').animate({
                     scrollLeft: $(window).width() + $(this).parents().parents().width()
                 }, 'slow');
